@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Svelvet from '$lib/container/views/Svelvet.svelte';
+  import Svelvet from 'svelvet';
   import { getD3PositionY, getD3PositionX, getD3Zoom } from '$lib/types/types';
 
   // import Svelvet from 'svelvet';

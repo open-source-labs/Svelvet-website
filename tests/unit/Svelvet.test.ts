@@ -1,5 +1,4 @@
-// import Svelvet from '../../src/lib/Containers/Svelvet/index.svelte';
-import Svelvet from '$lib/container/views/Svelvet.svelte';
+import Svelvet from 'svelvet';
 import { render, prettyDOM } from '@testing-library/svelte';
 
 const handleClick = (e: object) => {
@@ -88,7 +87,7 @@ test('Svelvet componet should render', () => {
   //     width: 600,
   //     background: false,
   //   },
-  // });
+  // });-i
   // expect(container.getElementsByClassName('Svelvet')).toBeTruthy();
 
   //const length = container.querySelectorAll('[class^=Node]');
