@@ -16,7 +16,15 @@ This repo contains the code for [Svelvet.io](https://www.svelvet.io/).
 
 Svelvet is a lightweight Svelte component library for building interactive node-based diagrams. See [the main Svelvet repository](https://github.com/open-source-labs/Svelvet) and [Svelvet.io](https://www.svelvet.io/) for the component library and documentation.
 
+<br>
 
+<div align="center">
+
+![screenshot](./src/assets/readme-gif.gif)
+
+</div>  
+  
+<br>
 
 ## Version Updates
 
@@ -71,16 +79,11 @@ Shout out to our contributors! Here's what's new:
 </ul>
 </details>
 
-
+<br>
 
 ## Installing Svelvet
 
-
-![screenshot](./src/assets/readme-gif.gif)
-
-## Quick Start
-
-Installing Svelvet: 
+<br>
 
 ```bash
 npm install svelvet
@@ -126,6 +129,7 @@ import Svelvet from 'svelvet';
 - Rachel He • [LinkedIn](https://www.linkedin.com/in/rachel-he-8200563b/) • [Github](https://github.com/rachelheplus)
 - Horacio Vallejo • [LinkedIn](https://www.linkedin.com/in/horacio-vallejo-100643187/) • [Github](https://github.com/horaciovallejo)
 
+<br>
 
 ## How to Contribute
 
@@ -137,9 +141,13 @@ The following is a list of possible features and improvements. If you have any a
 - Community Forum
 - GET CREATIVE!! Svelvet is an amazing project that has so much room to grow.
 
+<br>
+
 ## Credits
 
-Inspired by [React Flow](https://github.com/wbkd/react-flow), Svelvet expands the tools available to Svelte developers and makes Svelte more inviting to both new and seasoned software engineers. Under the hood, Svelvet depends on the [d3-zoom](https://github.com/d3/d3-zoom) library to zoom and pan across the graph.
+Inspired by [React Flow](https://github.com/wbkd/react-flow), Svelvet expands the tools available to Svelte developers and makes Svelte more inviting to both new and seasoned software engineers.
+
+<br>
 
 ## License
 
