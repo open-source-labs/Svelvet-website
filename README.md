@@ -34,7 +34,8 @@ Shout out to our contributors! Here's what's new:
 
 <details><summary>v7.0.0</summary>
 <ul>
-  <li>Split website code into separate repository.</li>
+  <li>Split website code into separate repository</li>
+  <li>Removed unused forum code</li>
   <li>Solved github issue #s: </li>
 </ul>
 </details>
