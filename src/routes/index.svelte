@@ -121,7 +121,7 @@
 <!-- ----------------------------- TOP LEVEL SECTION (intro & graph view) ------------------------------------ -->
 <!-- --------------------------------------------------------------------------------------------------------- -->
 
-<div class="topSection">
+<div class="topWrapper">
   <div class='topLeft'>
     <h1>
       Mapping out your ideas with Svelte has never been easier
@@ -130,7 +130,7 @@
       <code class="highlight">Svelvet</code> is a lightweight Svelte
       component library for building interactive node-based flow diagrams
     </p>
-    <a href="/docs/installation" class="btn-pink">Get Started</a>
+    <div class='buttonWrapper'><a href="/docs/installation" class="btn-pink">Get Started</a></div>
   </div>
   <div class="topRight">
     <div class="diagram">
@@ -175,7 +175,6 @@
 <!-- --------------------------------------------------------------------------------------------------------- -->
 
 <div class="installWrapper">
-  <div class='blurbWrapper'>
     <div class="typingWindowWrapper">
       <div class="overflow-hidden rounded-lg bg-gray-100 w-[320px] md:w-[380px] grid place-items-center wrapper">
         <div class="h-7 w-full bg-gray-300 flex items-center">
@@ -186,7 +185,7 @@
         <div class="typing-demo my-3">npm install svelvet</div>
       </div>
     </div>
-    <div class="sm:mt-0 w-full md:w-1/2 h-full flex flex-col justify-center">
+    <div class="blurbWrapper">
       <h3
         class="text-4xl font-bold my-4 text-center md:text-left text-gray-700"
       >
@@ -203,7 +202,6 @@
         class="install-btn">Install Now</a
       >
     </div>
-  </div>
 </div>
 
 <!-- --------------------------------------------------------------------------------------------------------- -->
@@ -240,35 +238,34 @@
     z-index: -1;
   }
 
-  .topSection {
-    display: flex;
-    width: auto;
-    margin: 12rem 8rem;
-    text-align: center;
-  }
+  .topWrapper {
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+  padding: 6vw;
+}
 
-  .topLeft {
-    float: left;
-    width: 50%;
-  }
+.topLeft {
+  order: 1;
+  align-self: center;
+  padding-right: 5vw;
+}
 
-  .topRight {
-    float: right;
-    width: 50%;
-  }
+.topRight {
+  order: 2;
+  align-self: center;
+  padding-bottom: 6.25vw;
+}
 
-  .topSection h1 {
-    font-size: 3rem;
+  .topWrapper h1 {
+    font-size: 2.5rem;
     font-weight: bold;
     color: #4b5563;
-    max-width: 90vw;
-    padding: 4rem;
+    padding-bottom: 1vw;
   }
 
-  .topSection p {
+  .topWrapper p {
     font-size: 1.25rem;
-    margin-left: 10rem;
-    margin-right: 10rem;
     margin-bottom: 2rem;
     color: #6b7280;
   }
@@ -279,15 +276,17 @@
 
   .diagram {
     background-color: #fff;
-    max-width: 100%;
-    height: 550px;
+    width:auto;
     border: 1px solid #e5e7eb;
     border-radius: 0.75rem;
     box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
-    margin-right: 12rem;
-    margin-left: 5rem;
+  }
+
+  .buttonWrapper {
+    display: flex;
+    justify-content: center;
   }
 
   .btn-pink {
@@ -336,73 +335,21 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 20rem 0 20rem;
   }
 
   .text-container h3 {
     font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
+    align-self: center;
   }
 
   .text-container p {
     color: rgba(255, 255, 255, 0.8);
     font-size: 1rem;
-    padding: 0 7rem 0 7rem;
+    margin: 0 28vw;
     text-align: center;
   }
-
-/* ------------------------------------------------------------------------------------------------------
------------------------------------------- INSTALL SECTION ----------------------------------------------
---------------------------------------------------------------------------------------------------------- */
-/* flex flex-col-reverse items-center md:flex-row h-full mx-12 my-20 md:my-32 md:gap-10 */
-.installWrapper {
-  height: fit-content;
-  height: 100%;
-  padding: 6rem 8rem;
-}
-
-.blurbWrapper {
-  float: right;
-  height: 100%;
-  padding-bottom: 6rem;
-}
-
-/* w-full md:w-1/2 my-4 md:h-full md:py-12 flex flex-col justify-center items-center text-center  */
-.typingWindowWrapper {
-  float: left;
-  flex: 1;
-  widows: 100%;
-  text-align: center;
-  padding-top: 2rem;
-  padding-left: 15rem;
-  padding-right: 8rem;
-}
-
-.install-btn {
-    padding: 0.75rem 1rem;
-    text-align: center;
-    margin: 1.5rem 42rem 0 0rem;
-    background-color: #ed4747;
-    border-radius: 2rem;
-    color: #fff;
-    font-size: 1.125rem;
-    transition: background-color 0.2s ease-in-out;
-    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
-    backdrop-filter: blur( 1.125rem ); 
-}
-
-.install-btn:hover {
-    background-color: #fff;
-    border: 1px solid #ed4747;
-    color: #ed4747;
-  }
-
-
-/* ------------------------------------------------------------------------------------------------------
----------------------------------------------- BUTTONS --------------------------------------------------
---------------------------------------------------------------------------------------------------------- */
- 
 
   .btn-white {
     padding: 0.75rem 1.5rem;
@@ -423,12 +370,53 @@
     color: #ffffff;
   }
 
+/* ------------------------------------------------------------------------------------------------------
+------------------------------------------ INSTALL SECTION ----------------------------------------------
+--------------------------------------------------------------------------------------------------------- */
+.installWrapper {
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+  height: 100%;
+  padding: 6rem 8rem;
+}
+
+.blurbWrapper {
+  order: 2;
+  height: 100%;
+  padding-bottom: 6rem;
+}
+
+.typingWindowWrapper {
+  order: 1;
+  widows: 100%;
+  padding-top: 2rem;
+  padding-right: 8rem;
+}
+
+.install-btn {
+    padding: 0.75rem 1rem;
+    text-align: center;
+    background-color: #ed4747;
+    border-radius: 2rem;
+    color: #fff;
+    font-size: 1.125rem;
+    transition: background-color 0.2s ease-in-out;
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+    backdrop-filter: blur( 1.125rem ); 
+}
+
+.install-btn:hover {
+    background-color: #fff;
+    border: 1px solid #ed4747;
+    color: #ed4747;
+  }
 
 
 
-
-
-
+/* ------------------------------------------------------------------------------------------------------
+---------------------------------------------- TYPING WINDOW --------------------------------------------
+--------------------------------------------------------------------------------------------------------- */
 
 
 
@@ -465,47 +453,56 @@
   @media (max-width: 768px) {
     .css-blurry-gradient {
       opacity: 0.8;
-      top: 50%;
     }
 
     .typing-demo {
       animation: blink 0.5s step-end infinite alternate;
     }
     .topSection {
-      margin-top: 48px;
-      margin-bottom: 48px;
-      gap: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .topLeft {
+      flex: 50%;
+    }
+
+    .topRight {
+      flex: 50%;
     }
 
     .topSection h1 {
-      font-size: 6rem;
-    }
-
-    .topSection p {
-      margin-top: 0;
-      margin-bottom: 0;
+      font-size: 5rem;
     }
 
     .diagram {
-      max-width: 550px;
+      max-width: 80%;
     }
 
+
+
+
+
     .pinkGradient {
-      height: 600px;
+      height: 60vw;
     }
 
     .text-container {
-      justify-content: flex-start;
+      justify-content: center;
+      align-self: center;
+      padding: 2vw;
     }
 
   .text-container h3 {
-      font-size: 4rem;
-      text-align: right;
+      font-size: 2rem;
+      text-align: center;
+
     }
 
     .text-container p {
       text-align: center;
-      padding: 0 0 0 0;
+      margin: 0 3vw;
     }
 
   }

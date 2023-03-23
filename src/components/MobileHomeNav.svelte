@@ -76,9 +76,16 @@
         <a on:click={toggleMenu} href="/" class="block py-6">Home</a>
       </li>
       <li>
-        <a on:click={toggleMenu} href="/docs/installation" class="block py-6">Documentation</a>
+        <a on:click={toggleMenu} href="/docs/installation" class="block py-6">Docs</a>
       </li>
       <!-- //TODO create button for create page -->
+      <li>
+        <a
+          on:click={toggleMenu}
+          href="https://github.com/open-source-labs/Svelvet"
+          target="_blank"
+          class="block py-6">Github</a
+        >
       <li>
         <a on:click={toggleMenu} href="/playground" class="block py-6">REPL</a>
       </li>
@@ -87,15 +94,7 @@
           on:click={toggleMenu}
           target="_blank"
           href="https://medium.com/@justinwouters/svelvet-2-0-c6b2059734a6"
-          class="block py-6">Blog</a
-        >
-      </li>
-      <li>
-        <a
-          on:click={toggleMenu}
-          href="https://github.com/open-source-labs/Svelvet"
-          target="_blank"
-          class="block py-6">Github</a
+          class="block py-6">Blogs</a
         >
       </li>
       <!-- added login / logout button link! -->

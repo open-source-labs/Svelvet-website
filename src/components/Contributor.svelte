@@ -1,6 +1,6 @@
 <script>
     import linkedinSVG from '../assets/linkedin-svgrepo-com.svg';
-    import githubSVG from '../assets/github-svgrepo-com.svg';
+    import githubSVG from '../assets/github-icon-white.svg';
     export let firstName;
     export let lastName;
     export let linkedin;
@@ -14,10 +14,10 @@
       {firstName} <br />{lastName}
     </p>
     <div class="social-links">
-      <a target="_blank" href={`https://www.linkedin.com/in/${linkedin}`}>
+      <a class="linkedIn" target="_blank" href={`https://www.linkedin.com/in/${linkedin}`}>
         <img src={linkedinSVG} alt="LinkedIn Icon" />
       </a>
-      <a target="_blank" href={`https://github.com/${github}`}>
+      <a class="gitHub" target="_blank" href={`https://github.com/${github}`}>
         <img src={githubSVG} alt="GitHub Icon" />
       </a>
     </div>
@@ -30,7 +30,7 @@
       font-size: 1.5rem;
       line-height: 1.5rem;
       font-size: 1rem;
-      font-weight:300;
+      font-weight:400;
       color: #fff;
     }
 
@@ -54,14 +54,23 @@
         -webkit-backdrop-filter: blur(7.9px);
         border: 1px solid rgba(255, 255, 255, 0.18);
         padding-top: 1.5rem;
-        -webkit-filter: grayscale(25%);
-        filter: grayscale(25%);
+        -webkit-filter: grayscale(20%);
+        filter: grayscale(20%);
     }
 
     .contributor-card:hover {
         background: linear-gradient(150deg, #ffffff61, #f5dede86, rgba(249, 136, 155, 0.472));
         -webkit-filter: none; 
         filter: none;
+    }
+
+    .gitHub:hover {
+      filter:brightness(100);
+    }
+
+    .linkedIn:hover {
+      -webkit-filter: brightness(100);
+      filter:brightness(100);
     }
   </style>
   

@@ -22,6 +22,12 @@ Shout out to our contributors! Here's what's new:
 
 ### Changelog
 
+<details><summary>v7.0.0</summary>
+<ul>
+  <li>What's new?????</li>
+</ul>
+</details>
+
 <details><summary>v6.0.0</summary>
 <ul>
   <li>Added adaptive anchors. Anchors now automatically arrange themselves in an aesthetically pleasing way without user input. Adaptive anchors are now the default anchor mode.</li>
