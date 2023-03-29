@@ -1,3 +1,5 @@
+// not used in anything yet! -jen
+
 export const community = [
     {
         Blog: 'https://medium.com/@alexander.zambrano/simplify-application-diagramming-with-svelvet-a8f664731243',
