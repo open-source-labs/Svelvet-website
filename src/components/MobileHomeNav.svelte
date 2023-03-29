@@ -48,7 +48,7 @@
 
 <div
   class:shadow-lg={y > 5}
-  class="md:hidden sticky top-0 z-50 flex justify-between px-8 py-3 w-screen border-b h-16 bg-white"
+  class="mobile"
   use:clickOutside={{ enabled: !hidden, cb: () => (hidden = true) }}
 >
   <div class="flex items-center">
@@ -58,8 +58,14 @@
       href="/"
       class="text-3xl text-gray-700 font-nunito font-medium tracking-wide ml-2 mr-6">svelvet</a
     >
+    <p
+      class="version text-xs rounded-full px-4 py-1 bg-rose-100 text-red-400 tracking-wider"
+    >
+      v7.0.0
+    </p>
   </div>
   <button class="outline-none mobile-menu-button pl-8 " on:click={toggleMenu}>
+    <!-- hamburger menu -->
     <div id="navMenu" class:active={!hidden}>
       <span /><span /><span />
     </div>
@@ -69,7 +75,7 @@
 {#if !hidden}
   <div
     transition:slide
-    class="md:hidden absolute w-screen mobile-menu border px-8 bg-gray-100 text-gray-700"
+    class="mobile absolute w-full mobile-menu border px-8 bg-gray-100 text-gray-700"
   >
     <ul class="text-center">
       <li>
@@ -84,15 +90,17 @@
           on:click={toggleMenu}
           href="https://github.com/open-source-labs/Svelvet"
           target="_blank"
+          rel="noreferrer"
           class="block py-6">Github</a
         >
       <li>
-        <a on:click={toggleMenu} href="/playground" class="block py-6">REPL</a>
+        <a on:click={toggleMenu} href="/playground" class="block py-6">Sandbox</a>
       </li>
       <li>
         <a
           on:click={toggleMenu}
           target="_blank"
+          rel="noreferrer"
           href="https://medium.com/@justinwouters/svelvet-2-0-c6b2059734a6"
           class="block py-6">Blogs</a
         >
@@ -176,6 +184,39 @@
     height: 32px;
     width: 32px;
     border-radius: 50%;
+  }
+
+  .mobile {
+    justify-content: space-between;
+    padding: 12px 32px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    border-bottom-width: 1px;
+  }
+
+  .version {
+    display: none;
+  }
+
+  @media (min-width: 800px) {
+    .mobile {
+    display: none;
+    }
+  }
+
+  /* show version no. */
+  @media (min-width: 400px) {
+    .version {
+      display: inline;
+    }
+  }
+
+  /* for drop shadow on nav to appear on scroll down */
+  @media (max-height: 5px) {
+    .mobile {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
   }
 
 </style>

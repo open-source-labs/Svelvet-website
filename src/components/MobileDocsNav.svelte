@@ -8,11 +8,15 @@
   $: activeLink = `${$page.url.pathname}`;
 
   let hidden = true;
+  let showDocs = false;
   let showGettingStarted = false;
   let showGuides = false;
 
   const toggleMenu = () => {
     hidden = !hidden;
+  };
+  const toggleDocs = () => {
+    showDocs = !showDocs;
   };
   const toggleGettingStarted = () => {
     showGettingStarted = !showGettingStarted;
@@ -238,7 +242,7 @@
           on:click={toggleMenu}
           target="_blank"
           href="https://medium.com/@alexander.zambrano/simplify-application-diagramming-with-svelvet-a8f664731243"
-          class="block py-4 px-12 font-medium text-gray-800">Blog</a
+          class="block py-4 px-12 font-medium text-gray-800">Blogs</a
         >
       </li>
       <li>

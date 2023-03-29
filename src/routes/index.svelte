@@ -3,6 +3,9 @@
   import { contributors } from '../data/contributors';
 
   import Svelvet from 'svelvet';
+  import copyIcon from '../assets/clipboard.svg';
+  const copyNPM = () => navigator.clipboard.writeText('npm install svelvet');
+  const copyYarn = () => navigator.clipboard.writeText('yarn add svelvet');
 
   const initialNodes = [
     {
@@ -117,9 +120,7 @@
 
 <div class="css-blurry-gradient" />
 
-<!-- --------------------------------------------------------------------------------------------------------- -->
-<!-- ----------------------------- TOP LEVEL SECTION (intro & graph view) ------------------------------------ -->
-<!-- --------------------------------------------------------------------------------------------------------- -->
+<!-- ----------------------------- TOP LEVEL SECTION (intro & diagram) --------------------------------------- -->
 
 <div class="topWrapper">
   <div class='topLeft'>
@@ -127,7 +128,7 @@
       Mapping out your ideas with Svelte has never been easier
     </h1>
     <p>
-      <code class="highlight">Svelvet</code> is a lightweight Svelte
+      <code class="highlight" style="color:#E94646;">Svelvet</code> is a lightweight Svelte
       component library for building interactive node-based flow diagrams
     </p>
     <div class='buttonWrapper'><a href="/docs/installation" class="btn-pink">Get Started</a></div>
@@ -147,9 +148,7 @@
   </div>
 </div>
 
-<!-- --------------------------------------------------------------------------------------------------------- -->
 <!-- ---------------------------------------- LEARN MORE SECTION --------------------------------------------- -->
-<!-- --------------------------------------------------------------------------------------------------------- -->
 
 <div class="pinkGradient">
   <div class="flex-container">
@@ -169,55 +168,77 @@
   </div>
 </div>
 
-
-<!-- --------------------------------------------------------------------------------------------------------- -->
 <!-- ------------------------------------------ INSTALL SECTION ---------------------------------------------- -->
-<!-- --------------------------------------------------------------------------------------------------------- -->
 
 <div class="installWrapper">
+  <div class="installInner1">
+    <h3>Get Started Easily</h3>
+    <p>
+      Start mapping out your ideas with our NPM package. Simply provide your
+      node data to the
+      <code class="highlight" style="color:#E94646;">Svelvet</code> component and you're
+      ready to show off your interactive diagram - no extra configuration needed!
+    </p>
+    <a
+      href="/docs/installation"
+      class="btn-pink">More Info</a
+    >
+  </div>
+  <div class="installInner2">
     <div class="typingWindowWrapper">
-      <div class="overflow-hidden rounded-lg bg-gray-100 w-[320px] md:w-[380px] grid place-items-center wrapper">
-        <div class="h-7 w-full bg-gray-300 flex items-center">
-          <div class="btn bg-[#FF605C]" />
-          <div class="btn bg-[#FFBD44]" />
-          <div class="btn bg-[#00CA4E]" />
+      <div class="typingWindow">
+        <div class="typingNavBar">
+          <div class="btn-circle" style="background-color: #FF605C;" />
+          <div class="btn-circle" style="background-color: #FFBD44;"/>
+          <div class="btn-circle" style="background-color: #00CA4E;"/>
         </div>
-        <div class="typing-demo my-3">npm install svelvet</div>
+        <div class="typing-demo">npm install svelvet</div>
       </div>
     </div>
-    <div class="blurbWrapper">
-      <h3
-        class="text-4xl font-bold my-4 text-center md:text-left text-gray-700"
-      >
-        Get Started Easily
-      </h3>
-      <p class="mb-4 text-gray-500 text-center md:text-left">
-        Start mapping out your ideas with our NPM package. Simply provide your
-        node data to the
-        <code class="bg-rose-100 rounded-lg p-1">Svelvet</code> component and you're
-        ready to show off your interactive diagram - no extra configuration needed!
+      <p>
+        To install and save in your <code class="highlight">package.json</code>
+        dependencies, run the command below using
+        <strong>npm</strong>:
       </p>
-      <a
-        href="/docs/installation"
-        class="install-btn">Install Now</a
-      >
-    </div>
+      <div class="clipboard">
+        <code>
+          <span style="color:#9F2A39;">npm install</span> svelvet
+        </code>
+        <img
+          on:click={copyNPM}
+          src={copyIcon}
+          alt="clipboard icon"
+        />
+      </div>
+        <p>
+          Or <strong>yarn</strong>:
+        </p>
+      <div class="clipboard">
+        <code>
+          <span style="color:#9F2A39;">yarn add</span> svelvet
+        </code>
+        <img
+          on:click={copyYarn}
+          src={copyIcon}
+          alt="clipboard icon"
+        />
+      </div>
+  </div>
 </div>
-
-<!-- --------------------------------------------------------------------------------------------------------- -->
-<!-- ------------------------------------------ CONTRIBUTORS SECTION ----------------------------------------- -->
-<!-- --------------------------------------------------------------------------------------------------------- -->
-<div>
-  <ContributorsGrid {contributors} />
-</div>
+    
+<ContributorsGrid {contributors} />
 
 
-
+<!-------------------------------------------------------------------------------------------------------
+------------------------------------------ STYLING!! ----------------------------------------------------
+---------------------------------------------------------------------------------------------------------  -->
 <style>
-/* ------------------------------------------------------------------------------------------------------
------------------------------ TOP LEVEL SECTION (intro & graph view) ------------------------------------
---------------------------------------------------------------------------------------------------------- */
-
+/*----------------------------- TOP LEVEL SECTION (intro & diagram) -------------------------------------*/
+  .highlight {
+    background-color: #FAE4E6; 
+    border-radius: 0.5rem; 
+    padding: 0.25rem;
+  }
   .css-blurry-gradient {
     overflow-x: hidden;
     position: absolute;
@@ -237,63 +258,58 @@
     opacity: 0.4;
     z-index: -1;
   }
-
   .topWrapper {
-  display: flex;
-  width: auto;
-  justify-content: space-between;
-  padding: 6vw;
-}
-
-.topLeft {
-  order: 1;
-  align-self: center;
-  padding-right: 5vw;
-}
-
-.topRight {
-  order: 2;
-  align-self: center;
-  padding-bottom: 6.25vw;
-}
-
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: auto;
+    padding: 6vw 5vw 10vw 5vw;
+    align-self: center;
+    text-align: left;
+  }
+  .topLeft {
+    order: 1;
+    padding-bottom: 3vw;
+    align-self: center;
+  }
+  .topRight {
+    order: 2;
+    align-self: center;
+    width: 100%;
+    padding-bottom: 6.25vw;
+  }
   .topWrapper h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #4b5563;
     padding-bottom: 1vw;
   }
-
   .topWrapper p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
+    font-size: 1rem;
     color: #6b7280;
+    padding-bottom: 2vw;
   }
-
-  .highlight {
-    color:#ed4747;
-  }
-
   .diagram {
+    align-self: center;
     background-color: #fff;
-    width:auto;
+    width: 100%;
     border: 1px solid #e5e7eb;
     border-radius: 0.75rem;
     box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
-    position: relative;
     overflow: hidden;
+    height: 500px;
   }
-
   .buttonWrapper {
     display: flex;
     justify-content: center;
   }
-
   .btn-pink {
-    padding: 0.75rem 1.5rem;
+    display: inline-block;
+    width: fit-content;
     text-align: center;
-    margin: 1.5rem;
-    background-color: #ed4747;
+    padding: .5rem 1rem;
+    text-align: center;
+    background-color: #E94646;
     border-radius: 2rem;
     color: #fff;
     font-size: 1.125rem;
@@ -301,137 +317,144 @@
     box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
     backdrop-filter: blur( 1.125rem ); 
   }
-
   .btn-pink:hover {
     background-color: #fff;
-    border: 1px solid #ed4747;
-    color: #ed4747;
+    outline: 2px solid #E94646;
+    color: #E94646;
   }
-
-/* ------------------------------------------------------------------------------------------------------
----------------------------------------- LEARN MORE SECTION ---------------------------------------------
---------------------------------------------------------------------------------------------------------- */
-
+/*---------------------------------------- LEARN MORE SECTION --------------------------------------------*/
   .pinkGradient {
-    height: 30rem;
+    height: fit-content;
     background-image: radial-gradient(
       circle at 50% 50%,
-      #ed4747,
+      #E94646,
       rgba(205, 203, 211, 0)
     );
     color: white;
     box-shadow: 0px 8px 16px rgba(241, 198, 198, 0.508);
   }
-
   .flex-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     height: 100%;
   }
-
   .text-container {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    padding: 6.5vw 5vw;
   }
-
   .text-container h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    align-self: center;
   }
-
   .text-container p {
     color: rgba(255, 255, 255, 0.8);
     font-size: 1rem;
-    margin: 0 28vw;
-    text-align: center;
+    text-align: left;
+    padding-bottom: 2vw;
   }
-
   .btn-white {
-    padding: 0.75rem 1.5rem;
-    width: 9.25rem;
-    margin: 2rem;
+    display: inline-block;
+    width: fit-content;
     text-align: center;
+    padding: .5rem 1rem;
     background-color: #fff;
-    border-radius: 2rem;
-    color: #ed4747;
+    border-radius: 99999px;
+    color: #1F2937;
     font-size: 1.125rem;
-    transition: background-color 0.2s ease-in-out;
     align-self: center;
   }
-
   .btn-white:hover {
+    transition: background-color 0.2s ease-in-out;
     background-color: transparent;
-    border: 1px solid #e5e7eb;
+    outline: 2px solid #e5e7eb;
     color: #ffffff;
   }
-
-/* ------------------------------------------------------------------------------------------------------
------------------------------------------- INSTALL SECTION ----------------------------------------------
---------------------------------------------------------------------------------------------------------- */
-.installWrapper {
-  display: flex;
-  justify-content: space-between;
-  height: fit-content;
-  height: 100%;
-  padding: 6rem 8rem;
-}
-
-.blurbWrapper {
-  order: 2;
-  height: 100%;
-  padding-bottom: 6rem;
-}
-
-.typingWindowWrapper {
-  order: 1;
-  widows: 100%;
-  padding-top: 2rem;
-  padding-right: 8rem;
-}
-
-.install-btn {
-    padding: 0.75rem 1rem;
-    text-align: center;
-    background-color: #ed4747;
-    border-radius: 2rem;
-    color: #fff;
-    font-size: 1.125rem;
-    transition: background-color 0.2s ease-in-out;
-    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
-    backdrop-filter: blur( 1.125rem ); 
-}
-
-.install-btn:hover {
-    background-color: #fff;
-    border: 1px solid #ed4747;
-    color: #ed4747;
+/*------------------------------------------ INSTALL SECTION ---------------------------------------------*/
+  .installWrapper {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 100%;
+    padding: 5vw;
+    align-self: center;
+    text-align: left;
   }
-
-
-
-/* ------------------------------------------------------------------------------------------------------
----------------------------------------------- TYPING WINDOW --------------------------------------------
---------------------------------------------------------------------------------------------------------- */
-
-
-
-  .wrapper {
-    box-shadow: 3px 3px 15px 3px rgba(0, 0, 0, 0.1);
+  .installInner1 {
+    order: 1;
+    align-self: center;
   }
-
-  .btn {
+  .installInner1 h3 {
+    font-size: 2rem; 
+    font-weight: bold; 
+    text-align: center; 
+    color: #4b5563;
+  }
+  .installInner1 p {
+    margin-bottom: 1rem;
+    color: #6b7280;
+    text-align: left;
+  }
+  .installInner2 {
+    display: flex;
+    flex-direction: column;
+    padding: 5vw;
+    order: 2;
+    align-self: center;
+  }
+  .installInner2 p {
+    color: #4b5563;
+    margin:1rem 0 1rem 0;
+  }
+  .typingWindowWrapper {
+    justify-content: center;
+    margin: 5vw;
+  }
+  .clipboard {
+    display: flex;
+  }
+  .clipboard code {
+    border-radius: 0.375rem;
+    padding: 0.75rem;
+    background-color: #FAE4E6;
+    color: #E94646;
+    width: 100%;
+  }
+  .clipboard img {
+    border-radius: 0.375rem;
+    padding: 0.75rem;
+    background-color: #FAE4E6;
+    margin-left: -1rem;
+    cursor: pointer;
+  }
+/*---------------------------------------------- TYPING WINDOW -------------------------------------------*/
+  .typingWindow {
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background-color: #f0f0f0;
+    min-width: fit-content;
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .typingNavBar {
+    height: 1.75rem;
+    width: 100%;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+  }
+  .btn-circle {
     float: left;
     margin-left: 7px;
     width: 12px;
     height: 12px;
     border-radius: 100%;
+    background-color: #FF605C;
   }
-
   .typing-demo {
     width: 20ch;
     animation: typing 4s steps(20), blink 0.5s step-end infinite alternate;
@@ -441,75 +464,9 @@
     border-right: 3px solid;
     font-family: monospace;
     font-size: 16px;
+    margin: .75rem 0 .75rem 0;
   }
-
-
-
-/* ------------------------------------------------------------------------------------------------------
----------------------------------------------- MAX VIEW -------------------------------------------------
---------------------------------------------------------------------------------------------------------- */
-
-
-  @media (max-width: 768px) {
-    .css-blurry-gradient {
-      opacity: 0.8;
-    }
-
-    .typing-demo {
-      animation: blink 0.5s step-end infinite alternate;
-    }
-    .topSection {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .topLeft {
-      flex: 50%;
-    }
-
-    .topRight {
-      flex: 50%;
-    }
-
-    .topSection h1 {
-      font-size: 5rem;
-    }
-
-    .diagram {
-      max-width: 80%;
-    }
-
-
-
-
-
-    .pinkGradient {
-      height: 60vw;
-    }
-
-    .text-container {
-      justify-content: center;
-      align-self: center;
-      padding: 2vw;
-    }
-
-  .text-container h3 {
-      font-size: 2rem;
-      text-align: center;
-
-    }
-
-    .text-container p {
-      text-align: center;
-      margin: 0 3vw;
-    }
-
-  }
-
-/* ------------------------------------------------------------------------------------------------------
----------------------------------------------- ANIMATIONS -----------------------------------------------
---------------------------------------------------------------------------------------------------------- */
+/*---------------------------------------------- ANIMATIONS ----------------------------------------------*/
 
   @keyframes typing {
     0% {
@@ -520,10 +477,99 @@
       width: 20ch;
     }
   }
-
   @keyframes blink {
     50% {
       border-color: transparent;
+    }
+  }
+/*-------------------------------------------- MEDIA QUERIES ---------------------------------------------*/
+    /* portrait phone view */
+  @media (min-width: 576px) {
+    .topLeft {
+      padding-bottom: 4vw;
+    }
+    .topWrapper p {
+      margin: 1rem 0 4rem 0;
+      margin-bottom: 1rem;
+    }
+    .topRight {
+      width: 550px;
+    }
+  }
+  /* tablet view */
+  @media (min-width: 768px) {
+    .topWrapper {
+      padding: 5vw 15vw 5vw 15vw;
+      align-self: center;
+    }
+    .topLeft {
+      padding-bottom: 3vw;
+    }
+    .topWrapper h1 {
+      font-size: 2.25rem;
+    }
+    .topWrapper p {
+      font-size: 1.25rem;
+      margin: 1rem 0 4rem 0;
+      margin-bottom: 1rem;
+    }
+    .diagram {
+      height: 550px;
+    }
+    .text-container {
+      margin: 0 20vw;
+    }
+    .text-container h3 {
+      font-size: 2.25rem;
+    }
+    .text-container p {
+      font-size: 1.25rem;
+    }
+    .installWrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 8vw;
+      text-align: left;
+    }
+    .installInner1 {
+      order: 1;
+      padding-right: 5vw;
+    }
+    .installInner2 {
+      order: 2;
+      align-self: center;
+    }
+    .installInner1 h3 {
+      text-align: left;
+    }
+    .installInner1 p {
+      text-align: left;
+    }
+    .typingWindowWrapper {
+      width: 320px;
+      margin: 0 0 3vw 0;
+    }
+  }
+  /* desktop view */
+  @media (min-width: 1024px) {
+    .topWrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 8vw;
+      text-align: left;
+    }
+    .topLeft {
+      order: 1;
+      padding-right: 5vw;
+    }
+    .topRight {
+      order: 2;
+      align-self: center;
+    }
+    .installWrapper {
+      padding: 5vw 15vw 5vw 15vw ;
     }
   }
 </style>

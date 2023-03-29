@@ -26,14 +26,11 @@
 
 <!-- Navbar -->
 
-<!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-<!-- GOTTA FIX THIS FIRST DIV !!! THIS IS MAKING THE WEIRD SPACING IN HOMEPAGE -->
-
 <div
-  class:shadow-lg={y > 5}
-  class="static hidden md:flex justify-between px-8 py-3 w-screen bg-white"
+class:shadow-lg={y > 5}
+  class="desktop"
 >
-  <div class="flex items-center justify-center">
+  <div class=" flex items-center justify-center">
     <img src={logo} alt="Logo" class="aspect-ratio-auto h-8" />
     <a
       id="home"
@@ -52,7 +49,7 @@
     </p>
   </div>
 
-  <nav class="space-x-11 text-sm text-gray-500 font-medium flex items-center">
+  <nav class="space-x-9 text-sm text-gray-500 font-medium flex items-center">
     <a
       href="/"
       id="home"
@@ -68,16 +65,11 @@
         : ''}">Docs</a
     >
 
-    <!-- <a
-    href="/community/forum"
-    id="community"
-    class="hover:text-rose-500 {activeLink.includes('community') ? 'text-rose-500' : ''}">Community</a
-    > -->
-
     <a
       href="https://github.com/open-source-labs/Svelvet"
       id="github"
       target="_blank"
+      rel="noreferrer"
       class="hover:text-rose-500">Github</a
     >
 
@@ -97,6 +89,7 @@
       <div class="dropdown-content">
         <a
           target="_blank"
+          rel="noreferrer"
           class="hover:text-rose-500 {activeLink.includes('blog')
             ? 'text-rose-500'
             : ''}"
@@ -105,6 +98,7 @@
         >
         <a
           target="_blank"
+          rel="noreferrer"
           class="hover:text-rose-500 {activeLink.includes('blog')
             ? 'text-rose-500'
             : ''}"
@@ -113,6 +107,7 @@
         >
         <a
           target="_blank"
+          rel="noreferrer"
           class="hover:text-rose-500 {activeLink.includes('blog')
             ? 'text-rose-500'
             : ''}"
@@ -121,6 +116,7 @@
         >
         <a
           target="_blank"
+          rel="noreferrer"
           class="hover:text-rose-500 {activeLink.includes('blog')
             ? 'text-rose-500'
             : ''}"
@@ -129,6 +125,7 @@
         >
         <a
         target="_blank"
+        rel="noreferrer"
         class="hover:text-rose-500 {activeLink.includes('blog')
           ? 'text-rose-500'
           : ''}"
@@ -160,7 +157,7 @@
         </div></button
       >
     {/if}
-  </nav>
+    </nav>
 </div>
 
 <style>
@@ -239,4 +236,28 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+  .desktop {
+    display: none;
+    justify-content: space-between;
+    padding: 12px 32px;
+    width: 100%;
+    background-color: white;
+  }
+
+  @media (min-width: 800px) {
+    .desktop {
+    display: none;
+    display: flex;
+    border-bottom-width: 1px;
+   }
+  }
+
+  /* for drop shadow on nav to appear on scroll down */
+  @media (max-height: 5px) {
+    .desktop {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+
 </style>
