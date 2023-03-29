@@ -1,18 +1,15 @@
-<footer
-  class="hidden md:flex flex-col pt-10 pb-5 border-t text-sm"
-  style="display:block"
->
-  <div class="hidden md:flex justify-around text-sm px-16">
-    <div class="flex flex-col space-y-3 text-gray-600">
-      <a href="/docs/installation" class="text-gray-700 font-semibold"
+<footer class="footerWrap">
+  <div class="footerTop">
+    <div class="section">
+      <a href="/docs/installation" class="sectionName"
         >Getting Started</a
       >
       <a href="/docs/installation">Installation</a>
       <a href="/docs/basic-usage">Basic Usage</a>
       <a href="/docs/core-concepts">Core Concepts</a>
     </div>
-    <div class="flex flex-col space-y-3 text-gray-600">
-      <a href="/docs/custom-nodes" class="text-gray-700 font-semibold">Guides</a>
+    <div class="section">
+      <a href="/docs/custom-nodes" class="sectionName">Guides</a>
       <a href="/docs/custom-nodes">Custom Nodes</a>
       <a href="/docs/custom-edges">Custom Edges</a>
       <a href="/docs/pan-and-zoom">Panning and Zooming</a>
@@ -32,8 +29,8 @@
       <a href="/docs/editEdge">Interactive Editable Nodes and Edges</a> 
       <!-- <a href="/docs/delete">Deletable Nodes</a> -->
     </div>
-    <div class="flex flex-col space-y-3 text-gray-600">
-      <a href="/" class="text-gray-700 font-semibold">Community</a>
+    <div class="section">
+      <a href="/" class="sectionName">Community</a>
       <a
         target="_blank"
         rel="noreferrer"
@@ -94,8 +91,8 @@
       >
     </div>
   </div>
-  <div class="flex flex-col items-center mt-10 text-gray-500">
-    <div class="text-xs">
+  <div class="footerBottom">
+    <div style="font-size: 0.75rem;">
       &copy; 2023 Svelvet | <a
         target="_blank"
         rel="noreferrer"
@@ -103,13 +100,54 @@
         >MIT License</a
       >
     </div>
-    <div class="text-xs">
+    <div style="font-size: 0.75rem;">
       Website designed by <a
         href="https://wendyhuynhdesign.com/"
         rel="noreferrer"
         target="_blank"
-        class="text-rose-400">Wendy Huynh</a
+        style="color: #EC7489;">Wendy Huynh</a
       >
     </div>
   </div>
 </footer>
+
+<style>
+  .footerWrap {
+    padding-top: 2.5rem;
+    padding-bottom: 1.25rem;
+    border-top-width: 1px;
+    font-size: 0.875rem;
+  }
+  .footerTop {
+    display: none;     
+    font-size: 0.875rem;
+    padding: 1rem 4rem;
+  }
+  .footerBottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.25rem;
+    color: #6b7280;
+  }
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    color: #4B5563;
+  }
+  .sectionName {
+    font-weight: 600;
+    color: #374151;
+  }
+  @media (min-width: 768px) {
+    .footerWrap {
+      display: block;
+      flex-direction: column;
+    }
+    .footerTop {
+      display: flex;
+      justify-content: space-around;
+    }     
+  }
+</style>

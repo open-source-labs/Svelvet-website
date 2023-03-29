@@ -281,7 +281,7 @@
   .topWrapper h1 {
     font-size: 2rem;
     font-weight: bold;
-    color: #4b5563;
+    color: #1F2937;
     padding-bottom: 1vw;
   }
   .topWrapper p {
@@ -392,7 +392,7 @@
     font-size: 2rem; 
     font-weight: bold; 
     text-align: center; 
-    color: #4b5563;
+    color: #374151;
   }
   .installInner1 p {
     margin-bottom: 1rem;
