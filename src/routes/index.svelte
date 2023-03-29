@@ -386,6 +386,7 @@
   .installInner1 {
     order: 1;
     align-self: center;
+    text-align: center;
   }
   .installInner1 h3 {
     font-size: 2rem; 
@@ -535,6 +536,7 @@
     .installInner1 {
       order: 1;
       padding-right: 5vw;
+      text-align: center;
     }
     .installInner2 {
       order: 2;

@@ -14,6 +14,9 @@
 
   $: activeLink = `${$page.url.pathname}`;
   let y: number;
+
+  export let mediumArticle;
+
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -93,7 +96,7 @@ class:shadow-lg={y > 5}
           class="hover:text-rose-500 {activeLink.includes('blog')
             ? 'text-rose-500'
             : ''}"
-          href="https://medium.com/@alexander.zambrano/simplify-application-diagramming-with-svelvet-a8f664731243"
+          href='https://medium.com/@alexander.zambrano/simplify-application-diagramming-with-svelvet-a8f664731243/'
           >Svelvet 1.0</a
         >
         <a
@@ -131,7 +134,16 @@ class:shadow-lg={y > 5}
           : ''}"
         href="https://medium.com/@hor.val/svelvet-6-0-the-svelte-component-library-for-building-interactive-node-based-diagrams-81dafa2d50cd"
         >Svelvet 6.0</a
-      >
+        >
+        <a
+        target="_blank"
+        rel="noreferrer"
+        class="hover:text-rose-500 {activeLink.includes('blog')
+          ? 'text-rose-500'
+          : ''}"
+        href="https://medium.com/LINKGOESHERE"
+        >Svelvet 7.0</a
+        >
       </div>
     </div>
 

@@ -12,8 +12,7 @@
       <a href="/docs/core-concepts">Core Concepts</a>
     </div>
     <div class="flex flex-col space-y-3 text-gray-600">
-      <a href="/docs/custom-nodes" class="text-gray-700 font-semibold">Guides</a
-      >
+      <a href="/docs/custom-nodes" class="text-gray-700 font-semibold">Guides</a>
       <a href="/docs/custom-nodes">Custom Nodes</a>
       <a href="/docs/custom-edges">Custom Edges</a>
       <a href="/docs/pan-and-zoom">Panning and Zooming</a>
@@ -37,38 +36,59 @@
       <a href="/" class="text-gray-700 font-semibold">Community</a>
       <a
         target="_blank"
+        rel="noreferrer"
         href="https://medium.com/@alexander.zambrano/simplify-application-diagramming-with-svelvet-a8f664731243"
         >Svelvet 1.0</a
       >
       <a
         target="_blank"
+        rel="noreferrer"
         href="https://medium.com/gitconnected/svelvet-2-0-c6b2059734a6"
         >Svelvet 2.0</a
       >
       <a
         target="_blank"
+        rel="noreferrer"
         href="https://medium.com/@MauricioACastro/svelvet-4-0-the-power-of-html-is-now-inside-your-nodes-3d96823096e3"
         >Svelvet 4.0</a
       >
       <a
         target="_blank"
+        rel="noreferrer"
         href="https://medium.com/@efergus1/svelvet-5-0-a-community-driven-update-cfcc93e7b7a7"
         >Svelvet 5.0</a
       >
       <a
-      target="_blank"
-      href="https://medium.com/@hor.val/svelvet-6-0-the-svelte-component-library-for-building-interactive-node-based-diagrams-81dafa2d50cd"
+        target="_blank"
+        rel="noreferrer"
+        href="https://medium.com/@hor.val/svelvet-6-0-the-svelte-component-library-for-building-interactive-node-based-diagrams-81dafa2d50cd"
       >Svelvet 6.0</a
-     >
-      <a target="_blank" href="https://github.com/open-source-labs/Svelvet"
-        >GitHub</a
       >
-      <a target="_blank" href="https://www.linkedin.com/company/svelvet/"
-        >LinkedIn</a
-      >
-      <a target="_blank" href="https://twitter.com/SvelvetOSLabs">Twitter</a>
       <a
         target="_blank"
+        rel="noreferrer"
+        href="https://medium.com/@hor.val/LINKGOESHERE"
+      >Svelvet 7.0</a
+      >
+      <a 
+        target="_blank" 
+        rel="noreferrer" 
+        href="https://github.com/open-source-labs/Svelvet"
+        >GitHub</a
+      >
+      <a 
+        target="_blank" 
+        rel="noreferrer" 
+        href="https://www.linkedin.com/company/svelvet/"
+        >LinkedIn</a
+      >
+      <a 
+        target="_blank" 
+        rel="noreferrer" 
+        href="https://twitter.com/SvelvetOSLabs">Twitter</a>
+      <a
+        target="_blank"
+        rel="noreferrer"
         href="https://stackoverflow.com/questions/tagged/svelvet"
         >Stack Overflow</a
       >
@@ -76,8 +96,9 @@
   </div>
   <div class="flex flex-col items-center mt-10 text-gray-500">
     <div class="text-xs">
-      &copy; 2022 Svelvet | <a
+      &copy; 2023 Svelvet | <a
         target="_blank"
+        rel="noreferrer"
         href="https://github.com/open-source-labs/Svelvet/blob/main/LICENSE"
         >MIT License</a
       >
@@ -85,6 +106,7 @@
     <div class="text-xs">
       Website designed by <a
         href="https://wendyhuynhdesign.com/"
+        rel="noreferrer"
         target="_blank"
         class="text-rose-400">Wendy Huynh</a
       >
