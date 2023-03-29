@@ -139,7 +139,7 @@
         nodes={initialNodes}
         edges={initialEdges}
         initialLocation={{ x: 260, y: 250 }}
-        initialZoom={2}
+        initialZoom={1}
         width={550}
         height={550}
         background
