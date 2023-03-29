@@ -33,6 +33,34 @@ import thomas from '../assets/profiles/thomas.png';
 
 export const contributors = [
   {
+    firstName: 'Brian',
+    lastName: 'Holmes',
+    linkedin: 'briangregoryholmes',
+    github: 'briangregoryholmes',
+    image: brian,
+  },
+  {
+    firstName: 'Britta',
+    lastName: 'Ager',
+    linkedin: 'britta-ager-84394a129',
+    github: 'bkager',
+    image: britta,
+  },
+  {
+    firstName: 'Jen',
+    lastName: 'Lee',
+    linkedin: 'jenleesj',
+    github: 'sjjen',
+    image: jen,
+  },
+  {
+    firstName: 'Thomas',
+    lastName: 'Kady',
+    linkedin: 'thomas-kady-45725b149',
+    github: 'thomaskady',
+    image: thomas,
+  },
+  {
     firstName: 'Anu',
     lastName: 'Sharma',
     image: anu,
@@ -221,33 +249,5 @@ export const contributors = [
     github: 'michael-chiang-dev5',
     image: michael,
   },
-  {
-    firstName: 'Brian',
-    lastName: 'Holmes',
-    linkedin: 'briangregoryholmes',
-    github: 'briangregoryholmes',
-    image: brian,
-  },
-  {
-    firstName: 'Britta',
-    lastName: 'Ager',
-    linkedin: 'britta-ager-84394a129',
-    github: 'bkager',
-    image: britta,
-  },
-  {
-    firstName: 'Jen',
-    lastName: 'Lee',
-    linkedin: 'jenleesj',
-    github: 'sjjen',
-    image: jen,
-  },
-  {
-    firstName: 'Thomas',
-    lastName: 'Kady',
-    linkedin: 'thomas-kady-45725b149',
-    github: 'thomaskady',
-    image: thomas,
-  }
 ];
 
