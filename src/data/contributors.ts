@@ -1,3 +1,4 @@
+// ADD A 1:1 RATIO .PNG PHOTO TO THE ASSETS FOLDER **IMPORTANT! THE PIC NEEDS TO BE SQUARE**
 import anu from '../assets/profiles/Anu-small.png';
 import andrew from '../assets/profiles/Andrew-small.png';
 import alexander from '../assets/profiles/Alexander-small.png';
@@ -26,21 +27,52 @@ import horacio from '../assets/profiles/horacio.png';
 import rachel from '../assets/profiles/rachel.png';
 import michael from '../assets/profiles/michael.png';
 import jen from '../assets/profiles/jen.png';
+import britta from '../assets/profiles/britta.png';
+import brian from '../assets/profiles/brian.png';
+import thomas from '../assets/profiles/thomas.png';
 
 export const contributors = [
+  {
+    firstName: 'Brian',
+    lastName: 'Holmes',
+    linkedin: 'briangregoryholmes',
+    github: 'briangregoryholmes',
+    image: brian,
+  },
+  {
+    firstName: 'Britta',
+    lastName: 'Ager',
+    linkedin: 'britta-ager-84394a129',
+    github: 'bkager',
+    image: britta,
+  },
+  {
+    firstName: 'Jen',
+    lastName: 'Lee',
+    linkedin: 'jenleesj',
+    github: 'sjjen',
+    image: jen,
+  },
+  {
+    firstName: 'Thomas',
+    lastName: 'Kady',
+    linkedin: 'thomas-kady-45725b149',
+    github: 'thomaskady',
+    image: thomas,
+  },
   {
     firstName: 'Anu',
     lastName: 'Sharma',
     image: anu,
     github: 'anulepau',
-    linkedin: 'anu-sharma-6936a686/',
+    linkedin: 'anu-sharma-6936a686',
   },
   {
     firstName: 'Andrew',
     lastName: 'Widjaja',
     image: andrew,
-    github: 'andrew-widjaja/',
-    linkedin: 'andrew-widjaja/',
+    github: 'andrew-widjaja',
+    linkedin: 'andrew-widjaja',
   },
   {
     firstName: 'Aaron',
@@ -102,7 +134,7 @@ export const contributors = [
     firstName: 'David',
     lastName: 'Jakubiec',
     image: david,
-    linkedin: 'david-jakubiec-16783384/',
+    linkedin: 'david-jakubiec-16783384',
     githubLink: 'davidjakubiec',
   },
   {
@@ -196,7 +228,6 @@ export const contributors = [
     github: 'horaciovallejo',
     image: horacio,
   },
-  //NEED NEW GITHUB HANDLE !!!
   {
     firstName: 'Ernesto',
     lastName: 'Gonzales',
@@ -204,7 +235,6 @@ export const contributors = [
     github: 'ErnestoGonza',
     image: ernesto,
   },
-  //something wrong w her photo????
   {
     firstName: 'Rachel',
     lastName: 'He',
@@ -219,33 +249,5 @@ export const contributors = [
     github: 'michael-chiang-dev5',
     image: michael,
   },
-  {
-    firstName: 'Brian',
-    lastName: 'Holmes',
-    linkedin: 'briangregoryholmes',
-    github: 'briangregoryholmes',
-    image: michael,
-  },
-  {
-    firstName: 'Britta',
-    lastName: 'Ager',
-    linkedin: 'britta-ager-84394a129',
-    github: 'bkager',
-    image: michael,
-  },
-  {
-    firstName: 'Jen',
-    lastName: 'Lee',
-    linkedin: 'jenleesj',
-    github: 'sjjen',
-    image: jen,
-  },
-  {
-    firstName: 'Thomas',
-    lastName: 'Kady',
-    linkedin: 'thomas-kady-45725b149',
-    github: 'thomaskady',
-    image: michael,
-  }
 ];
 
