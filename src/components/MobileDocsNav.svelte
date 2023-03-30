@@ -333,7 +333,7 @@
     width: 28px;
     height: 2px;
     border-radius: 9999px;
-    background-color: rgb(174, 174, 174);
+    background-color: rgb(104, 104, 104);
   }
   #navMenu > span:not(:last-child) {
     margin-bottom: 7px;
@@ -379,6 +379,7 @@
   }
   .docsDropDown li.selected {
     background-color: #FAE4E6;
+    color: #E94646;
   }
   .toggle {
     padding: 1rem 3rem;
@@ -388,7 +389,7 @@
     width: 100%;
   }
   .toggle:hover {
-    color: #4B5563;
+    color: #E94646;
   }
   .outer {
     display: block;
@@ -396,7 +397,7 @@
     font-weight: 500;
   }
   .outer:hover {
-    color: #4B5563;
+    color: #E94646;
   }
   .nested {
     display: block;

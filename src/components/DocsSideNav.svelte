@@ -40,10 +40,10 @@
 </script>
 
 <!-- Ask Team: about implementation of foreach loop for links/routes -->
-<div class="hidden md:block">
-  <div class="flex flex-col my-5 text-sm w-full">
-    <p class="font-medium text-gray-700 leading-9">Getting Started</p>
-    <div class="flex flex-col leading-9 text-gray-500 ">
+<div class="wrapper">
+  <div class="installSection">
+    <p class="title">Getting Started</p>
+    <div class="item">
       {#each gettingStartedLinks as link}
         <a
           id={link[0]}
@@ -52,14 +52,15 @@
             link[1]
           )
             ? 'text-rose-500 hover:text-rose-500 border-rose-300'
-            : 'hover:text-gray-700 border-gray-100'}">{link[0]}</a
+            : 'hover:text-gray-700 border-gray-100'}">
+          {link[0]}</a
         >
       {/each}
     </div>
   </div>
-  <div class="flex flex-col my-5 text-sm">
-    <p class="font-medium text-gray-700 leading-9">Guides</p>
-    <div class="flex flex-col leading-9 text-gray-500 ">
+  <div class="guideSection">
+    <p class="title">Guides</p>
+    <div class="item">
       {#each guideLinks as link}
         <a
           id={link[0]}
@@ -74,3 +75,38 @@
     </div>
   </div>
 </div>
+
+<style>
+  .wrapper {
+    display: none;
+  }
+  .installSection {
+    display: flex; 
+    flex-direction: column; 
+    margin-top: 1.25rem; 
+    font-size: 0.875rem; 
+    width: 100%;
+  }
+  .guideSection {
+    display: flex; 
+    flex-direction: column; 
+    margin-top: 1.25rem; 
+    font-size: 0.875rem;
+  }
+  .title {
+    font-weight: 500; 
+    color: #1F2937; 
+    line-height: 3;
+  }
+  .item {
+    display: flex; 
+    flex-direction: column; 
+    line-height: 2.5; 
+    color: #6B7280;
+  }
+  @media (min-width: 800px) {
+    .wrapper {
+      display: block;
+    }
+  }
+</style>
