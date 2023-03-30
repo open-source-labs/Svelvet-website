@@ -40,6 +40,7 @@ Shout out to our contributors! Here's what's new:
   <li>Reworked landing page hierarchy</li>
   <li>Tweaked & added more media query breakpoints to improve website responsiveness</li>
   <li>Added Contributors & Contributors Grid components to map out each contributor on landing page</li>
+  <li>Added Drop Menu for all medium articles in MobileDocsNav</li>
 </ul>
 </details>
 

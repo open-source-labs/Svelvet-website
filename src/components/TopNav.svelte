@@ -109,17 +109,17 @@ class:shadow-lg={y > 5}
           >Svelvet 5.0</a
         >
         <a
-        target="_blank"
-        rel="noreferrer"
-        class:selected={activeLink.includes('blog')}
-        href="https://medium.com/@hor.val/svelvet-6-0-the-svelte-component-library-for-building-interactive-node-based-diagrams-81dafa2d50cd"
-        >Svelvet 6.0</a
+          target="_blank"
+          rel="noreferrer"
+          class:selected={activeLink.includes('blog')}
+          href="https://medium.com/@hor.val/svelvet-6-0-the-svelte-component-library-for-building-interactive-node-based-diagrams-81dafa2d50cd"
+          >Svelvet 6.0</a
         >
         <a
-        target="_blank"
-        rel="noreferrer"
-        class:selected={activeLink.includes('blog')}
-        href="https://medium.com/LINKGOESHERE"
+          target="_blank"
+          rel="noreferrer"
+          class:selected={activeLink.includes('blog')}
+          href="https://medium.com/LINKGOESHERE"
         >Svelvet 7.0</a
         >
       </div>

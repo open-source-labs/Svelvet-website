@@ -8,21 +8,21 @@
   $: activeLink = `${$page.url.pathname}`;
 
   let hidden = true;
-  let showDocs = false;
   let showGettingStarted = false;
   let showGuides = false;
+  let showBlogs = false;
 
   const toggleMenu = () => {
     hidden = !hidden;
-  };
-  const toggleDocs = () => {
-    showDocs = !showDocs;
   };
   const toggleGettingStarted = () => {
     showGettingStarted = !showGettingStarted;
   };
   const toggleGuides = () => {
     showGuides = !showGuides;
+  };
+  const toggleBlogs = () => {
+    showBlogs = !showBlogs;
   };
   let y: number;
 </script>
@@ -235,16 +235,84 @@
         </ul>
       {/if}
 
-      <li class:selected={activeLink.includes('blog')}>
-        <!-- !!!!!!!!!!!!! ADD 7.0 ARTICLE LINK HERE !!!!!!!!!!-->
-        <a
-          on:click={toggleMenu}
-          target="_blank"
-          rel="noreferrer"
-          href="https://medium.com/@alexander.zambrano/simplify-application-diagramming-with-svelvet-a8f664731243"
-          class="outer">Blog</a
+      <li>
+        <button
+          on:click={toggleBlogs}
+          class="toggle"
         >
+          <span>Blogs</span>
+          {#if showBlogs}
+            <img src={downArrow} alt="down arrow" />
+          {:else}
+            <img src={rightArrow} alt="right arrow" />
+          {/if}
+        </button>
       </li>
+      {#if showBlogs}
+        <ul transition:slide class="list">
+          <li class:selected={activeLink.includes('blog')}>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              class="nested"
+              on:click={toggleMenu}
+              href='https://medium.com/@alexander.zambrano/simplify-application-diagramming-with-svelvet-a8f664731243/'
+              >Svelvet 1.0</a
+            >
+          </li>
+          <li class:selected={activeLink.includes('blog')}>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              class="nested"
+              on:click={toggleMenu}
+              href="https://medium.com/gitconnected/svelvet-2-0-c6b2059734a6"
+              >Svelvet 2.0</a
+            >
+          </li>
+          <li class:selected={activeLink.includes('blog')}>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              class="nested"
+              on:click={toggleMenu}
+              href="https://medium.com/@MauricioACastro/svelvet-4-0-the-power-of-html-is-now-inside-your-nodes-3d96823096e3"
+              >Svelvet 4.0</a
+            >
+          </li>
+          <li class:selected={activeLink.includes('blog')}>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              class="nested"
+              on:click={toggleMenu}
+              href="https://medium.com/@efergus1/svelvet-5-0-a-community-driven-update-cfcc93e7b7a7"
+              >Svelvet 5.0</a
+            >
+          </li>
+          <li class:selected={activeLink.includes('blog')}>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              class="nested"
+              on:click={toggleMenu}
+              href="https://medium.com/@hor.val/svelvet-6-0-the-svelte-component-library-for-building-interactive-node-based-diagrams-81dafa2d50cd"
+              >Svelvet 6.0</a
+            >
+          </li>
+                  <!-- !!!!!!!!!!!!! ADD 7.0 ARTICLE LINK HERE !!!!!!!!!!-->
+          <li class:selected={activeLink.includes('blog')}>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              class="nested"
+              on:click={toggleMenu}
+              href="https://medium.com/LINKGOESHERE"
+            >Svelvet 7.0</a
+            >
+          </li>
+        </ul>
+      {/if}
       <li>
         <a
           on:click={toggleMenu}
@@ -265,7 +333,7 @@
     width: 28px;
     height: 2px;
     border-radius: 9999px;
-    background-color: rgb(104, 104, 104);
+    background-color: rgb(174, 174, 174);
   }
   #navMenu > span:not(:last-child) {
     margin-bottom: 7px;
@@ -319,14 +387,23 @@
     justify-content: space-between;
     width: 100%;
   }
+  .toggle:hover {
+    color: #4B5563;
+  }
   .outer {
     display: block;
     padding: 1rem 3rem;
     font-weight: 500;
   }
+  .outer:hover {
+    color: #4B5563;
+  }
   .nested {
     display: block;
     padding: 1rem 4rem;
+  }
+  .nested:hover {
+    color: #E94646;
   }
   .list {
     cursor: pointer;
