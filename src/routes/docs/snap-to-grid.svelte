@@ -89,12 +89,24 @@ let code_sample = `< Svelvet snap={true} snapTo={30} />`
 </script>
 
 <div>
-  <h2 class="text-4xl font-semibold mb-12">Snap-To-Grid</h2>
+  <h2 class="text-4xl font-semibold mb-12">Snap to Grid</h2>
 
   <p class="my-4 text-gray-600">
     Snap-To-Grid is a lively feature that <code class="code">Svelvet</code> offers for a unique user experience when building out your data diagram-flow. Although simplisitc in its design, snap-to-grid can be as energetic or as subtle as you want. 
   </p>
-  <div class="overflow-hidden my-8 border border-gray-200 rounded-lg shadow-lg shadow-slate-100">
+  <p class="my-4 text-gray-600">
+     Snap-to-grid can easily be modifed within the Svelvet component declaration by changing the values passed into the <code class="code">snap</code> and <code class="code">snapTo</code> props. 
+     <!-- <code> <Svelvet nodes={initialNodes} edges={initialEdges} background snap={true} snapTo={30}/> </code>  -->
+  </p>
+	<code class="block rounded-md p-3 bg-rose-100 text-rose-600 w-full sm:w-3/4 md:w-1/2"
+	> {code_sample}
+	</code> 
+	<br>
+	<p>
+		If no specified numerical value is passed into snapTo, the default value is set to 30.
+	</p>
+
+	<div class="overflow-hidden my-8 border border-gray-200 rounded-lg shadow-lg shadow-slate-100">
     <Svelvet
       nodes={initialNodes}
       edges={initialEdges}
@@ -107,16 +119,7 @@ let code_sample = `< Svelvet snap={true} snapTo={30} />`
 	  initialLocation={{ x: 753, y:220 }}
     />
   </div>
-  <p class="my-4 text-gray-600">
-     The diagram above features the snap-to-grid functionality whenver a node's position is changed. Upon Svelvet 4.0's release, snap-to-grid can easily be modifed within the Svelvet component declaration by changing the values passed into the <code class="code">snap</code> and <code class="code">snapTo</code> props. <br><br> 
-     <!-- <code> <Svelvet nodes={initialNodes} edges={initialEdges} background snap={true} snapTo={30}/> </code>  -->
 
-     <code class="block rounded-md p-3 bg-rose-100 text-rose-600 w-full sm:w-3/4 md:w-1/2"
-      > {code_sample}
-    </code>
-
-     <br>If no specified numerical value is passed into snapTo, the default value is set to 30. 
-  </p>
 </div>
 
 <style>

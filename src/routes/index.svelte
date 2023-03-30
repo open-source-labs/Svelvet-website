@@ -125,11 +125,11 @@
 <div class="topWrapper">
   <div class='topLeft'>
     <h1>
-      Mapping out your ideas with Svelte has never been easier
+      Create beautiful flow diagrams in Svelte
     </h1>
     <p>
       <code class="highlight" style="color:#E94646;">Svelvet</code> is a lightweight Svelte
-      component library for building interactive node-based flow diagrams
+      component library for building interactive node graphs 
     </p>
     <div class='buttonWrapper'><a href="/docs/installation" class="btn-pink">Get Started</a></div>
   </div>
@@ -139,7 +139,7 @@
         nodes={initialNodes}
         edges={initialEdges}
         initialLocation={{ x: 260, y: 250 }}
-        initialZoom={2}
+        initialZoom={1}
         width={550}
         height={550}
         background
@@ -158,8 +158,7 @@
       </h3>
       <p>
         Svelvet allows you to easily create intuitive flow diagrams using
-        pre-built components with seamless zooming and panning, draggable
-        interactivity, customizable edges and nodes and more!
+        pre-built components with node-to-node data flow, seamless zooming and panning, customizable edges and nodes and more!
       </p>
       <a href="/docs/core-concepts" class="btn-white">
         Learn More

@@ -81,7 +81,7 @@ class:shadow-lg={y > 5}
       id="playground"
       class="hover:text-rose-500 {activeLink.includes('REPL')
         ? 'text-rose-500'
-        : ''}">REPL</a
+        : ''}">Sandbox</a
     >
 
     <div class="dropdown">

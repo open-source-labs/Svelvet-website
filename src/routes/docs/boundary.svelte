@@ -201,8 +201,8 @@
 <h2 class="text-4xl font-semibold mb-12">Diagram Boundary</h2>
 
 <p class="text-gray-600">
-  <code class="bg-rose-100 rounded-lg p-1">Svelvet</code> now has an optional
-  boundary that users can implement into their diagrams! To access this feature,
+  <code class="bg-rose-100 rounded-lg p-1">Svelvet</code> has an optional
+  boundary that users can implement into their diagrams. To access this feature,
   pass the <code class="bg-rose-100 rounded-lg p-1">boundary</code> prop to your
   <code class="bg-rose-100 rounded-lg p-1">Svelvet</code>
   application and set it equal to an object. Give the
@@ -226,9 +226,8 @@
     Implementing Diagram Boundaries
   </h3>
   <p class="text-gray-600">
-    Click <a
-      href="https://stackblitz.com/edit/sveltejs-kit-template-default-kjzkzt?file=src/routes/+layout.svelte"
-      style="color: blue">here</a
+    Click <a class="text-rose-600 underline underline-offset-1"
+      href="https://stackblitz.com/edit/sveltejs-kit-template-default-8sdfen?file=src/routes/+layout.svelte">here</a
     > for a sandbox, or test it out below!
   </p>
 </div>

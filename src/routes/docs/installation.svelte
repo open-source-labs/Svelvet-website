@@ -62,14 +62,17 @@
     We use the following terms to describe parts of a Svelvet flow diagram:
   </p>
   <p class="my-4 ml-4 text-gray-600">
-    <strong>Node:</strong> A node is a draggable element that can be connected to other nodes.
+    <strong>Node:</strong> A node is a draggable element that can be connected to other nodes. It may contain multiple components like sliders, etc. 
+    <br />
     <br />
     <strong>Edge:</strong> An edge is the connecting line between two nodes.
     <br />
+    <br />
     <!--Svelvet 6.0 added Anchor -->
-    <strong>Anchor:</strong> An anchor is the connecting point between the node and the edge. 
+    <strong>Anchor:</strong> An anchor is the point where the edge connects to the node. 
+    <br />
     <br />
     <strong>Handle:</strong> A handle is the element or shape that appears at the start or end of each
-    edge (e.g. semi-circle or arrowhead).
+    edge (e.g. circle).
   </p>
 </div>
