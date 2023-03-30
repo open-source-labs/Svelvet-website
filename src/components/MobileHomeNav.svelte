@@ -58,9 +58,7 @@
       href="/"
       class="svelvet">svelvet</a
     >
-    <p
-      class="version"
-    >
+    <p class="version">
       v7.0.0
     </p>
   </div>
@@ -75,26 +73,25 @@
 {#if !hidden}
   <div
     transition:slide
-    class="mobile absolute w-full mobile-menu border px-8 bg-gray-100 text-gray-700"
+    class="mobileDropDown"
   >
-    <ul class="text-center">
+    <ul>
       <li>
-        <a on:click={toggleMenu} href="/" class="block py-6">Home</a>
+        <a on:click={toggleMenu} href="/">Home</a>
       </li>
       <li>
-        <a on:click={toggleMenu} href="/docs/installation" class="block py-6">Docs</a>
+        <a on:click={toggleMenu} href="/docs/installation">Docs</a>
       </li>
-      <!-- //TODO create button for create page -->
       <li>
         <a
           on:click={toggleMenu}
           href="https://github.com/open-source-labs/Svelvet"
           target="_blank"
           rel="noreferrer"
-          class="block py-6">Github</a
+        >Github</a
         >
       <li>
-        <a on:click={toggleMenu} href="/playground" class="block py-6">Sandbox</a>
+        <a on:click={toggleMenu} href="/playground">Sandbox</a>
       </li>
       <li>
         <a
@@ -102,19 +99,19 @@
           target="_blank"
           rel="noreferrer"
           href="https://medium.com/@justinwouters/svelvet-2-0-c6b2059734a6"
-          class="block py-6">Blogs</a
+        >Blogs</a
         >
       </li>
-      <!-- added login / logout button link! -->
 
+      <!-- added login / logout button link! -->
       {#if $user}
       <button on:click={logout}>
-        <div class="login-container rounded-full px-4 py-1 bg-rose-100 text-red-400 tracking-wider hover:text-rose-500 hover:bg-white">Logout 
+        <div class="login-container btn-pink">Logout 
         <img src={$user_avatar} alt="user pic"/>
       </div> 
       </button>
     {:else}
-      <button on:click={signInWithGithub}><div class="login-container px-6 py-3 btn-primary">
+      <button on:click={signInWithGithub}><div class="login-container btn-pink">
         Log In
         <img src={github} alt="github-logo" />
       </div></button>
@@ -185,6 +182,21 @@
     display: flex;
     border-bottom-width: 1px;
   }
+  .mobileDropDown {
+    position: absolute;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 0 2rem 1.5rem 0;
+    background-color: #f4f4f4;
+    color: #4a4a4a;
+  }
+  .mobileDropDown ul {
+    text-align: center;
+  }
+  .mobileDropDown li {
+    display: block;
+    padding: 1.25rem 0;
+  }
   .mobile-menu-button {
     outline: none;
     padding-left: 2rem;
@@ -205,6 +217,26 @@
     letter-spacing: 0.05em;
     margin-left: 0.5rem;
     margin-right: 1.5rem;
+  }
+  .btn-pink {
+    display: inline-block;
+    width: fit-content;
+    text-align: center;
+    margin-top: 1rem;
+    padding: .5rem 1rem;
+    text-align: center;
+    background-color: #E94646;
+    border-radius: 2rem;
+    color: #fff;
+    font-size: 1.125rem;
+    transition: background-color 0.2s ease-in-out;
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+    backdrop-filter: blur( 1.125rem ); 
+  }
+  .btn-pink:hover {
+    background-color: #fff;
+    outline: 1px solid #E94646;
+    color: #E94646;
   }
   #navMenu {
     text-align: left;
