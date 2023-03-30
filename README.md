@@ -37,6 +37,9 @@ Shout out to our contributors! Here's what's new:
   <li>Split website code into separate repository</li>
   <li>Removed unused forum code</li>
   <li>Solved github issue #s: </li>
+  <li>Reworked landing page hierarchy</li>
+  <li>Tweaked & added more media query breakpoints to improve website responsiveness</li>
+  <li>Added Contributors & Contributors Grid components to map out each contributor on landing page</li>
 </ul>
 </details>
 
@@ -129,10 +132,10 @@ import Svelvet from 'svelvet';
 - Michael Chiang • [LinkedIn](https://www.linkedin.com/in/michael-chiang-84509025b/) • [Github](https://github.com/michael-chiang-dev5)
 - Rachel He • [LinkedIn](https://www.linkedin.com/in/rachel-he-8200563b/) • [Github](https://github.com/rachelheplus)
 - Horacio Vallejo • [LinkedIn](https://www.linkedin.com/in/horacio-vallejo-100643187/) • [Github](https://github.com/horaciovallejo)
-- Brian Holmes • [LinkedIn](https://www.linkedin.com/in/ernesto-gonzalez123) • [Github](https://github.com/ErnestoGonza)
-- Britta Ager • [LinkedIn](https://www.linkedin.com/in/michael-chiang-84509025b/) • [Github](https://github.com/michael-chiang-dev5)
-- Thomas Kady • [LinkedIn](https://www.linkedin.com/in/rachel-he-8200563b/) • [Github](https://github.com/rachelheplus)
-- Jen Lee • [LinkedIn](https://www.linkedin.com/in/horacio-vallejo-100643187/) • [Github](https://github.com/horaciovallejo)
+- Brian Holmes • [LinkedIn](https://www.linkedin.com/in/briangregoryholmes/) • [Github](https://github.com/briangregoryholmes)
+- Britta Ager • [LinkedIn](https://www.linkedin.com/in/britta-ager-84394a129) • [Github](https://github.com/bkager)
+- Thomas Kady • [LinkedIn](https://www.linkedin.com/in/thomas-kady-45725b149/) • [Github](https://github.com/thomaskady)
+- Jen Lee • [LinkedIn](https://www.linkedin.com/in/jenleesj/) • [Github](https://github.com/sjjen)
 
 <br>
 
