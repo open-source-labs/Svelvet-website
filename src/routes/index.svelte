@@ -343,7 +343,8 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 6.5vw 5vw;
+    padding: 8vw 5vw;
+    margin: 2vw 0;
   }
   .text-container h3 {
     font-size: 2rem;
@@ -382,6 +383,7 @@
     padding: 5vw;
     align-self: center;
     text-align: left;
+    margin: 10vw 0;
   }
   .installInner1 {
     order: 1;
@@ -400,7 +402,7 @@
     text-align: left;
   }
   .installInner2 {
-    display: flex;
+    display: none;
     flex-direction: column;
     padding: 5vw;
     order: 2;
@@ -532,6 +534,7 @@
       justify-content: space-between;
       padding: 8vw;
       text-align: left;
+      margin: 1vw 0;
     }
     .installInner1 {
       order: 1;
@@ -541,6 +544,9 @@
     .installInner2 {
       order: 2;
       align-self: center;
+      display: flex;
+      flex-direction: column;
+      padding: 5vw;
     }
     .installInner1 h3 {
       text-align: left;
