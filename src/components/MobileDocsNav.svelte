@@ -346,7 +346,7 @@
   }
   .svelvet {
     font-size: 1.875rem;
-    color: #4a5568;
+    color: #1F2937;
     font-family: 'Nunito', sans-serif;
     font-weight: 500;
     letter-spacing: 0.05em;

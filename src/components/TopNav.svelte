@@ -5,10 +5,9 @@
   import MobileHomeNav from './MobileHomeNav.svelte';
   import MobileDocsNav from './MobileDocsNav.svelte';
   import { signInWithGithub, logout, userInfo } from '../supabase-db';
-
   import { userInfoStore } from '../authStoreTs';
 
-  let { user, logged_in, user_avatar } = userInfoStore;
+  let { user, user_avatar } = userInfoStore;
   // use set method on user writable and set it equal to the return value of userIndo
   // user.set(userInfo);
 
@@ -33,114 +32,93 @@
 class:shadow-lg={y > 5}
   class="desktop"
 >
-  <div class=" flex items-center justify-center">
-    <img src={logo} alt="Logo" class="aspect-ratio-auto h-8" />
+  <div class="logoWrap">
+    <img src={logo} alt="Logo" class="logo" />
     <a
       id="home"
       href="/"
       on:click={() => {
         activeLink = '/';
       }}
-      class="text-3xl text-gray-700 font-nunito font-medium tracking-wide ml-2 mr-6"
+      class="svelvet"
       >svelvet</a
     >
-
-    <p
-      class="text-xs rounded-full px-4 py-1 bg-rose-100 text-red-400 tracking-wider"
-    >
+    <p class="version">
       v7.0.0
     </p>
   </div>
 
-  <nav class="space-x-9 text-sm text-gray-500 font-medium flex items-center">
+  <nav class="navBar">
     <a
       href="/"
       id="home"
-      class="hover:text-rose-500 {activeLink === '/' ? 'text-rose-500' : ''}"
+      class:selected={activeLink === '/'}
       >Home</a
     >
-
     <a
       href="/docs/installation"
       id="docs"
-      class="hover:text-rose-500 {activeLink.includes('docs')
-        ? 'text-rose-500'
-        : ''}">Docs</a
+      class:selected={activeLink.includes('docs')}
+     >Docs</a
     >
-
     <a
       href="https://github.com/open-source-labs/Svelvet"
       id="github"
       target="_blank"
       rel="noreferrer"
-      class="hover:text-rose-500">Github</a
+      >Github</a
     >
-
     <a
       href="/playground"
       id="playground"
-      class="hover:text-rose-500 {activeLink.includes('REPL')
-        ? 'text-rose-500'
-        : ''}">REPL</a
+      class:selected={activeLink.includes('playground')}
+      >REPL</a
     >
 
     <div class="dropdown">
-      <button class="dropbtn hover:text-rose-500"
-        >Blogs
-        <i class="fa fa-caret-down" />
+      <button class="dropbtn">
+        Blogs
       </button>
       <div class="dropdown-content">
         <a
           target="_blank"
           rel="noreferrer"
-          class="hover:text-rose-500 {activeLink.includes('blog')
-            ? 'text-rose-500'
-            : ''}"
+          class:selected={activeLink.includes('blog')}
           href='https://medium.com/@alexander.zambrano/simplify-application-diagramming-with-svelvet-a8f664731243/'
           >Svelvet 1.0</a
         >
         <a
           target="_blank"
           rel="noreferrer"
-          class="hover:text-rose-500 {activeLink.includes('blog')
-            ? 'text-rose-500'
-            : ''}"
+          class:selected={activeLink.includes('blog')}
           href="https://medium.com/gitconnected/svelvet-2-0-c6b2059734a6"
           >Svelvet 2.0</a
         >
         <a
           target="_blank"
           rel="noreferrer"
-          class="hover:text-rose-500 {activeLink.includes('blog')
-            ? 'text-rose-500'
-            : ''}"
+          class:selected={activeLink.includes('blog')}
           href="https://medium.com/@MauricioACastro/svelvet-4-0-the-power-of-html-is-now-inside-your-nodes-3d96823096e3"
           >Svelvet 4.0</a
         >
         <a
           target="_blank"
           rel="noreferrer"
-          class="hover:text-rose-500 {activeLink.includes('blog')
-            ? 'text-rose-500'
-            : ''}"
+          class:selected={activeLink.includes('blog')}
           href="https://medium.com/@efergus1/svelvet-5-0-a-community-driven-update-cfcc93e7b7a7"
           >Svelvet 5.0</a
         >
         <a
         target="_blank"
         rel="noreferrer"
-        class="hover:text-rose-500 {activeLink.includes('blog')
-          ? 'text-rose-500'
-          : ''}"
+        class:selected={activeLink.includes('blog')}
         href="https://medium.com/@hor.val/svelvet-6-0-the-svelte-component-library-for-building-interactive-node-based-diagrams-81dafa2d50cd"
         >Svelvet 6.0</a
         >
         <a
         target="_blank"
         rel="noreferrer"
-        class="hover:text-rose-500 {activeLink.includes('blog')
-          ? 'text-rose-500'
-          : ''}"
+        class:selected={activeLink.includes('blog')}
         href="https://medium.com/LINKGOESHERE"
         >Svelvet 7.0</a
         >
@@ -154,7 +132,7 @@ class:shadow-lg={y > 5}
         <!-- <div class="login-container rounded-full px-4 py-1 bg-rose-100 text-red-400 tracking-wider hover:text-rose-500 hover:bg-white">Logout
           <img src={$user_avatar} alt="user pic"/>
         </div> -->
-        <div class="login-container px-6 py-3 btn-primary">
+        <div class="login-container btn-pink">
           Logout
           <img src={$user_avatar} alt="user pic" />
         </div>
@@ -163,7 +141,7 @@ class:shadow-lg={y > 5}
       <!-- <img id="github-avatar" alt="github-avatar-photo"> -->
     {:else}
       <button on:click={signInWithGithub}
-        ><div class="login-container px-6 py-3 btn-primary">
+        ><div class="login-container btn-pink">
           Log In
           <img src={github} alt="github-logo" />
         </div></button
@@ -201,6 +179,7 @@ class:shadow-lg={y > 5}
   .dropdown {
     float: left;
     overflow: hidden;
+    color: #374151;
   }
 
   /* Dropdown button */
@@ -215,8 +194,11 @@ class:shadow-lg={y > 5}
   /* Add a red background color to navbar links on hover */
   .dropdown a:hover,
   .dropdown:hover .dropbtn {
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     color: #ff4561;
+  }
+  .dropbtn:hover {
+    background-color: #FAE4E6;
   }
 
   /* Dropdown content (hidden by default) */
@@ -232,16 +214,15 @@ class:shadow-lg={y > 5}
   /* Links inside the dropdown */
   .dropdown-content a {
     float: none;
-    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
   }
 
-  /* Add a grey background color to dropdown links on hover */
+  /* Add a pink background color to dropdown links on hover */
   .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #FAE4E6;
   }
 
   /* Show the dropdown menu on hover */
@@ -255,6 +236,71 @@ class:shadow-lg={y > 5}
     padding: 12px 32px;
     width: 100%;
     background-color: white;
+  }
+  .logoWrap {
+    display: flex; 
+    align-items: center;
+  }
+  .logo {
+    aspect-ratio: auto; 
+    height: 2rem;
+  }
+  .svelvet {
+    font-size: 1.875rem;
+    color: #1F2937;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin-left: 0.5rem;
+    margin-right: 1.5rem;
+  }
+  .version {
+    display: inline;
+    font-size: 0.75rem;
+    border-radius: 9999px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    background-color: #FAE4E6;
+    color: #E94646;
+    letter-spacing: 0.1em;
+  }
+  .navBar {
+    display: flex;
+    font-size: 0.875rem;
+    color: #6B7280;
+    font-weight: 500;
+    align-items: center;
+    gap: 2.25rem;
+  }
+  .navBar a {
+    color: #374151;
+  }
+  .navBar a:hover {
+    color: #E94646;
+  }
+  a.selected {
+    color: #E94646;
+  }
+  .btn-pink {
+    display: inline-block;
+    width: fit-content;
+    text-align: center;
+    padding: .25rem .75rem;
+    text-align: center;
+    background-color: #E94646;
+    border-radius: 6rem;
+    color: #fff;
+    font-size: .9rem;
+    transition: background-color 0.2s ease-in-out;
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+    backdrop-filter: blur( 1.125rem ); 
+  }
+  .btn-pink:hover {
+    background-color: #fff;
+    outline: 1px solid #E94646;
+    color: #E94646;
   }
 
   @media (min-width: 800px) {

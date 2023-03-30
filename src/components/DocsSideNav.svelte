@@ -35,16 +35,6 @@
     ['Unfold and Collapse', 'Unfold-collapse'],
   ];
 
-  // const communityLinks = [
-  //   [
-  //     'Blog',
-  //     'https://medium.com/@alexander.zambrano/simplify-application-diagramming-with-svelvet-a8f664731243'
-  //   ],
-  //   ['GitHub', 'https://github.com/open-source-labs/Svelvet'],
-  //   ['LinkedIn', 'https://www.linkedin.com/company/svelvet/'],
-  //   ['Twitter', 'https://twitter.com/Svelvet_OSLabs'],
-  //   ['Stack Overflow', 'https://stackoverflow.com/questions/tagged/svelte']
-  // ];
 
   $: activeLink = `${$page.url.pathname}`;
 </script>
@@ -83,22 +73,4 @@
       {/each}
     </div>
   </div>
-
-  <!-- Uncomment Once API Docs are Implemented -->
-
-  <!-- <div class="flex flex-col my-5 text-sm">
-    <a href="/community/forum" class="font-medium text-gray-700 leading-9">Community</a>
-    <div class="flex flex-col leading-9 text-gray-500 ">
-      {#each communityLinks as link}
-        <a
-          id={link[0]}
-          href={link[1]}
-          target="_blank"
-          class="border-l px-4 hover:border-rose-300  {activeLink.includes(link[1])
-            ? 'text-rose-500 hover:text-rose-500 border-rose-300'
-            : 'hover:text-gray-700 border-gray-100'}">{link[0]}</a
-        >
-      {/each}
-    </div>
-  </div> -->
 </div>
