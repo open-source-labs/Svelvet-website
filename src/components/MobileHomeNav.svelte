@@ -51,20 +51,20 @@
   class="mobile"
   use:clickOutside={{ enabled: !hidden, cb: () => (hidden = true) }}
 >
-  <div class="flex items-center">
-    <img src={logo} alt="Logo" class="aspect-ratio-auto h-8" />
+  <div class="logoWrap">
+    <img src={logo} alt="Logo" class="logo" />
     <a
       id="home"
       href="/"
-      class="text-3xl text-gray-700 font-nunito font-medium tracking-wide ml-2 mr-6">svelvet</a
+      class="svelvet">svelvet</a
     >
     <p
-      class="version text-xs rounded-full px-4 py-1 bg-rose-100 text-red-400 tracking-wider"
+      class="version"
     >
       v7.0.0
     </p>
   </div>
-  <button class="outline-none mobile-menu-button pl-8 " on:click={toggleMenu}>
+  <button class="mobile-menu-button" on:click={toggleMenu}>
     <!-- hamburger menu -->
     <div id="navMenu" class:active={!hidden}>
       <span /><span /><span />
@@ -112,7 +112,7 @@
         <div class="login-container rounded-full px-4 py-1 bg-rose-100 text-red-400 tracking-wider hover:text-rose-500 hover:bg-white">Logout 
         <img src={$user_avatar} alt="user pic"/>
       </div> 
-    </button>
+      </button>
     {:else}
       <button on:click={signInWithGithub}><div class="login-container px-6 py-3 btn-primary">
         Log In
@@ -133,16 +133,13 @@
     border-radius: 9999px;
     background-color: rgb(104, 104, 104);
   }
-
   #navMenu > span:not(:last-child) {
     margin-bottom: 7px;
   }
-
   #navMenu,
   #navMenu > span {
     transition: all 0.2s ease-in-out;
   }
-
   #navMenu.active {
     transition-delay: 0.4s;
     transform: rotate(45deg);
@@ -150,20 +147,16 @@
   #navMenu.active > span:nth-child(2) {
     width: 0;
   }
-
   #navMenu.active > span:nth-child(1),
   #navMenu.active > span:nth-child(3) {
     transition-delay: 0.2s;
   }
-
   #navMenu.active > span:nth-child(1) {
     transform: translateY(9px);
   }
-
   #navMenu.active > span:nth-child(3) {
     transform: translateY(-9px) rotate(90deg);
   }
-
   .login-container{
     display: flex;
     width: 8em;
@@ -177,7 +170,6 @@
     float: left;
     padding: .25em 1em .25em;
   }
-
   .login-container img {
     display: inline-block;
     margin-left: 5px;
@@ -185,7 +177,6 @@
     width: 32px;
     border-radius: 50%;
   }
-
   .mobile {
     justify-content: space-between;
     padding: 12px 32px;
@@ -194,7 +185,30 @@
     display: flex;
     border-bottom-width: 1px;
   }
-
+  .mobile-menu-button {
+    outline: none;
+    padding-left: 2rem;
+  }
+  .logoWrap {
+    display: flex; 
+    align-items: center;
+  }
+  .logo {
+    aspect-ratio: auto; 
+    height: 2rem;
+  }
+  .svelvet {
+    font-size: 1.875rem;
+    color: #4a5568;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin-left: 0.5rem;
+    margin-right: 1.5rem;
+  }
+  #navMenu {
+    text-align: left;
+  }
   .version {
     display: none;
   }
@@ -209,6 +223,15 @@
   @media (min-width: 400px) {
     .version {
       display: inline;
+      font-size: 0.75rem;
+      border-radius: 9999px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      background-color: #fff1f2;
+      color: #ef4444;
+      letter-spacing: 0.1em;
     }
   }
 

@@ -37,9 +37,6 @@ Shout out to our contributors! Here's what's new:
   <li>Split website code into separate repository</li>
   <li>Removed unused forum code</li>
   <li>Solved github issue #s: </li>
-  <li>Reworked landing page hierarchy</li>
-  <li>Tweaked & added more media query breakpoints to improve website responsiveness</li>
-  <li>Added Contributors & Contributors Grid components to map out each contributor on landing page</li>
 </ul>
 </details>
 

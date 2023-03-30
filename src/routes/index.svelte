@@ -138,7 +138,7 @@
       <Svelvet
         nodes={initialNodes}
         edges={initialEdges}
-        initialLocation={{ x: 260, y: 250 }}
+        initialLocation={{ x: 270, y: 245 }}
         initialZoom={1}
         width={550}
         height={550}
