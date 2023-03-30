@@ -31,34 +31,38 @@
 
 <div
   class:shadow-lg={y > 5}
-  class="md:hidden sticky top-0 z-50 flex justify-between px-8 py-3 w-screen border-b h-16 bg-white"
+  class="mobile"
 >
-  <div class="flex items-center">
-    <img src={logo} alt="Logo" class="aspect-ratio-auto h-8" />
+  <div class="logoWrap">
+    <img src={logo} alt="Logo" class="logo" />
     <a
       id="home"
       href="/"
-      class="text-3xl text-gray-700 font-nunito font-medium tracking-wide ml-2 mr-6"
+      class="svelvet"
       >svelvet</a
     >
+    <p class="version">
+      v7.0.0
+    </p>
   </div>
-  <button class="outline-none mobile-menu-button pl-8 " on:click={toggleMenu}>
+  <button class="mobile-menu-button" on:click={toggleMenu}>
     <div id="navMenu" class:active={!hidden}>
       <span /><span /><span />
     </div>
   </button>
 </div>
+
 {#if !hidden}
   <div
     transition:slide
-    class="md:hidden  w-screen mobile-menu border bg-gray-100 text-gray-500"
+    class="docsDropDown"
   >
-    <ul class="overflow-y-auto ">
+    <ul>
       <li class:bg-rose-100={activeLink === '/'}>
         <a
           on:click={toggleMenu}
           href="/"
-          class="block py-4 px-12 font-medium text-gray-800">Home</a
+          class="home">Home</a
         >
       </li>
 
@@ -295,5 +299,87 @@
 
   #navMenu.active > span:nth-child(3) {
     transform: translateY(-9px) rotate(90deg);
+  }
+
+  .mobile {
+    justify-content: space-between;
+    padding: 12px 32px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    border-bottom-width: 1px;
+  }
+  .docsDropDown {
+    display: block;
+    width: 100vw;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    color: #4a4a4a;
+  }
+  .docsDropDown ul {
+    overflow-y: auto; 
+  }
+  .docsDropDown li {
+  
+  }
+  .home {
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-weight: 500;
+    color: #1F2937;
+  }
+  .mobile-menu-button {
+    outline: none;
+    padding-left: 2rem;
+  }
+  .logoWrap {
+    display: flex; 
+    align-items: center;
+  }
+  .logo {
+    aspect-ratio: auto; 
+    height: 2rem;
+  }
+  .svelvet {
+    font-size: 1.875rem;
+    color: #4a5568;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin-left: 0.5rem;
+    margin-right: 1.5rem;
+  }
+  .version {
+    display: none;
+  }
+  @media (min-width: 800px) {
+    .mobile {
+    display: none;
+    }
+  }
+    /* show version no. */
+  @media (min-width: 400px) {
+    .version {
+      display: inline;
+      font-size: 0.75rem;
+      border-radius: 9999px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      background-color: #FAE4E6;
+      color: #E94646;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  /* for drop shadow on nav to appear on scroll down */
+  @media (max-height: 5px) {
+    .mobile {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
   }
 </style>

@@ -9,7 +9,7 @@
   /* importing GitHub logo from assets */
   import github from '../assets/github-icon-white.svg';
 
-  let { user, logged_in, user_avatar } = userInfoStore;
+  let { user, user_avatar } = userInfoStore;
 
   let hidden = true;
 
@@ -261,8 +261,8 @@
       padding-right: 1rem;
       padding-top: 0.25rem;
       padding-bottom: 0.25rem;
-      background-color: #fff1f2;
-      color: #ef4444;
+      background-color: #FAE4E6;
+      color: #E94646;
       letter-spacing: 0.1em;
     }
   }
