@@ -8,11 +8,9 @@
 {#if $page.url.pathname === '/testingplayground' || $page.url.pathname === '/testingplayground2'}
   <slot />
 {:else}
-  <div class="">
-    <div class="sticky top-0 left-0 right-0 z-50">
+  <div style="position: sticky; top: 0; left: 0; right: 0; z-index: 50;">
       <TopNav />
-    </div>
-    <slot />
   </div>
+  <slot />
   <Footer />
 {/if}

@@ -3,6 +3,9 @@
   import { contributors } from '../data/contributors';
 
   import Svelvet from 'svelvet';
+  import copyIcon from '../assets/clipboard.svg';
+  const copyNPM = () => navigator.clipboard.writeText('npm install svelvet');
+  const copyYarn = () => navigator.clipboard.writeText('yarn add svelvet');
 
   const initialNodes = [
     {
@@ -117,28 +120,26 @@
 
 <div class="css-blurry-gradient" />
 
-<!-- --------------------------------------------------------------------------------------------------------- -->
-<!-- ----------------------------- TOP LEVEL SECTION (intro & graph view) ------------------------------------ -->
-<!-- --------------------------------------------------------------------------------------------------------- -->
+<!-- ----------------------------- TOP LEVEL SECTION (intro & diagram) --------------------------------------- -->
 
-<div class="topSection">
+<div class="topWrapper">
   <div class='topLeft'>
     <h1>
       Mapping out your ideas with Svelte has never been easier
     </h1>
     <p>
-      <code class="highlight">Svelvet</code> is a lightweight Svelte
+      <code class="highlight" style="color:#E94646;">Svelvet</code> is a lightweight Svelte
       component library for building interactive node-based flow diagrams
     </p>
-    <a href="/docs/installation" class="btn-pink">Get Started</a>
+    <div class='buttonWrapper'><a href="/docs/installation" class="btn-pink">Get Started</a></div>
   </div>
   <div class="topRight">
     <div class="diagram">
       <Svelvet
         nodes={initialNodes}
         edges={initialEdges}
-        initialLocation={{ x: 260, y: 250 }}
-        initialZoom={2}
+        initialLocation={{ x: 270, y: 245 }}
+        initialZoom={1}
         width={550}
         height={550}
         background
@@ -147,9 +148,7 @@
   </div>
 </div>
 
-<!-- --------------------------------------------------------------------------------------------------------- -->
 <!-- ---------------------------------------- LEARN MORE SECTION --------------------------------------------- -->
-<!-- --------------------------------------------------------------------------------------------------------- -->
 
 <div class="pinkGradient">
   <div class="flex-container">
@@ -169,57 +168,77 @@
   </div>
 </div>
 
-
-<!-- --------------------------------------------------------------------------------------------------------- -->
 <!-- ------------------------------------------ INSTALL SECTION ---------------------------------------------- -->
-<!-- --------------------------------------------------------------------------------------------------------- -->
 
 <div class="installWrapper">
-  <div class='blurbWrapper'>
+  <div class="installInner1">
+    <h3>Get Started Easily</h3>
+    <p>
+      Start mapping out your ideas with our NPM package. Simply provide your
+      node data to the
+      <code class="highlight" style="color:#E94646;">Svelvet</code> component and you're
+      ready to show off your interactive diagram - no extra configuration needed!
+    </p>
+    <a
+      href="/docs/installation"
+      class="btn-pink">More Info</a
+    >
+  </div>
+  <div class="installInner2">
     <div class="typingWindowWrapper">
-      <div class="overflow-hidden rounded-lg bg-gray-100 w-[320px] md:w-[380px] grid place-items-center wrapper">
-        <div class="h-7 w-full bg-gray-300 flex items-center">
-          <div class="btn bg-[#FF605C]" />
-          <div class="btn bg-[#FFBD44]" />
-          <div class="btn bg-[#00CA4E]" />
+      <div class="typingWindow">
+        <div class="typingNavBar">
+          <div class="btn-circle" style="background-color: #FF605C;" />
+          <div class="btn-circle" style="background-color: #FFBD44;"/>
+          <div class="btn-circle" style="background-color: #00CA4E;"/>
         </div>
-        <div class="typing-demo my-3">npm install svelvet</div>
+        <div class="typing-demo">npm install svelvet</div>
       </div>
     </div>
-    <div class="sm:mt-0 w-full md:w-1/2 h-full flex flex-col justify-center">
-      <h3
-        class="text-4xl font-bold my-4 text-center md:text-left text-gray-700"
-      >
-        Get Started Easily
-      </h3>
-      <p class="mb-4 text-gray-500 text-center md:text-left">
-        Start mapping out your ideas with our NPM package. Simply provide your
-        node data to the
-        <code class="bg-rose-100 rounded-lg p-1">Svelvet</code> component and you're
-        ready to show off your interactive diagram - no extra configuration needed!
+      <p>
+        To install and save in your <code class="highlight">package.json</code>
+        dependencies, run the command below using
+        <strong>npm</strong>:
       </p>
-      <a
-        href="/docs/installation"
-        class="install-btn">Install Now</a
-      >
-    </div>
+      <div class="clipboard">
+        <code>
+          <span style="color:#9F2A39;">npm install</span> svelvet
+        </code>
+        <img
+          on:click={copyNPM}
+          src={copyIcon}
+          alt="clipboard icon"
+        />
+      </div>
+        <p>
+          Or <strong>yarn</strong>:
+        </p>
+      <div class="clipboard">
+        <code>
+          <span style="color:#9F2A39;">yarn add</span> svelvet
+        </code>
+        <img
+          on:click={copyYarn}
+          src={copyIcon}
+          alt="clipboard icon"
+        />
+      </div>
   </div>
 </div>
-
-<!-- --------------------------------------------------------------------------------------------------------- -->
-<!-- ------------------------------------------ CONTRIBUTORS SECTION ----------------------------------------- -->
-<!-- --------------------------------------------------------------------------------------------------------- -->
-<div>
-  <ContributorsGrid {contributors} />
-</div>
+    
+<ContributorsGrid {contributors} />
 
 
-
+<!-------------------------------------------------------------------------------------------------------
+------------------------------------------ STYLING!! ----------------------------------------------------
+---------------------------------------------------------------------------------------------------------  -->
 <style>
-/* ------------------------------------------------------------------------------------------------------
------------------------------ TOP LEVEL SECTION (intro & graph view) ------------------------------------
---------------------------------------------------------------------------------------------------------- */
-
+/*----------------------------- TOP LEVEL SECTION (intro & diagram) -------------------------------------*/
+  .highlight {
+    background-color: #FAE4E6; 
+    border-radius: 0.5rem; 
+    padding: 0.25rem;
+  }
   .css-blurry-gradient {
     overflow-x: hidden;
     position: absolute;
@@ -239,62 +258,58 @@
     opacity: 0.4;
     z-index: -1;
   }
-
-  .topSection {
+  .topWrapper {
     display: flex;
+    flex-direction: column;
+    height: fit-content;
     width: auto;
-    margin: 12rem 8rem;
-    text-align: center;
+    padding: 6vw 5vw 10vw 5vw;
+    align-self: center;
+    text-align: left;
   }
-
   .topLeft {
-    float: left;
-    width: 50%;
+    order: 1;
+    padding-bottom: 3vw;
+    align-self: center;
   }
-
   .topRight {
-    float: right;
-    width: 50%;
+    order: 2;
+    align-self: center;
+    width: 100%;
+    padding-bottom: 6.25vw;
   }
-
-  .topSection h1 {
-    font-size: 3rem;
+  .topWrapper h1 {
+    font-size: 2rem;
     font-weight: bold;
-    color: #4b5563;
-    max-width: 90vw;
-    padding: 4rem;
+    color: #1F2937;
+    padding-bottom: 1vw;
   }
-
-  .topSection p {
-    font-size: 1.25rem;
-    margin-left: 10rem;
-    margin-right: 10rem;
-    margin-bottom: 2rem;
+  .topWrapper p {
+    font-size: 1rem;
     color: #6b7280;
+    padding-bottom: 2vw;
   }
-
-  .highlight {
-    color:#ed4747;
-  }
-
   .diagram {
+    align-self: center;
     background-color: #fff;
-    max-width: 100%;
-    height: 550px;
+    width: 100%;
     border: 1px solid #e5e7eb;
     border-radius: 0.75rem;
     box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
-    position: relative;
     overflow: hidden;
-    margin-right: 12rem;
-    margin-left: 5rem;
+    height: 500px;
   }
-
+  .buttonWrapper {
+    display: flex;
+    justify-content: center;
+  }
   .btn-pink {
-    padding: 0.75rem 1.5rem;
+    display: inline-block;
+    width: fit-content;
     text-align: center;
-    margin: 1.5rem;
-    background-color: #ed4747;
+    padding: .5rem 1rem;
+    text-align: center;
+    background-color: #E94646;
     border-radius: 2rem;
     color: #fff;
     font-size: 1.125rem;
@@ -302,148 +317,147 @@
     box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
     backdrop-filter: blur( 1.125rem ); 
   }
-
   .btn-pink:hover {
     background-color: #fff;
-    border: 1px solid #ed4747;
-    color: #ed4747;
+    outline: 2px solid #E94646;
+    color: #E94646;
   }
-
-/* ------------------------------------------------------------------------------------------------------
----------------------------------------- LEARN MORE SECTION ---------------------------------------------
---------------------------------------------------------------------------------------------------------- */
-
+/*---------------------------------------- LEARN MORE SECTION --------------------------------------------*/
   .pinkGradient {
-    height: 30rem;
+    height: fit-content;
     background-image: radial-gradient(
       circle at 50% 50%,
-      #ed4747,
+      #E94646,
       rgba(205, 203, 211, 0)
     );
     color: white;
     box-shadow: 0px 8px 16px rgba(241, 198, 198, 0.508);
   }
-
   .flex-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     height: 100%;
   }
-
   .text-container {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0 20rem 0 20rem;
+    padding: 8vw 5vw;
+    margin: 2vw 0;
   }
-
   .text-container h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     text-align: center;
   }
-
   .text-container p {
     color: rgba(255, 255, 255, 0.8);
     font-size: 1rem;
-    padding: 0 7rem 0 7rem;
-    text-align: center;
+    text-align: left;
+    padding-bottom: 2vw;
   }
-
-/* ------------------------------------------------------------------------------------------------------
------------------------------------------- INSTALL SECTION ----------------------------------------------
---------------------------------------------------------------------------------------------------------- */
-/* flex flex-col-reverse items-center md:flex-row h-full mx-12 my-20 md:my-32 md:gap-10 */
-.installWrapper {
-  height: fit-content;
-  height: 100%;
-  padding: 6rem 8rem;
-}
-
-.blurbWrapper {
-  float: right;
-  height: 100%;
-  padding-bottom: 6rem;
-}
-
-/* w-full md:w-1/2 my-4 md:h-full md:py-12 flex flex-col justify-center items-center text-center  */
-.typingWindowWrapper {
-  float: left;
-  flex: 1;
-  widows: 100%;
-  text-align: center;
-  padding-top: 2rem;
-  padding-left: 15rem;
-  padding-right: 8rem;
-}
-
-.install-btn {
-    padding: 0.75rem 1rem;
-    text-align: center;
-    margin: 1.5rem 42rem 0 0rem;
-    background-color: #ed4747;
-    border-radius: 2rem;
-    color: #fff;
-    font-size: 1.125rem;
-    transition: background-color 0.2s ease-in-out;
-    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
-    backdrop-filter: blur( 1.125rem ); 
-}
-
-.install-btn:hover {
-    background-color: #fff;
-    border: 1px solid #ed4747;
-    color: #ed4747;
-  }
-
-
-/* ------------------------------------------------------------------------------------------------------
----------------------------------------------- BUTTONS --------------------------------------------------
---------------------------------------------------------------------------------------------------------- */
- 
-
   .btn-white {
-    padding: 0.75rem 1.5rem;
-    width: 9.25rem;
-    margin: 2rem;
+    display: inline-block;
+    width: fit-content;
     text-align: center;
+    padding: .5rem 1rem;
     background-color: #fff;
-    border-radius: 2rem;
-    color: #ed4747;
+    border-radius: 99999px;
+    color: #1F2937;
     font-size: 1.125rem;
-    transition: background-color 0.2s ease-in-out;
     align-self: center;
   }
-
   .btn-white:hover {
+    transition: background-color 0.2s ease-in-out;
     background-color: transparent;
-    border: 1px solid #e5e7eb;
+    outline: 2px solid #e5e7eb;
     color: #ffffff;
   }
-
-
-
-
-
-
-
-
-
-
-  .wrapper {
-    box-shadow: 3px 3px 15px 3px rgba(0, 0, 0, 0.1);
+/*------------------------------------------ INSTALL SECTION ---------------------------------------------*/
+  .installWrapper {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 100%;
+    padding: 5vw;
+    align-self: center;
+    text-align: left;
+    margin: 10vw 0;
   }
-
-  .btn {
+  .installInner1 {
+    order: 1;
+    align-self: center;
+    text-align: center;
+  }
+  .installInner1 h3 {
+    font-size: 2rem; 
+    font-weight: bold; 
+    text-align: center; 
+    color: #374151;
+  }
+  .installInner1 p {
+    margin-bottom: 1rem;
+    color: #6b7280;
+    text-align: left;
+  }
+  .installInner2 {
+    display: none;
+    flex-direction: column;
+    padding: 5vw;
+    order: 2;
+    align-self: center;
+  }
+  .installInner2 p {
+    color: #4b5563;
+    margin:1rem 0 1rem 0;
+  }
+  .typingWindowWrapper {
+    justify-content: center;
+    margin: 5vw;
+  }
+  .clipboard {
+    display: flex;
+  }
+  .clipboard code {
+    border-radius: 0.375rem;
+    padding: 0.75rem;
+    background-color: #FAE4E6;
+    color: #E94646;
+    width: 100%;
+  }
+  .clipboard img {
+    border-radius: 0.375rem;
+    padding: 0.75rem;
+    background-color: #FAE4E6;
+    margin-left: -1rem;
+    cursor: pointer;
+  }
+/*---------------------------------------------- TYPING WINDOW -------------------------------------------*/
+  .typingWindow {
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background-color: #f0f0f0;
+    min-width: fit-content;
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .typingNavBar {
+    height: 1.75rem;
+    width: 100%;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+  }
+  .btn-circle {
     float: left;
     margin-left: 7px;
     width: 12px;
     height: 12px;
     border-radius: 100%;
+    background-color: #FF605C;
   }
-
   .typing-demo {
     width: 20ch;
     animation: typing 4s steps(20), blink 0.5s step-end infinite alternate;
@@ -453,66 +467,9 @@
     border-right: 3px solid;
     font-family: monospace;
     font-size: 16px;
+    margin: .75rem 0 .75rem 0;
   }
-
-
-
-/* ------------------------------------------------------------------------------------------------------
----------------------------------------------- MAX VIEW -------------------------------------------------
---------------------------------------------------------------------------------------------------------- */
-
-
-  @media (max-width: 768px) {
-    .css-blurry-gradient {
-      opacity: 0.8;
-      top: 50%;
-    }
-
-    .typing-demo {
-      animation: blink 0.5s step-end infinite alternate;
-    }
-    .topSection {
-      margin-top: 48px;
-      margin-bottom: 48px;
-      gap: 10px;
-    }
-
-    .topSection h1 {
-      font-size: 6rem;
-    }
-
-    .topSection p {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
-    .diagram {
-      max-width: 550px;
-    }
-
-    .pinkGradient {
-      height: 600px;
-    }
-
-    .text-container {
-      justify-content: flex-start;
-    }
-
-  .text-container h3 {
-      font-size: 4rem;
-      text-align: right;
-    }
-
-    .text-container p {
-      text-align: center;
-      padding: 0 0 0 0;
-    }
-
-  }
-
-/* ------------------------------------------------------------------------------------------------------
----------------------------------------------- ANIMATIONS -----------------------------------------------
---------------------------------------------------------------------------------------------------------- */
+/*---------------------------------------------- ANIMATIONS ----------------------------------------------*/
 
   @keyframes typing {
     0% {
@@ -523,10 +480,104 @@
       width: 20ch;
     }
   }
-
   @keyframes blink {
     50% {
       border-color: transparent;
+    }
+  }
+/*-------------------------------------------- MEDIA QUERIES ---------------------------------------------*/
+    /* portrait phone view */
+  @media (min-width: 576px) {
+    .topLeft {
+      padding-bottom: 4vw;
+    }
+    .topWrapper p {
+      margin: 1rem 0 4rem 0;
+      margin-bottom: 1rem;
+    }
+    .topRight {
+      width: 550px;
+    }
+  }
+  /* tablet view */
+  @media (min-width: 768px) {
+    .topWrapper {
+      padding: 5vw 15vw 5vw 15vw;
+      align-self: center;
+    }
+    .topLeft {
+      padding-bottom: 3vw;
+    }
+    .topWrapper h1 {
+      font-size: 2.25rem;
+    }
+    .topWrapper p {
+      font-size: 1.25rem;
+      margin: 1rem 0 4rem 0;
+      margin-bottom: 1rem;
+    }
+    .diagram {
+      height: 550px;
+    }
+    .text-container {
+      margin: 0 20vw;
+    }
+    .text-container h3 {
+      font-size: 2.25rem;
+    }
+    .text-container p {
+      font-size: 1.25rem;
+    }
+    .installWrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 8vw;
+      text-align: left;
+      margin: 1vw 0;
+    }
+    .installInner1 {
+      order: 1;
+      padding-right: 5vw;
+      text-align: center;
+    }
+    .installInner2 {
+      order: 2;
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      padding: 5vw;
+    }
+    .installInner1 h3 {
+      text-align: left;
+    }
+    .installInner1 p {
+      text-align: left;
+    }
+    .typingWindowWrapper {
+      width: 320px;
+      margin: 0 0 3vw 0;
+    }
+  }
+  /* desktop view */
+  @media (min-width: 1024px) {
+    .topWrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 8vw;
+      text-align: left;
+    }
+    .topLeft {
+      order: 1;
+      padding-right: 5vw;
+    }
+    .topRight {
+      order: 2;
+      align-self: center;
+    }
+    .installWrapper {
+      padding: 5vw 15vw 5vw 15vw ;
     }
   }
 </style>

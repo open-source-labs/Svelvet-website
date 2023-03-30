@@ -9,7 +9,7 @@
   /* importing GitHub logo from assets */
   import github from '../assets/github-icon-white.svg';
 
-  let { user, logged_in, user_avatar } = userInfoStore;
+  let { user, user_avatar } = userInfoStore;
 
   let hidden = true;
 
@@ -48,18 +48,22 @@
 
 <div
   class:shadow-lg={y > 5}
-  class="md:hidden sticky top-0 z-50 flex justify-between px-8 py-3 w-screen border-b h-16 bg-white"
+  class="mobile"
   use:clickOutside={{ enabled: !hidden, cb: () => (hidden = true) }}
 >
-  <div class="flex items-center">
-    <img src={logo} alt="Logo" class="aspect-ratio-auto h-8" />
+  <div class="logoWrap">
+    <img src={logo} alt="Logo" class="logo" />
     <a
       id="home"
       href="/"
-      class="text-3xl text-gray-700 font-nunito font-medium tracking-wide ml-2 mr-6">svelvet</a
+      class="svelvet">svelvet</a
     >
+    <p class="version">
+      v7.0.0
+    </p>
   </div>
-  <button class="outline-none mobile-menu-button pl-8 " on:click={toggleMenu}>
+  <button class="mobile-menu-button" on:click={toggleMenu}>
+    <!-- hamburger menu -->
     <div id="navMenu" class:active={!hidden}>
       <span /><span /><span />
     </div>
@@ -69,45 +73,45 @@
 {#if !hidden}
   <div
     transition:slide
-    class="md:hidden absolute w-screen mobile-menu border px-8 bg-gray-100 text-gray-700"
+    class="mobileDropDown"
   >
-    <ul class="text-center">
+    <ul>
       <li>
-        <a on:click={toggleMenu} href="/" class="block py-6">Home</a>
+        <a on:click={toggleMenu} href="/">Home</a>
       </li>
       <li>
-        <a on:click={toggleMenu} href="/docs/installation" class="block py-6">Documentation</a>
-      </li>
-      <!-- //TODO create button for create page -->
-      <li>
-        <a on:click={toggleMenu} href="/playground" class="block py-6">REPL</a>
-      </li>
-      <li>
-        <a
-          on:click={toggleMenu}
-          target="_blank"
-          href="https://medium.com/@justinwouters/svelvet-2-0-c6b2059734a6"
-          class="block py-6">Blog</a
-        >
+        <a on:click={toggleMenu} href="/docs/installation">Docs</a>
       </li>
       <li>
         <a
           on:click={toggleMenu}
           href="https://github.com/open-source-labs/Svelvet"
           target="_blank"
-          class="block py-6">Github</a
+          rel="noreferrer"
+        >Github</a
+        >
+      <li>
+        <a on:click={toggleMenu} href="/playground">Sandbox</a>
+      </li>
+      <li>
+        <a
+          on:click={toggleMenu}
+          target="_blank"
+          rel="noreferrer"
+          href="https://medium.com/@justinwouters/svelvet-2-0-c6b2059734a6"
+        >Blogs</a
         >
       </li>
-      <!-- added login / logout button link! -->
 
+      <!-- added login / logout button link! -->
       {#if $user}
       <button on:click={logout}>
-        <div class="login-container rounded-full px-4 py-1 bg-rose-100 text-red-400 tracking-wider hover:text-rose-500 hover:bg-white">Logout 
+        <div class="login-container btn-pink">Logout 
         <img src={$user_avatar} alt="user pic"/>
       </div> 
-    </button>
+      </button>
     {:else}
-      <button on:click={signInWithGithub}><div class="login-container px-6 py-3 btn-primary">
+      <button on:click={signInWithGithub}><div class="login-container btn-pink">
         Log In
         <img src={github} alt="github-logo" />
       </div></button>
@@ -126,16 +130,13 @@
     border-radius: 9999px;
     background-color: rgb(104, 104, 104);
   }
-
   #navMenu > span:not(:last-child) {
     margin-bottom: 7px;
   }
-
   #navMenu,
   #navMenu > span {
     transition: all 0.2s ease-in-out;
   }
-
   #navMenu.active {
     transition-delay: 0.4s;
     transform: rotate(45deg);
@@ -143,20 +144,16 @@
   #navMenu.active > span:nth-child(2) {
     width: 0;
   }
-
   #navMenu.active > span:nth-child(1),
   #navMenu.active > span:nth-child(3) {
     transition-delay: 0.2s;
   }
-
   #navMenu.active > span:nth-child(1) {
     transform: translateY(9px);
   }
-
   #navMenu.active > span:nth-child(3) {
     transform: translateY(-9px) rotate(90deg);
   }
-
   .login-container{
     display: flex;
     width: 8em;
@@ -170,13 +167,111 @@
     float: left;
     padding: .25em 1em .25em;
   }
-
   .login-container img {
     display: inline-block;
     margin-left: 5px;
     height: 32px;
     width: 32px;
     border-radius: 50%;
+  }
+  .mobile {
+    justify-content: space-between;
+    padding: 12px 32px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    border-bottom-width: 1px;
+  }
+  .mobileDropDown {
+    position: absolute;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 0 2rem 1.5rem 0;
+    background-color: #f4f4f4;
+    color: #4a4a4a;
+  }
+  .mobileDropDown ul {
+    text-align: center;
+  }
+  .mobileDropDown li {
+    display: block;
+    padding: 1.25rem 0;
+  }
+  .mobile-menu-button {
+    outline: none;
+    padding-left: 2rem;
+  }
+  .logoWrap {
+    display: flex; 
+    align-items: center;
+  }
+  .logo {
+    aspect-ratio: auto; 
+    height: 2rem;
+  }
+  .svelvet {
+    font-size: 1.875rem;
+    color: #1F2937;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin-left: 0.5rem;
+    margin-right: 1.5rem;
+  }
+  .btn-pink {
+    display: inline-block;
+    width: fit-content;
+    text-align: center;
+    margin-top: 1rem;
+    padding: .5rem 1rem;
+    text-align: center;
+    background-color: #E94646;
+    border-radius: 2rem;
+    color: #fff;
+    font-size: 1.125rem;
+    transition: background-color 0.2s ease-in-out;
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+    backdrop-filter: blur( 1.125rem ); 
+  }
+  .btn-pink:hover {
+    background-color: #fff;
+    outline: 1px solid #E94646;
+    color: #E94646;
+  }
+  #navMenu {
+    text-align: left;
+  }
+  .version {
+    display: none;
+  }
+
+  @media (min-width: 800px) {
+    .mobile {
+    display: none;
+    }
+  }
+
+  /* show version no. */
+  @media (min-width: 400px) {
+    .version {
+      display: inline;
+      font-size: 0.75rem;
+      border-radius: 9999px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      background-color: #FAE4E6;
+      color: #E94646;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  /* for drop shadow on nav to appear on scroll down */
+  @media (max-height: 5px) {
+    .mobile {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
   }
 
 </style>

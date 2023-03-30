@@ -11,14 +11,15 @@
       {/each}
     </ul>
 
-    <p class="text-gray-100 text-center mt-5 md:mb-0">
+    <p class="text">
       Svelvet is open source and has room for many more features. We welcome
       contributors!
     </p>
     <a
       href="https://github.com/open-source-labs/Svelvet"
       target="_blank"
-      class="self-center w-fit border-2 border-transparent hover:border-white mt-4 py-2 px-5 rounded-full hover:ease-in duration-100 hover:text-white hover:bg-transparent bg-white text-gray-800 "
+      rel="noreferrer"
+      class="btn-white"
       >See Svelvet on GitHub</a
     >
   </article>
@@ -36,16 +37,46 @@
       padding-bottom: 5rem;
     }
     .wrapper h2 {
-        font-size: 1.5rem;
-        padding: 1rem;
-        font-weight:300;
+      font-size: 1.5rem;
+      margin: 1rem 5rem;
+      font-weight:bold;
+      text-align: center;
     }
     .contributors {
-      width: 50%;
+      width: 60%;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
       margin: 0 auto;
+    }
+    .text {
+      color: #f7fafc;
+      text-align: center;
+      margin-top: 1.25rem;
+      padding: 2vw;
+      margin-bottom: 0; 
+    }
+    .btn-white {
+      display: inline-block;
+      width: fit-content;
+      text-align: center;
+      padding: .5rem 1rem;
+      background-color: #fff;
+      border-radius: 99999px;
+      color: #1F2937;
+      font-size: 1.125rem;
+      align-self: center;
+    }
+    .btn-white:hover {
+      transition: background-color 0.2s ease-in-out;
+      background-color: transparent;
+      outline: 2px solid #e5e7eb;
+      color: #ffffff;
+    }
+    @media (max-width: 699px) {
+      .contributors {
+        width: 50%;
+      }
     }
   </style>
   
