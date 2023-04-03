@@ -1,3 +1,4 @@
+//used in TopNav & Mobile DocsNav --> didn't implement in MobileHomeNav
 export const articles = [
     {
         version: 'Svelvet 1.0',
