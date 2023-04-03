@@ -98,8 +98,8 @@
           on:click={toggleMenu}
           target="_blank"
           rel="noreferrer"
-          href="https://medium.com/@justinwouters/svelvet-2-0-c6b2059734a6"
-        >Blogs</a
+          href="https://medium.com/@hor.val/svelvet-6-0-the-svelte-component-library-for-building-interactive-node-based-diagrams-81dafa2d50cd"
+        >Blog 7.0</a
         >
       </li>
 
@@ -211,7 +211,7 @@
   }
   .svelvet {
     font-size: 1.875rem;
-    color: #1F2937;
+    color: 1F2937;
     font-family: 'Nunito', sans-serif;
     font-weight: 500;
     letter-spacing: 0.05em;

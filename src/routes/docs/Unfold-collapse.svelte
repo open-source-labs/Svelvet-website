@@ -109,13 +109,11 @@
 </script>
 
 <div>
-  <h2 class="text-4xl font-semibold mb-12">Unfold and Collapse the Diagram</h2>
+  <h2 class="text-4xl font-semibold mb-12">Unfold and Collapse</h2>
 </div>
 
 <p class="text-gray-600">
-  Unfold and collapse is a feature requested by the Svelvet community and now
-  it's available as an additional prop! To enable unfold and collapse
-  functionality, just pass <code class="bg-rose-100 rounded-lg p-1"
+  Unfold and collapse functionality is available as an additional prop. To enable it, pass the <code class="bg-rose-100 rounded-lg p-1"
     >collapsible</code
   >
   prop and set the value to true into your
@@ -125,10 +123,9 @@
 <br />
 
 <p class="text-gray-600">
-  Click <a
-    href="https://stackblitz.com/edit/unfold-collapse?file=src/routes/+layout.svelte"
-    style="color: blue">here</a
-  > for a sandbox, or test it out below!
+  Click <a class="text-rose-600 underline underline-offset-1"
+    href="https://stackblitz.com/edit/sveltejs-kit-template-default-8sdfen?file=src/routes/+layout.svelte">here</a
+  > for a sandbox, or test it out below!<br><br>
 </p>
 
 <br />

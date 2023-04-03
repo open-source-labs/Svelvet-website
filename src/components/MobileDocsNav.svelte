@@ -4,6 +4,7 @@
   import downArrow from '../assets/arrow-down.svg';
   import { page } from '$app/stores';
   import { slide, fade } from 'svelte/transition';
+  import { articles } from '../data/articles';
 
   $: activeLink = `${$page.url.pathname}`;
 
@@ -250,67 +251,15 @@
       </li>
       {#if showBlogs}
         <ul transition:slide class="list">
-          <li class:selected={activeLink.includes('blog')}>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              class="nested"
-              on:click={toggleMenu}
-              href='https://medium.com/@alexander.zambrano/simplify-application-diagramming-with-svelvet-a8f664731243/'
-              >Svelvet 1.0</a
-            >
-          </li>
-          <li class:selected={activeLink.includes('blog')}>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              class="nested"
-              on:click={toggleMenu}
-              href="https://medium.com/gitconnected/svelvet-2-0-c6b2059734a6"
-              >Svelvet 2.0</a
-            >
-          </li>
-          <li class:selected={activeLink.includes('blog')}>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              class="nested"
-              on:click={toggleMenu}
-              href="https://medium.com/@MauricioACastro/svelvet-4-0-the-power-of-html-is-now-inside-your-nodes-3d96823096e3"
-              >Svelvet 4.0</a
-            >
-          </li>
-          <li class:selected={activeLink.includes('blog')}>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              class="nested"
-              on:click={toggleMenu}
-              href="https://medium.com/@efergus1/svelvet-5-0-a-community-driven-update-cfcc93e7b7a7"
-              >Svelvet 5.0</a
-            >
-          </li>
-          <li class:selected={activeLink.includes('blog')}>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              class="nested"
-              on:click={toggleMenu}
-              href="https://medium.com/@hor.val/svelvet-6-0-the-svelte-component-library-for-building-interactive-node-based-diagrams-81dafa2d50cd"
-              >Svelvet 6.0</a
-            >
-          </li>
-                  <!-- !!!!!!!!!!!!! ADD 7.0 ARTICLE LINK HERE !!!!!!!!!!-->
-          <li class:selected={activeLink.includes('blog')}>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              class="nested"
-              on:click={toggleMenu}
-              href="https://medium.com/LINKGOESHERE"
-            >Svelvet 7.0</a
-            >
-          </li>
+          {#each articles as article}
+            <li class='nested'>
+              <a
+                target='_blank'
+                rel='noreferrer'
+                class:selected={activeLink.includes('blog')}
+                href={`https://medium.com/${article.link}`}>{article.version}</a>
+            </li>
+          {/each}
         </ul>
       {/if}
       <li>
