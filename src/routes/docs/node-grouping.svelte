@@ -1,5 +1,5 @@
 <script>
-  import Svelvet from '$lib/container/views/Svelvet.svelte';
+  import Svelvet from 'svelvet';
 
   const initialNodes = [
     {
@@ -120,32 +120,23 @@
 
 <div>
   <div>
-    <h2 class="text-4xl font-semibold mb-12">Node-Grouping</h2>
+    <h2 class="text-4xl font-semibold mb-12">Node Grouping</h2>
 
     <p class="my-4 text-gray-600">
       Svelvet supports node grouping so you can select multiple nodes at once.
-      You merely need to specify 'childNodes' property within your initial nodes
-      declaration. Keep in mind that children of child nodes need to be
-      specified in the grandparent in order to move with it. See the example
-      sandbox below to test and tinker with the nodes.
+      Specify the 'childNodes' property within your initial nodes
+      declaration. Children of child nodes need to be
+      specified in the grandparent in order to move with it.<br><br> 
+      <code class="code">childNodes:[2,4]</code>
     </p>
 
-    <ul>
-      <li class="flex items-center justify-between py-1 border-b">
-        <code class="code">childNodes:[2,4]</code>
-      </li>
-    </ul>
+    <p class="text-gray-600">
+      Click <a class="text-rose-600 underline underline-offset-1"
+        href="https://stackblitz.com/edit/sveltejs-kit-template-default-8sdfen?file=src/routes/+layout.svelte">here</a
+      > for a sandbox, or test it out below!<br><br>
+    </p>
   </div>
 
-  <h3 class="text-xl font-semibold mt-12">Node-Grouping</h3>
-  <br />
-  <p class="text-gray-600">
-    Click <a
-      href="https://stackblitz.com/edit/node-grouping-asdfsdf?file=src/routes/+layout.svelte"
-      style="color: blue">here</a
-    > for a sandbox, or test it out below!
-  </p>
-  <br />
   <Svelvet
     nodes={initialNodes}
     width={500}

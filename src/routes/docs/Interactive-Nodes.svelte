@@ -61,7 +61,7 @@
 </script>
 
 <h2 class="text-4xl font-semibold mb-12">
-  Interactive Node Linking & Creation
+  Interactive Node Linking and Creation
 </h2>
 
 <p class="text-gray-600">
@@ -86,19 +86,19 @@
   <code class="bg-rose-100 rounded-lg p-1">anchor</code> simply go back to that anchor
   and release the mouse click.
 </p>
-<br />
-<p>PS: you can also link edges!</p>
+<br>
+<p>You can also link edges!</p>
 
 <div>
   <h3 class="text-xl font-semibold mt-12 mb-6">
     Implementing Node Linking & Creation
   </h3>
   <p class="text-gray-600">
-    Click <a
-      href="https://stackblitz.com/edit/unfold-collapse?file=src/routes/+layout.svelte"
-      style="color: blue">here</a
-    > for a sandbox, or test it out below!
+    Click <a class="text-rose-600 underline underline-offset-1"
+      href="https://stackblitz.com/edit/sveltejs-kit-template-default-8sdfen?file=src/routes/+layout.svelte">here</a
+    > for a sandbox, or test it out below!<br><br>
   </p>
+  
 </div>
 
 <Svelvet

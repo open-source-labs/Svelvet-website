@@ -36,22 +36,21 @@
 </div>
 
 <p class="text-gray-600">
-  <code class="code">Svelvet</code> now have
-  <code class="code">dynamic anchors</code> as a new feature! Drag the nodes around
-  and see what happens to the anchors!
-</p>
-
-<p class="text-gray-600">
-  Now you don't even need to specify <code class="code">sourcePosition</code>
-  and <code class="code">targetPosition</code> in your node object anymore because
-  Svelvet is going to take care of generating optimal anchors based on the relative
+  <code class="code">Svelvet</code> has optional
+  <code class="code">dynamic anchors</code>. You don't need to specify <code class="code">sourcePosition</code>
+  and <code class="code">targetPosition</code> in your node object;  
+  Svelvet generates optimal anchors based on the relative
   posistions between two nodes.
 </p>
 
 <br />
 
+
+
 <p class="text-gray-600">
-  Drag the node around and see how the anchors are changing dynamically!
+  Click <a class="text-rose-600 underline underline-offset-1"
+    href="https://stackblitz.com/edit/sveltejs-kit-template-default-8sdfen?file=src/routes/+layout.svelte">here</a
+  > for a sandbox, or drag the nodes below around to see the anchors change dynamically!
 </p>
 
 <div
@@ -70,15 +69,7 @@
   />
 </div>
 
-<h3 class="text-xl font-semibold mt-12 mb-6">Dynamic Anchors</h3>
-<p class="text-gray-600">
-  Click <a
-    href="https://stackblitz.com/edit/dynamic-anchor?file=README.md"
-    style="color: blue">here</a
-  > for a sandbox!
-</p>
 
-<br />
 
 <!-- 
 <iframe

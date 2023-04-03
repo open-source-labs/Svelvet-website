@@ -1,13 +1,10 @@
 <script>
 </script>
 
-<h2 class="text-4xl font-semibold mb-12">Initial Zoom & Location</h2>
+<h2 class="text-4xl font-semibold mb-12">Initial Zoom and Location</h2>
 
 <p class="text-gray-600">
-  Implementing initial zoom & location to a <code
-    class="bg-rose-100 rounded-lg p-1">Svelvet</code
-  >
-  application is now possible! To access this feature, simply add the prop
+  To set an initial zoom level and location this feature, simply add the prop
   <code class="bg-rose-100 rounded-lg p-1">initialZoom</code>
   and set it equal to a number from
   <code class="bg-rose-100 rounded-lg p-1">0 to 10</code>,
@@ -29,9 +26,8 @@
     Implementing Initial Zoom & Location
   </h3>
   <p class="text-gray-600">
-    Click <a
-      href="https://stackblitz.com/edit/initial-zoom?file=src/routes/+layout.svelte"
-      style="color: blue">here</a
+    Click <a class="text-rose-600 underline underline-offset-1"
+      href="https://stackblitz.com/edit/sveltejs-kit-template-default-8sdfen?file=src/routes/+layout.svelte">here</a
     > for a sandbox!
   </p>
 </div>

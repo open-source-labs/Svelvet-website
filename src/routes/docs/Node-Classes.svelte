@@ -103,32 +103,25 @@
 
 <div>
   <h2 class="text-4xl font-semibold mb-12">Node Classes</h2>
-  <p class="my-4 text-gray-600">
-    <code class="code">Svelvet 5.0</code> also brings on an extra layer of customization
-    in creating your diagrams. This is achieved with the implementation of custom
-    classes with custom styling that you, the user, can input.
-  </p>
-  <p class="my-4 text-gray-600">
-    <strong> *Setup* </strong> <br /> It is important to note that you must add
-    a key value pair to your node object in initialNodes. It should look
-    something like this: <br />
+
+  <p>
+    You can add custom classes and class styling by adding a key value pair to your node object in initialNodes. It should look
+    something like this: <br><br>
     <code class="code"> className: 'yourCustomClass'</code>.
   </p>
   <p class="my-4 text-gray-600">
     Also include the <code class="code"> :global </code> keyword, and mark CSS
     as
-    <code class="code"> !important</code>. See sandbox for an example.
+    <code class="code"> !important</code>. 
   </p>
-  <p />
 </div>
 
 <div>
   <h3 class="text-xl font-semibold mt-12 mb-6">Implementing Node classes</h3>
   <p class="text-gray-600">
-    Click <a
-      href="https://stackblitz.com/edit/node-classes?file=src/routes/+layout.svelte"
-      style="color: blue">here</a
-    > for a sandbox, or test it out below!
+    Click <a class="text-rose-600 underline underline-offset-1"
+      href="https://stackblitz.com/edit/sveltejs-kit-template-default-8sdfen?file=src/routes/+layout.svelte">here</a
+    > for a sandbox, or test it out below!<br><br>
   </p>
 </div>
 

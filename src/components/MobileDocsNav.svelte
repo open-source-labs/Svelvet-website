@@ -4,12 +4,14 @@
   import downArrow from '../assets/arrow-down.svg';
   import { page } from '$app/stores';
   import { slide, fade } from 'svelte/transition';
+  import { articles } from '../data/articles';
 
   $: activeLink = `${$page.url.pathname}`;
 
   let hidden = true;
   let showGettingStarted = false;
   let showGuides = false;
+  let showBlogs = false;
 
   const toggleMenu = () => {
     hidden = !hidden;
@@ -20,6 +22,9 @@
   const toggleGuides = () => {
     showGuides = !showGuides;
   };
+  const toggleBlogs = () => {
+    showBlogs = !showBlogs;
+  };
   let y: number;
 </script>
 
@@ -27,41 +32,45 @@
 
 <div
   class:shadow-lg={y > 5}
-  class="md:hidden sticky top-0 z-50 flex justify-between px-8 py-3 w-screen border-b h-16 bg-white"
+  class="mobile"
 >
-  <div class="flex items-center">
-    <img src={logo} alt="Logo" class="aspect-ratio-auto h-8" />
+  <div class="logoWrap">
+    <img src={logo} alt="Logo" class="logo" />
     <a
       id="home"
       href="/"
-      class="text-3xl text-gray-700 font-nunito font-medium tracking-wide ml-2 mr-6"
+      class="svelvet"
       >svelvet</a
     >
+    <p class="version">
+      v7.0.0
+    </p>
   </div>
-  <button class="outline-none mobile-menu-button pl-8 " on:click={toggleMenu}>
+  <button class="mobile-menu-button" on:click={toggleMenu}>
     <div id="navMenu" class:active={!hidden}>
       <span /><span /><span />
     </div>
   </button>
 </div>
+
 {#if !hidden}
   <div
     transition:slide
-    class="md:hidden  w-screen mobile-menu border bg-gray-100 text-gray-500"
+    class="docsDropDown"
   >
-    <ul class="overflow-y-auto ">
-      <li class:bg-rose-100={activeLink === '/'}>
+    <ul>
+      <li class:selected={activeLink === '/'}>
         <a
           on:click={toggleMenu}
           href="/"
-          class="block py-4 px-12 font-medium text-gray-800">Home</a
+          class="outer">Home</a
         >
       </li>
 
       <li>
         <button
           on:click={toggleGettingStarted}
-          class="py-4 px-12 font-medium text-gray-800 flex justify-between w-full"
+          class="toggle"
         >
           <span>Getting Started</span>
           {#if showGettingStarted}
@@ -73,26 +82,26 @@
       </li>
 
       {#if showGettingStarted}
-        <ul transition:slide class="cursor-pointer bg-white">
-          <li class:bg-rose-100={activeLink.includes('installation')}>
+        <ul transition:slide class="list">
+          <li class:selected={activeLink.includes('installation')}>
             <a
               on:click={toggleMenu}
               href="/docs/installation"
-              class="block py-4 px-12 shadow-inner">Installation</a
+              class="nested">Installation</a
             >
           </li>
-          <li class:bg-rose-100={activeLink.includes('basic-usage')}>
+          <li class:selected={activeLink.includes('basic-usage')}>
             <a
               on:click={toggleMenu}
               href="/docs/basic-usage"
-              class="block py-4 px-12">Basic Usage</a
+              class="nested">Basic Usage</a
             >
           </li>
-          <li class:bg-rose-100={activeLink.includes('core-concepts')}>
+          <li class:selected={activeLink.includes('core-concepts')}>
             <a
               on:click={toggleMenu}
               href="/docs/core-concepts"
-              class="block py-4 px-12">Core Concepts</a
+              class="nested">Core Concepts</a
             >
           </li>
         </ul>
@@ -101,7 +110,7 @@
       <li>
         <button
           on:click={toggleGuides}
-          class="py-4 px-12 font-medium text-gray-800 flex justify-between w-full"
+          class="toggle"
         >
           <span>Guides</span>
           {#if showGuides}
@@ -113,140 +122,153 @@
       </li>
 
       {#if showGuides}
-        <ul transition:slide class="cursor-pointer bg-white">
-          <li class:bg-rose-100={activeLink.includes('custom-nodes')}>
+        <ul transition:slide class="list">
+          <li class:selected={activeLink.includes('custom-nodes')}>
             <a
               on:click={toggleMenu}
               href="/docs/custom-nodes"
-              class="block py-4 px-12 shadow-inner">Custom Nodes</a
+              class="nested">Custom Nodes</a
             >
           </li>
-          <li class:bg-rose-100={activeLink.includes('custom-edges')}>
+          <li class:selected={activeLink.includes('custom-edges')}>
             <a
               on:click={toggleMenu}
               href="/docs/custom-edges"
-              class="block py-4 px-12">Custom Edges</a
+              class="nested">Custom Edges</a
             >
           </li>
-          <li class:bg-rose-100={activeLink.includes('pan-and-zoom')}>
+          <li class:selected={activeLink.includes('pan-and-zoom')}>
             <a
               on:click={toggleMenu}
               href="/docs/pan-and-zoom"
-              class="block py-4 px-12">Pan and Zoom</a
+              class="nested">Pan and Zoom</a
             >
           </li>
-          <li class:bg-rose-100={activeLink.includes('typescript')}>
+          <li class:selected={activeLink.includes('typescript')}>
             <a
               on:click={toggleMenu}
               href="/docs/typescript"
-              class="block py-4 px-12">TypeScript</a
+              class="nested">TypeScript</a
             >
           </li>
-          <li class:bg-rose-100={activeLink.includes('testing')}>
+          <li class:selected={activeLink.includes('testing')}>
             <a
               on:click={toggleMenu}
               href="/docs/testing"
-              class="block py-4 px-12">Testing</a
+              class="nested">Testing</a
             >
           </li>
-          <li class:bg-rose-100={activeLink.includes('snap-to-grid')}>
+          <li class:selected={activeLink.includes('snap-to-grid')}>
             <a
               on:click={toggleMenu}
               href="/docs/snap-to-grid"
-              class="block py-4 px-12">Snap-To-Grid</a
+              class="nested">Snap-To-Grid</a
             >
           </li>
-          <li class:bg-rose-100={activeLink.includes('HTML-Docs')}>
+          <li class:selected={activeLink.includes('HTML-Docs')}>
             <a
               on:click={toggleMenu}
               href="/docs/HTML-Docs"
-              class="block py-4 px-12">HTML-Docs</a
+              class="nested">HTML-Docs</a
             >
           </li>
           <li
-            class:bg-rose-100={activeLink.includes(
+            class:selected={activeLink.includes(
               'Interactive Node Linking & Creation'
             )}
           >
             <a
               on:click={toggleMenu}
               href="/docs/Interactive-Nodes"
-              class="block py-4 px-12">Interactive Node Linking & Creation</a
+              class="nested">Interactive Node Linking & Creation</a
             >
           </li>
           <li
-            class:bg-rose-100={activeLink.includes('Custom Svelte Components')}
+            class:selected={activeLink.includes('Custom Svelte Components')}
           >
             <a
               on:click={toggleMenu}
               href="/docs/Custom-Svelte"
-              class="block py-4 px-12">Custom Svelte Components</a
+              class="nested">Custom Svelte Components</a
             >
           </li>
-          <li class:bg-rose-100={activeLink.includes('Minimap')}>
+          <li class:selected={activeLink.includes('Minimap')}>
             <a
               on:click={toggleMenu}
               href="/docs/Minimap"
-              class="block py-4 px-12">Minimap</a
+              class="nested">Minimap</a
             >
           </li>
           <li
-            class:bg-rose-100={activeLink.includes('Initial Zoom & Location')}
+            class:selected={activeLink.includes('Initial Zoom & Location')}
           >
             <a
               on:click={toggleMenu}
               href="/docs/Initial-Zoom-Location"
-              class="block py-4 px-12">Initial Zoom & Location</a
+              class="nested">Initial Zoom & Location</a
             >
           </li>
-          <li class:bg-rose-100={activeLink.includes('Node Classes')}>
+          <li class:selected={activeLink.includes('Node Classes')}>
             <a
               on:click={toggleMenu}
               href="/docs/Node-Classes"
-              class="block py-4 px-12">Node Classes</a
+              class="nested">Node Classes</a
             >
           </li>
           <li
-            class:bg-rose-100={activeLink.includes(
+            class:selected={activeLink.includes(
               'Importing & Exporting Diagrams'
             )}
           >
             <a
               on:click={toggleMenu}
               href="/docs/importDiagrams"
-              class="block py-4 px-12">Importing & Exporting Diagrams</a
+              class="nested">Importing & Exporting Diagrams</a
             >
           </li>
-          <li class:bg-rose-100={activeLink.includes('Diagram Boundary')}>
+          <li class:selected={activeLink.includes('Diagram Boundary')}>
             <a
               on:click={toggleMenu}
               href="/docs/boundary"
-              class="block py-4 px-12">Diagram Boundary</a
+              class="nested">Diagram Boundary</a
             >
           </li>
-          <!-- <li class:bg-rose-100={activeLink.includes('Interactive Editable Nodes')}>
-            <a on:click={toggleMenu} href="/docs/editNodes" class="block py-4 px-12">Interactive Editable Nodes</a>
-          </li>
-          <li class:bg-rose-100={activeLink.includes('Deletable Nodes')}>
-            <a on:click={toggleMenu} href="/docs/delete" class="block py-4 px-12">Deletable Nodes</a>
-          </li> -->
         </ul>
       {/if}
 
-      <li class:bg-rose-100={activeLink.includes('blog')}>
-        <a
-          on:click={toggleMenu}
-          target="_blank"
-          href="https://medium.com/@alexander.zambrano/simplify-application-diagramming-with-svelvet-a8f664731243"
-          class="block py-4 px-12 font-medium text-gray-800">Blog</a
+      <li>
+        <button
+          on:click={toggleBlogs}
+          class="toggle"
         >
+          <span>Blogs</span>
+          {#if showBlogs}
+            <img src={downArrow} alt="down arrow" />
+          {:else}
+            <img src={rightArrow} alt="right arrow" />
+          {/if}
+        </button>
       </li>
+      {#if showBlogs}
+        <ul transition:slide class="list">
+          {#each articles as article}
+            <li class='nested'>
+              <a
+                target='_blank'
+                rel='noreferrer'
+                class:selected={activeLink.includes('blog')}
+                href={`https://medium.com/${article.link}`}>{article.version}</a>
+            </li>
+          {/each}
+        </ul>
+      {/if}
       <li>
         <a
           on:click={toggleMenu}
           href="https://github.com/open-source-labs/Svelvet"
           target="_blank"
-          class="block py-5 px-12 font-medium text-gray-800">Github</a
+          rel="noreferrer"
+          class="outer">Github</a
         >
       </li>
     </ul>
@@ -262,16 +284,13 @@
     border-radius: 9999px;
     background-color: rgb(104, 104, 104);
   }
-
   #navMenu > span:not(:last-child) {
     margin-bottom: 7px;
   }
-
   #navMenu,
   #navMenu > span {
     transition: all 0.2s ease-in-out;
   }
-
   #navMenu.active {
     transition-delay: 0.4s;
     transform: rotate(45deg);
@@ -279,17 +298,119 @@
   #navMenu.active > span:nth-child(2) {
     width: 0;
   }
-
   #navMenu.active > span:nth-child(1),
   #navMenu.active > span:nth-child(3) {
     transition-delay: 0.2s;
   }
-
   #navMenu.active > span:nth-child(1) {
     transform: translateY(9px);
   }
-
   #navMenu.active > span:nth-child(3) {
     transform: translateY(-9px) rotate(90deg);
+  }
+  .mobile {
+    justify-content: space-between;
+    padding: 12px 32px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    border-bottom-width: 1px;
+  }
+  .docsDropDown {
+    display: block;
+    width: 100%;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    color: #1F2937;
+  }
+  .docsDropDown ul {
+    overflow-y: auto; 
+  }
+  .docsDropDown li.selected {
+    background-color: #FAE4E6;
+    color: #E94646;
+  }
+  .toggle {
+    padding: 1rem 3rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .toggle:hover {
+    color: #E94646;
+  }
+  .outer {
+    display: block;
+    padding: 1rem 3rem;
+    font-weight: 500;
+  }
+  .outer:hover {
+    color: #E94646;
+  }
+  .nested {
+    display: block;
+    padding: 1rem 4rem;
+  }
+  .nested:hover {
+    color: #E94646;
+  }
+  .list {
+    cursor: pointer;
+    background-color: #FFFFFF;
+  }
+  .mobile-menu-button {
+    outline: none;
+    padding-left: 2rem;
+  }
+  .logoWrap {
+    display: flex; 
+    align-items: center;
+  }
+  .logo {
+    aspect-ratio: auto; 
+    height: 2rem;
+  }
+  .svelvet {
+    font-size: 1.875rem;
+    color: #1F2937;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin-left: 0.5rem;
+    margin-right: 1.5rem;
+  }
+  .version {
+    display: none;
+  }
+  @media (min-width: 800px) {
+    .mobile {
+    display: none;
+    }
+    .docsDropDown {
+    display: none;
+    }
+  }
+    /* show version no. */
+  @media (min-width: 400px) {
+    .version {
+      display: inline;
+      font-size: 0.75rem;
+      border-radius: 9999px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      background-color: #FAE4E6;
+      color: #E94646;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  /* for drop shadow on nav to appear on scroll down */
+  @media (max-height: 5px) {
+    .mobile {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
   }
 </style>

@@ -87,12 +87,12 @@
   <h3 class="text-xl font-semibold">How Does Svelvet Work?</h3>
   <p class="my-4 text-gray-600">
     A <code class="bg-rose-100 rounded-lg p-1">Svelvet</code> flow component
-    renders any number of nodes and edges. As a user of the component, you can
+    renders any number of nodes and edges. As a user, you
     pass arrays of
     <code class="bg-rose-100 rounded-lg p-1">nodes</code>
     and <code class="bg-rose-100 rounded-lg p-1">edges</code> as props to the
     Svelvet component. Under the hood, Svelvet will render the nodes with
-    information provided in the
+    the information you provide in the
     <code class="bg-rose-100 rounded-lg p-1">nodes</code> array and connect them
     with edges depending on its source and target IDs provided in the
     <code class="bg-rose-100 rounded-lg p-1">edges</code> array, which correspond
@@ -117,11 +117,10 @@
     Below is a quick example of using <code class="bg-rose-100 rounded-lg p-1"
       >Svelvet</code
     >
-    to display a diagram mapping out the purchase flow of an application, or click
-    <a
-      href="https://stackblitz.com/edit/sveltejs-kit-template-default-8dtt82?file=src/routes/+layout.svelte"
-      style="color: blue">here</a
-    > for a sandbox!
+    to display a diagram mapping out the purchase flow of an application. Click
+    <a class="text-rose-600 underline underline-offset-1"
+      href="https://stackblitz.com/edit/sveltejs-kit-template-default-8dtt82?file=src/routes/+layout.svelte">here</a
+    > for a sandbox!<br><br>
   </p>
 </div>
 <Svelvet

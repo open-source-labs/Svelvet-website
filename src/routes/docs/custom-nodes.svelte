@@ -85,8 +85,7 @@
  -->
 
 <p class="text-gray-600">
-  Click <a
-    href="https://stackblitz.com/edit/customnodes?file=src/routes/+layout.svelte"
-    style="color: blue">here</a
+  Click <a class="text-rose-600 underline underline-offset-1"
+    href="https://stackblitz.com/edit/customnodes?file=src/routes/+layout.svelte">here</a
   > for a sandbox!
 </p>
