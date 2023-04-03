@@ -8,24 +8,19 @@
 
 <p class="text-gray-600">
   The default anchors can appear at the top, bottom, left, or right center of
-  the node but it does not always satisfy developers' specific needs. So Svelvet
-  6.0 introduces <code class="code">custom anchor position</code> as a new
-  feature. Developers can now pass in a
-  <code class="code">custom callback function</code> to decide where they want the
-  anchors to appear on the node.
+  the node, or you can create <code class="code">custom anchor position</code> by passing in a
+  <code class="code">custom callback function</code> to set where the anchors appear on the node.
 </p>
-
 <br />
-<img alt="Custom Anchor position demo" src={customAnchor} />
-
-<h3 class="text-xl font-semibold mt-12 mb-6">Custom Anchor Position</h3>
 
 <p class="text-gray-600">
-  Click <a
-    href="https://stackblitz.com/edit/custom-anchors?file=README.md"
-    style="color: blue">here</a
-  > for a sandbox!
+  Click <a class="text-rose-600 underline underline-offset-1"
+    href="https://stackblitz.com/edit/sveltejs-kit-template-default-8sdfen?file=src/routes/+layout.svelte">here</a
+  > for a sandbox, or test it out below!<br><br>
 </p>
+
+<img alt="Custom Anchor position demo" src={customAnchor} />
+
 
 <!--The iframe below is a Code Sandbox demo for the same feature. However, Code Sandbox is having issue during Svelvet 6 launch time. That's why we switch to Stackblitz instead-->
 

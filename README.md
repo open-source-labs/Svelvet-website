@@ -36,6 +36,7 @@ Shout out to our contributors! Here's what's new:
 <ul>
   <li>Split website code into separate repository</li>
   <li>Removed unused forum code</li>
+  <li>Updated documentation throughout site</li>
   <li>Solved github issue #s: </li>
   <li>Reworked landing page hierarchy</li>
   <li>Tweaked & added more media query breakpoints to improve website responsiveness</li>

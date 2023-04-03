@@ -37,7 +37,7 @@
 </script>
 
 <div>
-  <h2 class="text-4xl font-semibold mb-12">TypeScript</h2>
+  <h2 class="text-4xl font-semibold mb-12">Usage with TypeScript</h2>
   <h3 class="text-xl font-semibold">Usage</h3>
   <p class="my-4 text-gray-600">
     <code class="code">Svelvet</code> is written in TypeScript, and provides types

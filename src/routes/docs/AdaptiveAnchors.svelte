@@ -76,10 +76,9 @@
 />
  -->
 
-<p class="text-gray-600">
-  Click <a
-    href="https://stackblitz.com/edit/adaptiveanchors?file=src/routes/+layout.svelte"
-    style="color: blue">here</a
+ <p class="text-gray-600">
+  Click <a class="text-rose-600 underline underline-offset-1"
+    href="https://stackblitz.com/edit/sveltejs-kit-template-default-8sdfen?file=src/routes/+layout.svelte">here</a
   > for a sandbox, or test it out below!
 </p>
 
