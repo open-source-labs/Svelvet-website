@@ -72,8 +72,10 @@ class:shadow-lg={y > 5}
     <a
       href="/playground"
       id="playground"
-      class:selected={activeLink.includes('playground')}
-      >REPL</a
+
+      class="hover:text-rose-500 {activeLink.includes('REPL')
+        ? 'text-rose-500'
+        : ''}">Sandbox</a
     >
 
     <!-- medium article links in data folder -->

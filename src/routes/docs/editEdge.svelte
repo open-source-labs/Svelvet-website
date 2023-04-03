@@ -5,24 +5,19 @@
 <h2 class="text-4xl font-semibold mb-12">Interactive Editable Nodes and Edges</h2>
 
 <p class="text-gray-600">
-  <code class="bg-rose-100 rounded-lg p-1">Svelvet</code> also allows users to
-  interactively edit nodes and edges in their diagrams using the <code class="bg-rose-100 rounded-lg p-1">editable</code>
+  <code class="bg-rose-100 rounded-lg p-1">Svelvet</code> allows users to edit nodes and edges in their diagrams using the <code class="bg-rose-100 rounded-lg p-1">editable</code>
   prop. 
   Right click on a node or edge to bring
-  up a modal that will have customizable options! You can also delete nodes and edges using this modal.
+  up a modal that will have customizable options. You can also delete nodes and edges using this modal.<br><br>
 </p>
-
-<br />
-<img alt="Edge edit demo" src={editEdgeDemo} />
-
-<h3 class="text-xl font-semibold mt-12 mb-6">Sandbox</h3>
 
 <p class="text-gray-600">
-  Click <a
-    href="https://stackblitz.com/edit/edit-edge?file=src/routes/+layout.svelte"
-    style="color: blue">here</a
-  > for a sandbox!
+  Click <a class="text-rose-600 underline underline-offset-1"
+    href="https://stackblitz.com/edit/sveltejs-kit-template-default-8sdfen?file=src/routes/+layout.svelte">here</a
+  > for a sandbox!<br><br>
 </p>
+
+<img alt="Edge edit demo" src={editEdgeDemo} />
 
 <!--The iframe below is a Code Sandbox demo for the same feature. However, Code Sandbox is having issue during Svelvet 6 launch time. That's why we switch to Stackblitz instead-->
 

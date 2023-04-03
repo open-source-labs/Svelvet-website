@@ -3,7 +3,6 @@
 
 <div>
   <h2 class="text-4xl font-semibold mb-12">Testing</h2>
-  <h3 class="text-xl font-semibold">External</h3>
 
   <p class="my-4 text-gray-600">
     While testing your application, it is highly recommended to exclude Svelvet components as best
@@ -36,25 +35,4 @@
     work to get started, letting you focus on writing quality tests rather than config issues.
   </p>
 </div>
-<div>
-  <h3 class="text-xl font-semibold mt-12">Internal</h3>
-  <p class="my-4 text-gray-600">
-    Svelvet components are built with unit, integration and end-to-end tests using <a
-      class="text-rose-600 underline underline-offset-1"
-      target="_blank"
-      href="https://vitest.dev/">@vitest</a
-    >,
-    <a
-      class="text-rose-600 underline underline-offset-1"
-      target="_blank"
-      href="https://testing-library.com/docs/svelte-testing-library/intro/"
-      >@testing-library/svelte</a
-    >, and
-    <a
-      class="text-rose-600 underline underline-offset-1"
-      target="_blank"
-      href="https://www.cypress.io/">@cypress</a
-    > along with an integrated CI/CD pipeline. Therefore, package version updates and usage could be
-    done with confidence.
-  </p>
-</div>
+

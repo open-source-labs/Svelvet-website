@@ -120,13 +120,10 @@
 
 <div>
   <div>
-    <h2 class="text-4xl font-semibold mb-12">CSS-Background</h2>
+    <h2 class="text-4xl font-semibold mb-12">Background Colors</h2>
 
     <p class="my-4 text-gray-600">
-      If for any reason you want a different background as you make your Svelvet
-      visulization there is a built in declaration available. Simply declare a
-      bgColor and set it equal to a string as seen in the example below and the
-      display will update it accordingly.
+      To set the background color of a node, set the <code class="code">bgColor</code> property to a string. 
     </p>
   </div>
 
@@ -141,9 +138,8 @@
   <h3 class="text-xl font-semibold mt-12">CSS-Background</h3>
   <br />
   <p class="text-gray-600">
-    Click <a
-      href="https://stackblitz.com/edit/sveltejs-kit-template-default-8sdfen?file=src/routes/+layout.svelte"
-      style="color: blue">here</a
+    Click <a class="text-rose-600 underline underline-offset-1"
+      href="https://stackblitz.com/edit/sveltejs-kit-template-default-8sdfen?file=src/routes/+layout.svelte">here</a
     > for a sandbox, or test it out below!
   </p>
   <br />

@@ -35,18 +35,16 @@
 </div>
 
 <p class="text-gray-600">
-  <code class="code">Svelvet</code> now makes nodes more powerful by enabling
-  <code class="code">resizability</code> as a new default feature for all the nodes
-  in Svelvet component. Hover your mouse to the right bottom corner of each node,
+  <code class="code">Svelvet</code> enables
+  <code class="code">resizability</code> as a new default feature for all nodes. Hover your mouse to the right bottom corner of each node,
   you can see a purple mini dot attached. Drag the purple dot and see what happens!
 </p>
 
 <br />
 <p class="text-gray-600">
-  Click <a
-    href="https://stackblitz.com/edit/dynamic-anchor?file=README.md"
-    style="color: blue">here</a
-  > for a sandbox, or test it out below!
+  Click <a class="text-rose-600 underline underline-offset-1"
+    href="https://stackblitz.com/edit/sveltejs-kit-template-default-8sdfen?file=src/routes/+layout.svelte">here</a
+  > for a sandbox, or test it out below.
 </p>
 
 <br />

@@ -82,22 +82,13 @@
   <h2 class="text-4xl font-semibold mb-12">Minimap</h2>
 
   <p class="my-4 text-gray-600">
-    <code class="code">Svelvet 5.0</code> introduces a new optional feature that
-    can be added to diagrams now. To access this feature set the minimap prop to
-    <code class="code">{true}</code> in your Svelvet application.
-  </p>
-  <p class="my-4 text-gray-600">
-    It is important to note that the minimap scales to your current zoom
-    settings which you can affect by scrolling your mouse wheel up or down; if
-    you are on a touchpad or touchscreen, expand or collapse and it should work
-    the same way. Different browsers may have different settings.
+    To add a minimap to your graph, set the minimap prop to
+    <code class="code">{true}</code>.
   </p>
 
-  <br />
   <p class="text-gray-600">
-    Click <a
-      href="https://stackblitz.com/edit/minimap-as34t2?file=src/routes/+layout.svelte"
-      style="color: blue">here</a
+    Click <a class="text-rose-600 underline underline-offset-1"
+      href="https://stackblitz.com/edit/sveltejs-kit-template-default-8sdfen?file=src/routes/+layout.svelte">here</a
     > for a sandbox, or test it out below!
   </p>
 </div>

@@ -63,10 +63,9 @@
     Implementing Custom Svelte Components
   </h3>
   <p class="text-gray-600">
-    Click <a
-      href="https://stackblitz.com/edit/custom-svelte?file=src/routes/About.svelte"
-      style="color: blue">here</a
-    > for a sandbox, or try it yourself below!
+    Click <a class="text-rose-600 underline underline-offset-1"
+      href="https://stackblitz.com/edit/sveltejs-kit-template-default-8sdfen?file=src/routes/+layout.svelte">here</a
+    > for a sandbox, or test it out below!
   </p>
 </div>
 <br />
