@@ -119,7 +119,7 @@
     >
     to display a diagram mapping out the purchase flow of an application. Click
     <a class="text-rose-600 underline underline-offset-1"
-      href="https://stackblitz.com/edit/sveltejs-kit-template-default-8dtt82?file=src/routes/+layout.svelte">here</a
+      href="https://codesandbox.io/s/svelvet-demo-v1gjl9">here</a
     > for a sandbox!<br><br>
   </p>
 </div>

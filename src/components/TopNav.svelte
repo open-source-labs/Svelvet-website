@@ -15,8 +15,6 @@
   $: activeLink = `${$page.url.pathname}`;
   let y: number;
 
-  export let mediumArticle;
-
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -70,10 +68,10 @@ class:shadow-lg={y > 5}
       >Github</a
     >
     <a
-      href="/playground"
-      id="playground"
+      href="https://codesandbox.io/s/svelvet-demo-v1gjl9"
+      id="sandbox"
 
-      class="hover:text-rose-500 {activeLink.includes('REPL')
+      class="hover:text-rose-500 {activeLink.includes('sandbox')
         ? 'text-rose-500'
         : ''}">Sandbox</a
     >

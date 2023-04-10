@@ -91,7 +91,7 @@
         >Github</a
         >
       <li>
-        <a on:click={toggleMenu} href="/playground">Sandbox</a>
+        <a on:click={toggleMenu} href="https://codesandbox.io/s/svelvet-demo-v1gjl9">Sandbox</a>
       </li>
       <li>
         <a

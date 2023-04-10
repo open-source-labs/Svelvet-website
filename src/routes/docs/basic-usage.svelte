@@ -39,7 +39,7 @@
 <p class="my-4 text-gray-600">
   Click
   <a class="text-rose-600 underline underline-offset-1"
-    href="https://stackblitz.com/edit/sveltejs-kit-template-default-przg8a?file=src/routes/+layout.svelte"
+    href="https://codesandbox.io/s/svelvet-demo-v1gjl9"
     >here</a
   > for a sandbox!
 </p>
