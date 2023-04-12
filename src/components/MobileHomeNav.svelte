@@ -232,10 +232,11 @@
     transition: background-color 0.2s ease-in-out;
     box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
     backdrop-filter: blur( 1.125rem ); 
+    border: 2px solid transparent;
   }
   .btn-pink:hover {
     background-color: #fff;
-    outline: 1px solid #E94646;
+    border: 2px solid #E94646;
     color: #E94646;
   }
   #navMenu {

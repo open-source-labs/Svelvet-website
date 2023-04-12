@@ -315,10 +315,11 @@
     transition: background-color 0.2s ease-in-out;
     box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
     backdrop-filter: blur( 1.125rem ); 
+    border: 2px solid transparent;
   }
   .btn-pink:hover {
     background-color: #fff;
-    outline: 2px solid #E94646;
+    border: 2px solid #E94646;
     color: #E94646;
   }
 /*---------------------------------------- LEARN MORE SECTION --------------------------------------------*/
@@ -366,11 +367,12 @@
     color: #1F2937;
     font-size: 1.125rem;
     align-self: center;
+    border: 2px solid transparent;
   }
   .btn-white:hover {
     transition: background-color 0.2s ease-in-out;
     background-color: transparent;
-    outline: 2px solid #e5e7eb;
+    border: 2px solid #e5e7eb;
     color: #ffffff;
   }
 /*------------------------------------------ INSTALL SECTION ---------------------------------------------*/
