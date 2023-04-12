@@ -66,11 +66,12 @@
       color: #1F2937;
       font-size: 1.125rem;
       align-self: center;
+      border: 2px solid transparent;
     }
     .btn-white:hover {
       transition: background-color 0.2s ease-in-out;
       background-color: transparent;
-      outline: 2px solid #e5e7eb;
+      border: 2px solid #e5e7eb;
       color: #ffffff;
     }
     @media (max-width: 699px) {
