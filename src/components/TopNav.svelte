@@ -54,7 +54,7 @@ class:shadow-lg={y > 5}
       >Home</a
     >
     <a
-      href="https://svelvet.mintlify.app/introduction"
+      href="https://svelvet.mintlify.app/"
       id="docs"
       target="_blank"
       rel="noreferrer"

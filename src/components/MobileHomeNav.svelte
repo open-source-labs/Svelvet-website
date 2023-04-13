@@ -82,7 +82,7 @@
       <li>
         <a 
           on:click={toggleMenu} 
-          href="https://svelvet.mintlify.app/introduction"
+          href="https://svelvet.mintlify.app/"
           target="_blank"
           rel="noreferrer"
         >Docs</a>
