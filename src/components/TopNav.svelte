@@ -3,7 +3,7 @@
   import github from '../assets/github-icon-white.svg';
   import { page } from '$app/stores';
   import MobileHomeNav from './MobileHomeNav.svelte';
-  import { signInWithGithub, logout, userInfo } from '../supabase-db';
+  import { signInWithGithub, logout } from '../supabase-db';
   import { userInfoStore } from '../authStoreTs';
   import { articles } from '../data/articles'
 
@@ -13,8 +13,6 @@
 
   $: activeLink = `${$page.url.pathname}`;
   let y: number;
-
-  export let mediumArticle;
 
 </script>
 

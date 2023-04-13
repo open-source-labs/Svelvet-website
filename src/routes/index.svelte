@@ -131,7 +131,14 @@
       <code class="highlight" style="color:#E94646;">Svelvet</code> is a lightweight Svelte
       component library for building interactive node graphs 
     </p>
-    <div class='buttonWrapper'><a href="https://svelvet.mintlify.app/" class="btn-pink">Get Started</a></div>
+    <div class='buttonWrapper'>
+      <a 
+        href="https://svelvet.mintlify.app/" 
+        target="_blank"
+        rel="noreferrer"
+        class="btn-pink"
+      >Get Started</a>
+    </div>
   </div>
   <div class="topRight">
     <div class="diagram">
@@ -160,9 +167,12 @@
         Svelvet allows you to easily create intuitive flow diagrams using
         pre-built components with node-to-node data flow, seamless zooming and panning, customizable edges and nodes and more!
       </p>
-      <a href="https://svelvet.mintlify.app/" class="btn-white">
-        Learn More
-      </a>
+      <a 
+        href="https://svelvet.mintlify.app/" 
+        target="_blank"
+        rel="noreferrer"
+        class="btn-white"
+      >Learn More</a>
     </div>
   </div>
 </div>
@@ -180,8 +190,10 @@
     </p>
     <a
       href="https://svelvet.mintlify.app/"
-      class="btn-pink">More Info</a
-    >
+      target="_blank"
+      rel="noreferrer"
+      class="btn-pink"
+    >More Info</a>
   </div>
   <div class="installInner2">
     <div class="typingWindowWrapper">
