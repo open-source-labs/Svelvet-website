@@ -3,7 +3,6 @@
   import github from '../assets/github-icon-white.svg';
   import { page } from '$app/stores';
   import MobileHomeNav from './MobileHomeNav.svelte';
-  import MobileDocsNav from './MobileDocsNav.svelte';
   import { signInWithGithub, logout, userInfo } from '../supabase-db';
   import { userInfoStore } from '../authStoreTs';
   import { articles } from '../data/articles'
@@ -20,12 +19,10 @@
 </script>
 
 <svelte:window bind:scrollY={y} />
-<!-- Toggled Mobile Navbar -->
-{#if activeLink.includes('docs')}
-  <MobileDocsNav />
-{:else}
+
+<!-- Mobile Navbar -->
   <MobileHomeNav />
-{/if}
+
 
 <!-- Navbar -->
 
@@ -57,9 +54,10 @@ class:shadow-lg={y > 5}
       >Home</a
     >
     <a
-      href="/docs/installation"
+      href="https://svelvet.mintlify.app/introduction"
       id="docs"
-      class:selected={activeLink.includes('docs')}
+      target="_blank"
+      rel="noreferrer"
      >Docs</a
     >
     <a

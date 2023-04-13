@@ -80,7 +80,12 @@
         <a on:click={toggleMenu} href="/">Home</a>
       </li>
       <li>
-        <a on:click={toggleMenu} href="/docs/installation">Docs</a>
+        <a 
+          on:click={toggleMenu} 
+          href="https://svelvet.mintlify.app/introduction"
+          target="_blank"
+          rel="noreferrer"
+        >Docs</a>
       </li>
       <li>
         <a
