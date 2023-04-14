@@ -168,7 +168,7 @@
         pre-built components with node-to-node data flow, seamless zooming and panning, customizable edges and nodes and more!
       </p>
       <a 
-        href="https://svelvet.mintlify.app/" 
+        href="https://svelvet.mintlify.app/components/svelvet" 
         target="_blank"
         rel="noreferrer"
         class="btn-white"
@@ -189,7 +189,7 @@
       ready to show off your interactive diagram - no extra configuration needed!
     </p>
     <a
-      href="https://svelvet.mintlify.app/"
+      href="https://svelvet.mintlify.app/getting-started/installation"
       target="_blank"
       rel="noreferrer"
       class="btn-pink"
