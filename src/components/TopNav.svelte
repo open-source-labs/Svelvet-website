@@ -3,8 +3,7 @@
   import github from '../assets/github-icon-white.svg';
   import { page } from '$app/stores';
   import MobileHomeNav from './MobileHomeNav.svelte';
-  import MobileDocsNav from './MobileDocsNav.svelte';
-  import { signInWithGithub, logout, userInfo } from '../supabase-db';
+  import { signInWithGithub, logout } from '../supabase-db';
   import { userInfoStore } from '../authStoreTs';
   import { articles } from '../data/articles'
 
@@ -15,17 +14,13 @@
   $: activeLink = `${$page.url.pathname}`;
   let y: number;
 
-  export let mediumArticle;
-
 </script>
 
 <svelte:window bind:scrollY={y} />
-<!-- Toggled Mobile Navbar -->
-{#if activeLink.includes('docs')}
-  <MobileDocsNav />
-{:else}
+
+<!-- Mobile Navbar -->
   <MobileHomeNav />
-{/if}
+
 
 <!-- Navbar -->
 
@@ -57,9 +52,10 @@ class:shadow-lg={y > 5}
       >Home</a
     >
     <a
-      href="/docs/installation"
+      href="https://svelvet.mintlify.app/"
       id="docs"
-      class:selected={activeLink.includes('docs')}
+      target="_blank"
+      rel="noreferrer"
      >Docs</a
     >
     <a
@@ -70,12 +66,11 @@ class:shadow-lg={y > 5}
       >Github</a
     >
     <a
-      href="/playground"
-      id="playground"
-
-      class="hover:text-rose-500 {activeLink.includes('REPL')
-        ? 'text-rose-500'
-        : ''}">Sandbox</a
+      href="https://codesandbox.io/s/svelvet-demo-home-v1gjl9"
+      id="sandbox"
+      target="_blank"
+      rel="noreferrer"
+      >Sandbox</a
     >
 
     <!-- medium article links in data folder -->
