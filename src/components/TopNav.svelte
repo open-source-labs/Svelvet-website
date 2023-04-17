@@ -66,12 +66,11 @@ class:shadow-lg={y > 5}
       >Github</a
     >
     <a
-      href="/playground"
-      id="playground"
-
-      class="hover:text-rose-500 {activeLink.includes('REPL')
-        ? 'text-rose-500'
-        : ''}">Sandbox</a
+      href="https://codesandbox.io/s/svelvet-demo-home-v1gjl9"
+      id="sandbox"
+      target="_blank"
+      rel="noreferrer"
+      >Sandbox</a
     >
 
     <!-- medium article links in data folder -->

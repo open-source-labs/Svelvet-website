@@ -96,7 +96,13 @@
         >Github</a
         >
       <li>
-        <a on:click={toggleMenu} href="/playground">Sandbox</a>
+        <a on:click={toggleMenu} 
+          href="https://codesandbox.io/s/svelvet-demo-home-v1gjl9"
+          id="sandbox"
+          target="_blank"
+          rel="noreferrer"
+          >Sandbox</a
+        >
       </li>
       <li>
         <a
