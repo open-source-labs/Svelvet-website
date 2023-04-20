@@ -230,7 +230,7 @@ export const contributors = [
   },
   {
     firstName: 'Ernesto',
-    lastName: 'Gonzales',
+    lastName: 'Gonzalez',
     linkedin: 'ernesto-gonzalez-a168221a7',
     github: 'ErnestoGonza',
     image: ernesto,
