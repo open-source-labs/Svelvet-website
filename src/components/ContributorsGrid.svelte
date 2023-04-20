@@ -69,7 +69,7 @@
   .btn-white:hover {
     transition: background-color 0.2s ease-in-out;
     background-color: transparent;
-    box-shadow: 0 0 2px 2px #e5e7eb;
+    box-shadow: 0 0 2px #e5e7eb;
     color: #ffffff;
   }
   @media (max-width: 699px) {
