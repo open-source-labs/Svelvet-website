@@ -6,7 +6,7 @@
   import MobileDocsNav from './MobileDocsNav.svelte';
   import { signInWithGithub, logout, userInfo } from '../supabase-db';
   import { userInfoStore } from '../authStoreTs';
-  import { articles } from '../data/articles'
+  import { articles } from '../data/articles';
 
   let { user, user_avatar } = userInfoStore;
   // use set method on user writable and set it equal to the return value of userIndo
@@ -16,7 +16,6 @@
   let y: number;
 
   export let mediumArticle;
-
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -29,10 +28,7 @@
 
 <!-- Navbar -->
 
-<div
-class:shadow-lg={y > 5}
-  class="desktop"
->
+<div class:shadow-lg={y > 5} class="desktop">
   <div class="logoWrap">
     <img src={logo} alt="Logo" class="logo" />
     <a
@@ -41,38 +37,27 @@ class:shadow-lg={y > 5}
       on:click={() => {
         activeLink = '/';
       }}
-      class="svelvet"
-      >svelvet</a
+      class="svelvet">svelvet</a
     >
-    <p class="version">
-      v7.0.0
-    </p>
+    <p class="version">v7.0.0</p>
   </div>
 
   <nav class="navBar">
+    <a href="/" id="home" class:selected={activeLink === '/'}>Home</a>
     <a
-      href="/"
-      id="home"
-      class:selected={activeLink === '/'}
-      >Home</a
-    >
-    <a
-      href="/docs/installation"
+      href="https://svelvet.mintlify.app"
       id="docs"
-      class:selected={activeLink.includes('docs')}
-     >Docs</a
+      class:selected={activeLink.includes('docs')}>Docs</a
     >
     <a
       href="https://github.com/open-source-labs/Svelvet"
       id="github"
       target="_blank"
-      rel="noreferrer"
-      >Github</a
+      rel="noreferrer">GitHub</a
     >
     <a
-      href="/playground"
+      href="https://stackblitz.com/edit/svelvet-v7?file=src/routes/+page.svelte"
       id="playground"
-
       class="hover:text-rose-500 {activeLink.includes('REPL')
         ? 'text-rose-500'
         : ''}">Sandbox</a
@@ -80,47 +65,23 @@ class:shadow-lg={y > 5}
 
     <!-- medium article links in data folder -->
     <div class="dropdown">
-      <button class="dropbtn">
-        Blogs
-      </button>
+      <button class="dropbtn"> Blogs </button>
       <div class="dropdown-content">
         <ul>
           {#each articles as article}
             <li>
               <a
-                target='_blank'
-                rel='noreferrer'
+                target="_blank"
+                rel="noreferrer"
                 class:selected={activeLink.includes('blog')}
-                href={`https://medium.com/${article.link}`}>{article.version}</a>
+                href={`https://medium.com/${article.link}`}>{article.version}</a
+              >
             </li>
           {/each}
         </ul>
       </div>
     </div>
-
-    <!-- Add logic for OAuth and conditionally render if the user is logged in, change button text to sign out and vice versa -->
-
-    {#if $user}
-      <button on:click={logout}>
-        <!-- <div class="login-container rounded-full px-4 py-1 bg-rose-100 text-red-400 tracking-wider hover:text-rose-500 hover:bg-white">Logout
-          <img src={$user_avatar} alt="user pic"/>
-        </div> -->
-        <div class="login-container btn-pink">
-          Logout
-          <img src={$user_avatar} alt="user pic" />
-        </div>
-      </button>
-
-      <!-- <img id="github-avatar" alt="github-avatar-photo"> -->
-    {:else}
-      <button on:click={signInWithGithub}
-        ><div class="login-container btn-pink">
-          Log In
-          <img src={github} alt="github-logo" />
-        </div></button
-      >
-    {/if}
-    </nav>
+  </nav>
 </div>
 
 <style>
@@ -150,7 +111,7 @@ class:shadow-lg={y > 5}
 
   /* The dropdown container */
   .dropdown {
-    float: left;
+    float: right;
     overflow: hidden;
     color: #374151;
   }
@@ -171,13 +132,14 @@ class:shadow-lg={y > 5}
     color: #ff4561;
   }
   .dropbtn:hover {
-    background-color: #FAE4E6;
+    background-color: #fae4e6;
   }
 
   /* Dropdown content (hidden by default) */
   .dropdown-content {
     display: none;
     position: absolute;
+    right: 0px;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -195,7 +157,7 @@ class:shadow-lg={y > 5}
 
   /* Add a pink background color to dropdown links on hover */
   .dropdown-content a:hover {
-    background-color: #FAE4E6;
+    background-color: #fae4e6;
   }
 
   /* Show the dropdown menu on hover */
@@ -211,16 +173,16 @@ class:shadow-lg={y > 5}
     background-color: white;
   }
   .logoWrap {
-    display: flex; 
+    display: flex;
     align-items: center;
   }
   .logo {
-    aspect-ratio: auto; 
+    aspect-ratio: auto;
     height: 2rem;
   }
   .svelvet {
     font-size: 1.875rem;
-    color: #1F2937;
+    color: #1f2937;
     font-family: 'Nunito', sans-serif;
     font-weight: 500;
     letter-spacing: 0.05em;
@@ -235,14 +197,14 @@ class:shadow-lg={y > 5}
     padding-right: 1rem;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
-    background-color: #FAE4E6;
-    color: #E94646;
+    background-color: #fae4e6;
+    color: #e94646;
     letter-spacing: 0.1em;
   }
   .navBar {
     display: flex;
     font-size: 0.875rem;
-    color: #6B7280;
+    color: #6b7280;
     font-weight: 500;
     align-items: center;
     gap: 2.25rem;
@@ -251,37 +213,37 @@ class:shadow-lg={y > 5}
     color: #374151;
   }
   .navBar a:hover {
-    color: #E94646;
+    color: #e94646;
   }
   a.selected {
-    color: #E94646;
+    color: #e94646;
   }
   .btn-pink {
     display: inline-block;
     width: fit-content;
     text-align: center;
-    padding: .25rem .75rem;
+    padding: 0.25rem 0.75rem;
     text-align: center;
-    background-color: #E94646;
+    background-color: #e94646;
     border-radius: 6rem;
     color: #fff;
-    font-size: .9rem;
+    font-size: 0.9rem;
     transition: background-color 0.2s ease-in-out;
     box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
-    backdrop-filter: blur( 1.125rem ); 
+    backdrop-filter: blur(1.125rem);
   }
   .btn-pink:hover {
     background-color: #fff;
-    outline: 1px solid #E94646;
-    color: #E94646;
+    outline: 1px solid #e94646;
+    color: #e94646;
   }
 
   @media (min-width: 800px) {
     .desktop {
-    display: none;
-    display: flex;
-    border-bottom-width: 1px;
-   }
+      display: none;
+      display: flex;
+      border-bottom-width: 1px;
+    }
   }
 
   /* for drop shadow on nav to appear on scroll down */
@@ -290,5 +252,4 @@ class:shadow-lg={y > 5}
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
   }
-
 </style>

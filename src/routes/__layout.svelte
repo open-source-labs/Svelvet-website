@@ -9,7 +9,7 @@
   <slot />
 {:else}
   <div style="position: sticky; top: 0; left: 0; right: 0; z-index: 50;">
-      <TopNav />
+    <TopNav />
   </div>
   <slot />
   <Footer />

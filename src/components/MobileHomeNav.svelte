@@ -39,7 +39,7 @@
       update,
       destroy() {
         window.removeEventListener('click', handleOutsideClick);
-      }
+      },
     };
   }
 </script>
@@ -53,14 +53,8 @@
 >
   <div class="logoWrap">
     <img src={logo} alt="Logo" class="logo" />
-    <a
-      id="home"
-      href="/"
-      class="svelvet">svelvet</a
-    >
-    <p class="version">
-      v7.0.0
-    </p>
+    <a id="home" href="/" class="svelvet">svelvet</a>
+    <p class="version">v7.0.0</p>
   </div>
   <button class="mobile-menu-button" on:click={toggleMenu}>
     <!-- hamburger menu -->
@@ -71,56 +65,41 @@
 </div>
 
 {#if !hidden}
-  <div
-    transition:slide
-    class="mobileDropDown"
-  >
+  <div transition:slide class="mobileDropDown">
     <ul>
       <li>
         <a on:click={toggleMenu} href="/">Home</a>
       </li>
       <li>
-        <a on:click={toggleMenu} href="/docs/installation">Docs</a>
+        <a on:click={toggleMenu} href="https://svelvet.mintlify.app">Docs</a>
       </li>
       <li>
         <a
           on:click={toggleMenu}
           href="https://github.com/open-source-labs/Svelvet"
           target="_blank"
-          rel="noreferrer"
-        >Github</a
+          rel="noreferrer">GitHub</a
         >
+      </li>
       <li>
-        <a on:click={toggleMenu} href="/playground">Sandbox</a>
+        <a
+          on:click={toggleMenu}
+          href="https://stackblitz.com/edit/svelvet-v7?file=src/routes/+page.svelte"
+          >Sandbox</a
+        >
       </li>
       <li>
         <a
           on:click={toggleMenu}
           target="_blank"
           rel="noreferrer"
-          href="https://medium.com/@hor.val/svelvet-6-0-the-svelte-component-library-for-building-interactive-node-based-diagrams-81dafa2d50cd"
-        >Blog 7.0</a
+          href="https://medium.com/@jenlee_35516/svelvet-7-0-build-intuitive-interactive-node-diagrams-in-svelte-cb4e78872ff6"
+          >Blog 7.0</a
         >
       </li>
-
-      <!-- added login / logout button link! -->
-      {#if $user}
-      <button on:click={logout}>
-        <div class="login-container btn-pink">Logout 
-        <img src={$user_avatar} alt="user pic"/>
-      </div> 
-      </button>
-    {:else}
-      <button on:click={signInWithGithub}><div class="login-container btn-pink">
-        Log In
-        <img src={github} alt="github-logo" />
-      </div></button>
-    {/if}
     </ul>
   </div>
 {/if}
-
-
 
 <style>
   #navMenu > span {
@@ -154,7 +133,7 @@
   #navMenu.active > span:nth-child(3) {
     transform: translateY(-9px) rotate(90deg);
   }
-  .login-container{
+  .login-container {
     display: flex;
     width: 8em;
     justify-content: space-between;
@@ -165,7 +144,7 @@
     align-items: center;
     flex: 1;
     float: left;
-    padding: .25em 1em .25em;
+    padding: 0.25em 1em 0.25em;
   }
   .login-container img {
     display: inline-block;
@@ -202,11 +181,11 @@
     padding-left: 2rem;
   }
   .logoWrap {
-    display: flex; 
+    display: flex;
     align-items: center;
   }
   .logo {
-    aspect-ratio: auto; 
+    aspect-ratio: auto;
     height: 2rem;
   }
   .svelvet {
@@ -223,20 +202,20 @@
     width: fit-content;
     text-align: center;
     margin-top: 1rem;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     text-align: center;
-    background-color: #E94646;
+    background-color: #e94646;
     border-radius: 2rem;
     color: #fff;
     font-size: 1.125rem;
     transition: background-color 0.2s ease-in-out;
     box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
-    backdrop-filter: blur( 1.125rem ); 
+    backdrop-filter: blur(1.125rem);
   }
   .btn-pink:hover {
     background-color: #fff;
-    outline: 1px solid #E94646;
-    color: #E94646;
+    outline: 1px solid #e94646;
+    color: #e94646;
   }
   #navMenu {
     text-align: left;
@@ -247,7 +226,7 @@
 
   @media (min-width: 800px) {
     .mobile {
-    display: none;
+      display: none;
     }
   }
 
@@ -261,8 +240,8 @@
       padding-right: 1rem;
       padding-top: 0.25rem;
       padding-bottom: 0.25rem;
-      background-color: #FAE4E6;
-      color: #E94646;
+      background-color: #fae4e6;
+      color: #e94646;
       letter-spacing: 0.1em;
     }
   }
@@ -273,5 +252,4 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
   }
-
 </style>
