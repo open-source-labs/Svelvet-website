@@ -5,7 +5,7 @@
     generateInput,
     generateOutput,
     Resizer,
-    ColorWheel,
+    ColorPicker,
     Node,
     Anchor,
   } from 'svelvet';
@@ -24,14 +24,14 @@
 </script>
 
 <Node useDefaults rotation={-5} position={{ x: 50, y: 400 }} let:selected>
+  <p class="note" id="custom">
+    Built In
+    <br />
+    Components
+  </p>
   <NodeWrapper title="Color">
-    <div class="note" id="custom">
-      Built In
-      <br />
-      Components
-    </div>
     <div class="node-body">
-      <ColorWheel parameterStore={$inputs.color} />
+      <ColorPicker parameterStore={$inputs.color} />
     </div>
     <div class="output-anchors">
       <Anchor
@@ -49,7 +49,7 @@
       </Anchor>
     </div>
   </NodeWrapper>
-  <Resizer rotation />
+  <Resizer rotation width />
 </Node>
 
 <style>
@@ -68,7 +68,7 @@
     flex-direction: column;
     gap: 10px;
   }
-  #custom {
+  .note {
     font-family: 'Reenie Beanie', sans-serif;
     position: absolute;
     top: 10%;

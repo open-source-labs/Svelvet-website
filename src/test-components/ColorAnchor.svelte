@@ -11,9 +11,8 @@
 
 <style>
   .my-anchor {
-    box-sizing: content-box;
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     background-color: var(--color);
     border: solid 2px white;
