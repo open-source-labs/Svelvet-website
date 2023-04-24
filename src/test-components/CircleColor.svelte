@@ -10,6 +10,7 @@
     Anchor,
   } from 'svelvet';
   import type { CSSColorString } from 'svelvet';
+  import CustomEdge from './CustomEdge.svelte';
 
   type Inputs = {
     color: CSSColorString;
@@ -42,6 +43,7 @@
         output
         edgeStyle="bezier"
         edgeColor={output}
+        edge={CustomEdge}
         edgeLabel="Dynamic Edges"
         locked
       >
