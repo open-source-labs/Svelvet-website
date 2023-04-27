@@ -4,8 +4,6 @@
 
   /* import store so that we can check if there's a user that is loggin in */
   import { userInfoStore } from '../authStoreTs';
-  /* import supabase functionality for user login / logout */
-  import { signInWithGithub, logout } from '../supabase-db';
   /* importing GitHub logo from assets */
   import github from '../assets/github-icon-white.svg';
 

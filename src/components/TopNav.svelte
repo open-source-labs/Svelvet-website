@@ -4,11 +4,8 @@
   import { page } from '$app/stores';
   import MobileHomeNav from './MobileHomeNav.svelte';
   import MobileDocsNav from './MobileDocsNav.svelte';
-  import { signInWithGithub, logout, userInfo } from '../supabase-db';
-  import { userInfoStore } from '../authStoreTs';
   import { articles } from '../data/articles';
 
-  let { user, user_avatar } = userInfoStore;
   // use set method on user writable and set it equal to the return value of userIndo
   // user.set(userInfo);
 
