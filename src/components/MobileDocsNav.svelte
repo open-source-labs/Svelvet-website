@@ -30,21 +30,11 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div
-  class:shadow-lg={y > 5}
-  class="mobile"
->
+<div class:shadow-lg={y > 5} class="mobile">
   <div class="logoWrap">
     <img src={logo} alt="Logo" class="logo" />
-    <a
-      id="home"
-      href="/"
-      class="svelvet"
-      >svelvet</a
-    >
-    <p class="version">
-      v7.0.0
-    </p>
+    <a id="home" href="/" class="svelvet">svelvet</a>
+    <p class="version">v7.0.0</p>
   </div>
   <button class="mobile-menu-button" on:click={toggleMenu}>
     <div id="navMenu" class:active={!hidden}>
@@ -54,24 +44,14 @@
 </div>
 
 {#if !hidden}
-  <div
-    transition:slide
-    class="docsDropDown"
-  >
+  <div transition:slide class="docsDropDown">
     <ul>
       <li class:selected={activeLink === '/'}>
-        <a
-          on:click={toggleMenu}
-          href="/"
-          class="outer">Home</a
-        >
+        <a on:click={toggleMenu} href="/" class="outer">Home</a>
       </li>
 
       <li>
-        <button
-          on:click={toggleGettingStarted}
-          class="toggle"
-        >
+        <button on:click={toggleGettingStarted} class="toggle">
           <span>Getting Started</span>
           {#if showGettingStarted}
             <img src={downArrow} alt="down arrow" />
@@ -84,34 +64,25 @@
       {#if showGettingStarted}
         <ul transition:slide class="list">
           <li class:selected={activeLink.includes('installation')}>
-            <a
-              on:click={toggleMenu}
-              href="/docs/installation"
-              class="nested">Installation</a
+            <a on:click={toggleMenu} href="/v6/installation" class="nested"
+              >Installation</a
             >
           </li>
           <li class:selected={activeLink.includes('basic-usage')}>
-            <a
-              on:click={toggleMenu}
-              href="/docs/basic-usage"
-              class="nested">Basic Usage</a
+            <a on:click={toggleMenu} href="/v6/basic-usage" class="nested"
+              >Basic Usage</a
             >
           </li>
           <li class:selected={activeLink.includes('core-concepts')}>
-            <a
-              on:click={toggleMenu}
-              href="/docs/core-concepts"
-              class="nested">Core Concepts</a
+            <a on:click={toggleMenu} href="/v6/core-concepts" class="nested"
+              >Core Concepts</a
             >
           </li>
         </ul>
       {/if}
 
       <li>
-        <button
-          on:click={toggleGuides}
-          class="toggle"
-        >
+        <button on:click={toggleGuides} class="toggle">
           <span>Guides</span>
           {#if showGuides}
             <img src={downArrow} alt="down arrow" />
@@ -124,52 +95,38 @@
       {#if showGuides}
         <ul transition:slide class="list">
           <li class:selected={activeLink.includes('custom-nodes')}>
-            <a
-              on:click={toggleMenu}
-              href="/docs/custom-nodes"
-              class="nested">Custom Nodes</a
+            <a on:click={toggleMenu} href="/v6/custom-nodes" class="nested"
+              >Custom Nodes</a
             >
           </li>
           <li class:selected={activeLink.includes('custom-edges')}>
-            <a
-              on:click={toggleMenu}
-              href="/docs/custom-edges"
-              class="nested">Custom Edges</a
+            <a on:click={toggleMenu} href="/v6/custom-edges" class="nested"
+              >Custom Edges</a
             >
           </li>
           <li class:selected={activeLink.includes('pan-and-zoom')}>
-            <a
-              on:click={toggleMenu}
-              href="/docs/pan-and-zoom"
-              class="nested">Pan and Zoom</a
+            <a on:click={toggleMenu} href="/v6/pan-and-zoom" class="nested"
+              >Pan and Zoom</a
             >
           </li>
           <li class:selected={activeLink.includes('typescript')}>
-            <a
-              on:click={toggleMenu}
-              href="/docs/typescript"
-              class="nested">TypeScript</a
+            <a on:click={toggleMenu} href="/v6/typescript" class="nested"
+              >TypeScript</a
             >
           </li>
           <li class:selected={activeLink.includes('testing')}>
-            <a
-              on:click={toggleMenu}
-              href="/docs/testing"
-              class="nested">Testing</a
+            <a on:click={toggleMenu} href="/v6/testing" class="nested"
+              >Testing</a
             >
           </li>
           <li class:selected={activeLink.includes('snap-to-grid')}>
-            <a
-              on:click={toggleMenu}
-              href="/docs/snap-to-grid"
-              class="nested">Snap-To-Grid</a
+            <a on:click={toggleMenu} href="/v6/snap-to-grid" class="nested"
+              >Snap-To-Grid</a
             >
           </li>
           <li class:selected={activeLink.includes('HTML-Docs')}>
-            <a
-              on:click={toggleMenu}
-              href="/docs/HTML-Docs"
-              class="nested">HTML-Docs</a
+            <a on:click={toggleMenu} href="/v6/HTML-Docs" class="nested"
+              >HTML-Docs</a
             >
           </li>
           <li
@@ -177,42 +134,30 @@
               'Interactive Node Linking & Creation'
             )}
           >
-            <a
-              on:click={toggleMenu}
-              href="/docs/Interactive-Nodes"
-              class="nested">Interactive Node Linking & Creation</a
+            <a on:click={toggleMenu} href="/v6/Interactive-Nodes" class="nested"
+              >Interactive Node Linking & Creation</a
             >
           </li>
-          <li
-            class:selected={activeLink.includes('Custom Svelte Components')}
-          >
-            <a
-              on:click={toggleMenu}
-              href="/docs/Custom-Svelte"
-              class="nested">Custom Svelte Components</a
+          <li class:selected={activeLink.includes('Custom Svelte Components')}>
+            <a on:click={toggleMenu} href="/v6/Custom-Svelte" class="nested"
+              >Custom Svelte Components</a
             >
           </li>
           <li class:selected={activeLink.includes('Minimap')}>
-            <a
-              on:click={toggleMenu}
-              href="/docs/Minimap"
-              class="nested">Minimap</a
+            <a on:click={toggleMenu} href="/v6/Minimap" class="nested"
+              >Minimap</a
             >
           </li>
-          <li
-            class:selected={activeLink.includes('Initial Zoom & Location')}
-          >
+          <li class:selected={activeLink.includes('Initial Zoom & Location')}>
             <a
               on:click={toggleMenu}
-              href="/docs/Initial-Zoom-Location"
+              href="/v6/Initial-Zoom-Location"
               class="nested">Initial Zoom & Location</a
             >
           </li>
           <li class:selected={activeLink.includes('Node Classes')}>
-            <a
-              on:click={toggleMenu}
-              href="/docs/Node-Classes"
-              class="nested">Node Classes</a
+            <a on:click={toggleMenu} href="/v6/Node-Classes" class="nested"
+              >Node Classes</a
             >
           </li>
           <li
@@ -220,27 +165,20 @@
               'Importing & Exporting Diagrams'
             )}
           >
-            <a
-              on:click={toggleMenu}
-              href="/docs/importDiagrams"
-              class="nested">Importing & Exporting Diagrams</a
+            <a on:click={toggleMenu} href="/v6/importDiagrams" class="nested"
+              >Importing & Exporting Diagrams</a
             >
           </li>
           <li class:selected={activeLink.includes('Diagram Boundary')}>
-            <a
-              on:click={toggleMenu}
-              href="/docs/boundary"
-              class="nested">Diagram Boundary</a
+            <a on:click={toggleMenu} href="/v6/boundary" class="nested"
+              >Diagram Boundary</a
             >
           </li>
         </ul>
       {/if}
 
       <li>
-        <button
-          on:click={toggleBlogs}
-          class="toggle"
-        >
+        <button on:click={toggleBlogs} class="toggle">
           <span>Blogs</span>
           {#if showBlogs}
             <img src={downArrow} alt="down arrow" />
@@ -252,12 +190,13 @@
       {#if showBlogs}
         <ul transition:slide class="list">
           {#each articles as article}
-            <li class='nested'>
+            <li class="nested">
               <a
-                target='_blank'
-                rel='noreferrer'
+                target="_blank"
+                rel="noreferrer"
                 class:selected={activeLink.includes('blog')}
-                href={`https://medium.com/${article.link}`}>{article.version}</a>
+                href={`https://medium.com/${article.link}`}>{article.version}</a
+              >
             </li>
           {/each}
         </ul>
@@ -321,14 +260,14 @@
     width: 100%;
     border: 1px solid #ddd;
     background-color: #f4f4f4;
-    color: #1F2937;
+    color: #1f2937;
   }
   .docsDropDown ul {
-    overflow-y: auto; 
+    overflow-y: auto;
   }
   .docsDropDown li.selected {
-    background-color: #FAE4E6;
-    color: #E94646;
+    background-color: #fae4e6;
+    color: #e94646;
   }
   .toggle {
     padding: 1rem 3rem;
@@ -338,7 +277,7 @@
     width: 100%;
   }
   .toggle:hover {
-    color: #E94646;
+    color: #e94646;
   }
   .outer {
     display: block;
@@ -346,34 +285,34 @@
     font-weight: 500;
   }
   .outer:hover {
-    color: #E94646;
+    color: #e94646;
   }
   .nested {
     display: block;
     padding: 1rem 4rem;
   }
   .nested:hover {
-    color: #E94646;
+    color: #e94646;
   }
   .list {
     cursor: pointer;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
   .mobile-menu-button {
     outline: none;
     padding-left: 2rem;
   }
   .logoWrap {
-    display: flex; 
+    display: flex;
     align-items: center;
   }
   .logo {
-    aspect-ratio: auto; 
+    aspect-ratio: auto;
     height: 2rem;
   }
   .svelvet {
     font-size: 1.875rem;
-    color: #1F2937;
+    color: #1f2937;
     font-family: 'Nunito', sans-serif;
     font-weight: 500;
     letter-spacing: 0.05em;
@@ -385,13 +324,13 @@
   }
   @media (min-width: 800px) {
     .mobile {
-    display: none;
+      display: none;
     }
     .docsDropDown {
-    display: none;
+      display: none;
     }
   }
-    /* show version no. */
+  /* show version no. */
   @media (min-width: 400px) {
     .version {
       display: inline;
@@ -401,8 +340,8 @@
       padding-right: 1rem;
       padding-top: 0.25rem;
       padding-bottom: 0.25rem;
-      background-color: #FAE4E6;
-      color: #E94646;
+      background-color: #fae4e6;
+      color: #e94646;
       letter-spacing: 0.1em;
     }
   }

@@ -41,11 +41,29 @@
 
   <nav class="navBar">
     <a href="/" id="home" class:selected={activeLink === '/'}>Home</a>
-    <a
-      href="https://svelvet.mintlify.app"
-      id="docs"
-      class:selected={activeLink.includes('docs')}>Docs</a
-    >
+
+    <div class="dropdown">
+      <button class="dropbtn"> Docs </button>
+      <div class="dropdown-content docs">
+        <ul>
+          <li>
+            <a
+              href="https://svelvet.mintlify.app"
+              id="docs"
+              class:selected={activeLink.includes('docs')}>v7</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              class:selected={activeLink.includes('blog')}
+              href={`/v6/installation`}>v6</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
     <a
       href="https://github.com/open-source-labs/Svelvet"
       id="github"
@@ -141,6 +159,12 @@
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+  }
+  .docs {
+    float: none;
+    position: absolute;
+    right: 200px;
+    width: 100px;
   }
 
   /* Links inside the dropdown */

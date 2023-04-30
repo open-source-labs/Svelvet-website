@@ -34,7 +34,6 @@
     ['Unfold and Collapse', 'Unfold-collapse'],
   ];
 
-
   $: activeLink = `${$page.url.pathname}`;
 </script>
 
@@ -46,12 +45,13 @@
       {#each gettingStartedLinks as link}
         <a
           id={link[0]}
-          href="/docs/{link[1]}"
+          href="/v6/{link[1]}"
           class="border-l px-4 hover:border-rose-300  {activeLink.includes(
             link[1]
           )
             ? 'text-rose-500 hover:text-rose-500 border-rose-300'
-            : 'hover:text-gray-700 border-gray-100'}">
+            : 'hover:text-gray-700 border-gray-100'}"
+        >
           {link[0]}</a
         >
       {/each}
@@ -63,7 +63,7 @@
       {#each guideLinks as link}
         <a
           id={link[0]}
-          href="/docs/{link[1]}"
+          href="/v6/{link[1]}"
           class="border-l px-4 hover:border-rose-300  {activeLink.includes(
             link[1]
           )
@@ -80,28 +80,28 @@
     display: none;
   }
   .installSection {
-    display: flex; 
-    flex-direction: column; 
-    margin-top: 1.25rem; 
-    font-size: 0.875rem; 
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.25rem;
+    font-size: 0.875rem;
     width: 100%;
   }
   .guideSection {
-    display: flex; 
-    flex-direction: column; 
-    margin-top: 1.25rem; 
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.25rem;
     font-size: 0.875rem;
   }
   .title {
-    font-weight: 500; 
-    color: #1F2937; 
+    font-weight: 500;
+    color: #1f2937;
     line-height: 3;
   }
   .item {
-    display: flex; 
-    flex-direction: column; 
-    line-height: 2.5; 
-    color: #6B7280;
+    display: flex;
+    flex-direction: column;
+    line-height: 2.5;
+    color: #6b7280;
   }
   @media (min-width: 800px) {
     .wrapper {
