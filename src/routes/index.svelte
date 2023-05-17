@@ -12,6 +12,7 @@
   import CircleColor from '../test-components/CircleColor.svelte';
   import DashCount from '../test-components/DashCount.svelte';
   import Output from '../test-components/Output.svelte';
+  import { onMount } from 'svelte';
 
   const copyNPM = () => navigator.clipboard.writeText('npm install svelvet');
   const copyYarn = () => navigator.clipboard.writeText('yarn add svelvet');
@@ -20,6 +21,14 @@
   $: zoom = (svelvetWidth / 800) * 0.6;
 
   $: minimapVisible = svelvetWidth >= 600;
+
+  let readyToMount = false;
+
+  onMount(() => {
+    setTimeout(() => {
+      readyToMount = true;
+    }, 100);
+  });
 </script>
 
 <svelte:head>
@@ -47,33 +56,35 @@
   </div>
   <div class="topRight">
     <div class="diagram" bind:clientWidth={svelvetWidth}>
-      <Svelvet
-        edgeStyle="step"
-        TD
-        {theme}
-        {zoom}
-        controls
-        minimap={minimapVisible}
-        fitView="resize"
-      >
-        <Group
-          position={{ x: -150, y: -100 }}
-          width={600}
-          height={700}
-          color="goldenrod"
-          groupName="parameters"
+      {#if readyToMount}
+        <Svelvet
+          edgeStyle="step"
+          TD
+          {theme}
+          {zoom}
+          controls
+          minimap={minimapVisible}
+          fitView="resize"
         >
-          <Thickness />
-          <Noise />
-          <Scale />
-          <CircleColor />
-          <DashCount />
-        </Group>
-        <Output />
-        <span id="state" class="note"> Stateful Anchors</span>
-        <span id="groups" class="note">Group Boxes</span>
-        <ThemeToggle main="light" alt="dark" slot="toggle" />
-      </Svelvet>
+          <Group
+            position={{ x: -150, y: -100 }}
+            width={600}
+            height={700}
+            color="goldenrod"
+            groupName="parameters"
+          >
+            <Thickness />
+            <Noise />
+            <Scale />
+            <CircleColor />
+            <DashCount />
+          </Group>
+          <Output />
+          <span id="state" class="note"> Stateful Anchors</span>
+          <span id="groups" class="note">Group Boxes</span>
+          <ThemeToggle main="light" alt="dark" slot="toggle" />
+        </Svelvet>
+      {/if}
     </div>
   </div>
 </div>
