@@ -240,6 +240,10 @@ npx playwright test
 
 ## The Svelvet Team
 
+- Samuel Alvarez • [LinkedIn](https://www.linkedin.com/in/samuelsalvarez/) • [Github](https://github.com/bittermelonsam)
+- Rathna Chinthalapalli • [LinkedIn](https://www.linkedin.com/in/rathnac/) • [Github](https://github.com/rathna-git)
+- Wesley Waters • [LinkedIn](https://www.linkedin.com/in/wesley-w-332882248/) • [Github](https://github.com/Wesley-Waters)
+- Ruxin Zheng • [LinkedIn](https://www.linkedin.com/in/ruxinzhengswe/) • [Github](https://github.com/RuxinZ)
 - Brian Holmes • [LinkedIn](https://www.linkedin.com/in/briangregoryholmes/) • [Github](https://github.com/briangregoryholmes)
 - Britta Ager • [LinkedIn](https://www.linkedin.com/in/britta-ager-84394a129) • [Github](https://github.com/bkager)
 - Thomas Kady • [LinkedIn](https://www.linkedin.com/in/thomas-kady-45725b149) • [Github](https://github.com/thomaskady)

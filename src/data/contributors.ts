@@ -30,8 +30,38 @@ import jen from '../assets/profiles/jen.png';
 import britta from '../assets/profiles/britta.png';
 import brian from '../assets/profiles/brian.png';
 import thomas from '../assets/profiles/thomas.png';
+import ruxin from '../assets/profiles/Ruxin.png';
+import sam from '../assets/profiles/Sam.png';
 
 export const contributors = [
+  {
+    firstName: 'Samuel',
+    lastName: 'Alvarez',
+    linkedin: 'samuelsalvarez',
+    github: 'bittermelonsam',
+    image: sam,
+  },
+  {
+    firstName: 'Rathna',
+    lastName: 'Chinthalapalli',
+    linkedin: 'rathnac',
+    github: 'rathna-git',
+    image: brian,
+  },
+  {
+    firstName: 'Wesley',
+    lastName: 'Waters',
+    linkedin: 'wesley-w-332882248',
+    github: 'Wesley-Waters',
+    image: brian,
+  },
+  {
+    firstName: 'Ruxin',
+    lastName: 'Zheng',
+    linkedin: 'ruxinzhengswe',
+    github: 'RuxinZ',
+    image: ruxin,
+  },
   {
     firstName: 'Brian',
     lastName: 'Holmes',
