@@ -33,17 +33,12 @@ Svelvet is a lightweight Svelte component library for building interactive node-
 - test: added unit test for helper functions in the src/lib/utils/helpers folder using vitest
 - chore: update package version
 
-<ul>
-    <li>Changed primary API. Developers now pass Node and other exposed components directly as children to Svelvet</li>
-   
-</ul>
-
 ### Roadmap
 
 Please refer to the [roadmap](https://svelvet.mintlify.app/roadmap) for the full list of ideas for iteration.
 Ideas inspired by v8.0.0 include:
 
-- fg
+- abc
 
 ## The Svelvet 8.0 Team
 
@@ -51,6 +46,15 @@ Ideas inspired by v8.0.0 include:
 - Ruxin Zheng • [LinkedIn](https://www.linkedin.com/in/ruxinzhengswe/) • [Github](https://github.com/RuxinZ)
 - Samuel Alvarez • [LinkedIn](https://www.linkedin.com/in/samuelsalvarez/) • [Github](https://github.com/bittermelonsam)
 - Wesley Waters • [LinkedIn](https://www.linkedin.com/in/wesley-w-332882248/) • [Github](https://github.com/Wesley-Waters)
+
+## Technologies
+
+- Svelte
+- Typescript, JSDoc
+- Vitest, Playwright
+- Mintlify
+- Vite
+- SvelteKit
 
 ## Credits
 
