@@ -59,7 +59,7 @@
               target="_blank"
               rel="noreferrer"
               class:selected={activeLink.includes('blog')}
-              href={`/v6/installation`}>v6(deprecated)</a
+              href={`/v6/installation`}>v6</a
             >
           </li>
         </ul>
