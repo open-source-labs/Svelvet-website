@@ -19,7 +19,7 @@
     href="https://github.com/open-source-labs/Svelvet"
     target="_blank"
     rel="noreferrer"
-    class="btn-white">See Svelvet on GitHub</a
+    class="btn-white btn">See Svelvet on GitHub</a
   >
 </article>
 
@@ -31,7 +31,12 @@
     align-items: center;
     justify-content: center;
     color: rgb(255, 255, 255);
-    background: linear-gradient(to right, #f66f52, #f86f6f, rgb(251 113 133));
+    background: linear-gradient(
+      to right,
+      #f66f52,
+      #f86f6f,
+      rgb(251 113 133)
+    );
     padding-top: 2rem;
     padding-bottom: 5rem;
   }
@@ -59,9 +64,9 @@
     display: inline-block;
     width: fit-content;
     text-align: center;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.5rem;
     background-color: #fff;
-    border-radius: 99999px;
+    border-radius: 2rem;
     color: #1f2937;
     font-size: 1.125rem;
     align-self: center;

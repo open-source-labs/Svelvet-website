@@ -11,6 +11,9 @@
 
   $: activeLink = `${$page.url.pathname}`;
   let y: number;
+  $: currentDocVersion = $page.url.pathname.includes('v6')
+    ? 'v6.0.0'
+    : 'v8.0.0';
 
   export let mediumArticle;
 </script>
@@ -23,8 +26,6 @@
   <MobileHomeNav />
 {/if}
 
-<!-- Navbar -->
-
 <div class:shadow-lg={y > 5} class="desktop">
   <div class="logoWrap">
     <img src={logo} alt="Logo" class="logo" />
@@ -36,7 +37,7 @@
       }}
       class="svelvet">svelvet</a
     >
-    <p class="version">v7.0.0</p>
+    <p class="version">{currentDocVersion}</p>
   </div>
 
   <nav class="navBar">
@@ -50,7 +51,7 @@
             <a
               href="https://svelvet.mintlify.app"
               id="docs"
-              class:selected={activeLink.includes('docs')}>v7</a
+              class:selected={activeLink.includes('docs')}>v8</a
             >
           </li>
           <li>
@@ -89,7 +90,8 @@
                 target="_blank"
                 rel="noreferrer"
                 class:selected={activeLink.includes('blog')}
-                href={`https://medium.com/${article.link}`}>{article.version}</a
+                href={`https://medium.com/${article.link}`}
+                >{article.version}</a
               >
             </li>
           {/each}
