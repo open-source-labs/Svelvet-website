@@ -14,7 +14,7 @@
 
 Svelvet is a lightweight Svelte component library for building interactive node-based user interfaces and diagrams.
 
-[⚡ Website](https://www.svelvet.io/) | [📚 Documentation](https://svelvet.mintlify.app) | [⌨️ Blog](https://medium.com/@MauricioACastro/svelvet-4-0-the-power-of-html-is-now-inside-your-nodes-3d96823096e3) | [💬 Twitter](https://twitter.com/SvelvetOSLabs) | [💼 LinkedIn](https://www.linkedin.com/company/svelvet/)
+[⚡ Website](https://www.svelvet.io/) | [📚 Documentation](https://svelvet.mintlify.app) | [⌨️ Blog](https://medium.com/@rathnaganjigunta/introducing-svelvet-8-new-features-for-a-user-friendly-svelte-component-library-c9b966c5eb75) | [💼 LinkedIn](https://www.linkedin.com/company/svelvet/)
 
 </div>
 <br>
@@ -88,8 +88,8 @@ Some ideas inspired by v8.0.0 include:
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![JSDoc](https://img.shields.io/badge/JSDoc-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Vitest](https://img.shields.io/badge/vitest-%236da13f.svg?style=for-the-badge&logo=vitest&logoColor=white)
-![Svelte Testing Library](https://img.shields.io/badge/Testing_Library-%23E34F26.svg?style=for-the-badge&logo=testinglibrary&logoColor=white)
 ![Playwright](https://img.shields.io/badge/Playwright-%2320232a.svg?style=for-the-badge&logo=Playwright&logoColor=%2345ba4b)
+![Svelte Testing Library](https://img.shields.io/badge/Testing_Library-%23E34F26.svg?style=for-the-badge&logo=testinglibrary&logoColor=white)
 ![NPM](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
 ![Mintlify](https://img.shields.io/badge/mintlify-%233C873A?style=for-the-badge&logo=Mintlify&logoColor=white)
 ![SvelteKit](https://img.shields.io/badge/svelteKit-%23E34F26.svg?style=for-the-badge&logo=svelte&logoColor=white)
