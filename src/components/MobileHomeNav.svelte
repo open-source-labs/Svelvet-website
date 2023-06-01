@@ -69,7 +69,9 @@
         <a on:click={toggleMenu} href="/">Home</a>
       </li>
       <li>
-        <a on:click={toggleMenu} href="https://svelvet.mintlify.app">Docs</a>
+        <a on:click={toggleMenu} href="https://svelvet.mintlify.app"
+          >Docs</a
+        >
       </li>
       <li>
         <a
@@ -91,8 +93,8 @@
           on:click={toggleMenu}
           target="_blank"
           rel="noreferrer"
-          href="https://medium.com/@jenlee_35516/svelvet-7-0-build-intuitive-interactive-node-diagrams-in-svelte-cb4e78872ff6"
-          >Blog 7.0</a
+          href="https://medium.com/@rathnaganjigunta/introducing-svelvet-8-new-features-for-a-user-friendly-svelte-component-library-c9b966c5eb75"
+          >Blog 8.0</a
         >
       </li>
     </ul>

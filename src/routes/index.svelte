@@ -14,7 +14,8 @@
   import Output from '../test-components/Output.svelte';
   import { onMount } from 'svelte';
 
-  const copyNPM = () => navigator.clipboard.writeText('npm install svelvet');
+  const copyNPM = () =>
+    navigator.clipboard.writeText('npm install svelvet');
   const copyYarn = () => navigator.clipboard.writeText('yarn add svelvet');
   let svelvetWidth;
   let theme: Theme = 'light';
@@ -40,17 +41,16 @@
 <!-- ----------------------------- TOP LEVEL SECTION (intro & diagram) --------------------------------------- -->
 
 <div class="topWrapper">
-  <div class="topLeft">
-    <h1 id="header">
-      Build interactive, node-based UIs and diagrams in Svelte
-    </h1>
-    <p id="subheader">
+  <div class="topLeft center-text">
+    <h1>Build interactive, node-based UIs and diagrams in Svelte</h1>
+    <p class="short-intro">
       <code class="highlight" style="color:#E94646;">Svelvet</code> is a lightweight
       component library for building dynamic, customizable node graphs
     </p>
     <div class="buttonWrapper">
-      <a href="https://svelvet.mintlify.app/getting-started" class="btn-pink"
-        >Get Started</a
+      <a
+        href="https://svelvet.mintlify.app/getting-started"
+        class="btn-pink btn">Get Started</a
       >
     </div>
   </div>
@@ -93,14 +93,17 @@
 
 <div class="pinkGradient">
   <div class="flex-container">
-    <div class="text-container">
+    <div class="text-container center-text">
       <h3>Beautiful and Customizable</h3>
-      <p>
+      <p class="short-intro">
         Svelvet allows you to easily create intuitive user interfaces and
-        diagrams with pre-built components with node-to-node data flow, seamless
-        zooming and panning, customizable edges and nodes and more!
+        diagrams with pre-built components with node-to-node data flow,
+        seamless zooming and panning, customizable edges and nodes and
+        more!
       </p>
-      <a href="https://svelvet.mintlify.app" class="btn-white"> Learn More </a>
+      <a href="https://svelvet.mintlify.app" class="btn-white btn">
+        Learn More
+      </a>
     </div>
   </div>
 </div>
@@ -110,16 +113,16 @@
 <div class="installWrapper">
   <div class="installInner1">
     <h3>Get Started Easily</h3>
-    <p>
-      Start mapping out your ideas with our NPM package. Simply provide your
-      node data to the
-      <code class="highlight" style="color:#E94646;">Svelvet</code> component and
-      you're ready to show off your interactive diagram - no extra configuration
+    <p class="short-intro">
+      Start mapping out your ideas with our NPM package. Simply provide
+      your node data to the
+      <code class="highlight" style="color:#E94646;">Svelvet</code> component
+      and you're ready to show off your interactive diagram - no extra configuration
       needed!
     </p>
     <a
       href="https://svelvet.mintlify.app/getting-started/installation"
-      class="btn-pink">More Info</a
+      class="btn-pink btn">More Info</a
     >
   </div>
   <div class="installInner2">
@@ -134,7 +137,9 @@
       </div>
     </div>
     <p>
-      To install and save in your <code class="highlight">package.json</code>
+      To install and save in your <code class="highlight"
+        >package.json</code
+      >
       dependencies, run the command below using
       <strong>npm</strong>:
     </p>
@@ -158,9 +163,7 @@
 
 <ContributorsGrid {contributors} />
 
-<!-------------------------------------------------------------------------------------------------------
------------------------------------------- STYLING!! ----------------------------------------------------
----------------------------------------------------------------------------------------------------------  -->
+<!-------------------------------- STYLING!! -------------------------------->
 <style>
   /* Inter font */
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
@@ -195,17 +198,36 @@
     top: 530px;
     left: 490px;
   }
+
+  .btn {
+    display: inline-block;
+    width: fit-content;
+    text-align: center;
+    padding: 0.6rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 1.125rem;
+    /* align-self: center; */
+  }
+
+  .short-intro {
+    font-size: 1rem;
+  }
+
+  .center-text {
+    text-align: center;
+  }
+
+  h1,
+  h3 {
+    margin-bottom: 1rem;
+  }
   /*----------------------------- TOP LEVEL SECTION (intro & diagram) -------------------------------------*/
   .highlight {
     background-color: #fae4e6;
-    border-radius: 0.5rem;
-    padding: 0.25rem;
+    border-radius: 8px;
+    padding: 0.25rem 0.8rem;
   }
 
-  #header,
-  #subheader {
-    text-align: center;
-  }
   .css-blurry-gradient {
     overflow-x: hidden;
     position: absolute;
@@ -270,15 +292,8 @@
     justify-content: center;
   }
   .btn-pink {
-    display: inline-block;
-    width: fit-content;
-    text-align: center;
-    padding: 0.5rem 1rem;
-    text-align: center;
     background-color: #e94646;
-    border-radius: 2rem;
     color: #fff;
-    font-size: 1.125rem;
     transition: background-color 0.2s ease-in-out;
     box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
     backdrop-filter: blur(1.125rem);
@@ -309,31 +324,25 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 8vw 5vw;
     margin: 2vw 0;
   }
   .text-container h3 {
     font-size: 2rem;
     font-weight: bold;
-    text-align: center;
+    /* text-align: center; */
   }
   .text-container p {
     color: rgba(255, 255, 255, 0.8);
-    font-size: 1rem;
-    text-align: left;
+    /* font-size: 1rem; */
+    /* text-align: left; */
     padding-bottom: 2vw;
   }
   .btn-white {
     box-sizing: border-box;
-    display: inline-block;
-    width: fit-content;
-    text-align: center;
-    padding: 0.5rem 1rem;
     background-color: #fff;
-    border-radius: 99999px;
     color: #1f2937;
-    font-size: 1.125rem;
-    align-self: center;
   }
   .btn-white:hover {
     transition: background-color 0.2s ease-in-out;
@@ -366,7 +375,6 @@
   .installInner1 p {
     margin-bottom: 1rem;
     color: #6b7280;
-    text-align: left;
   }
   .installInner2 {
     display: none;
@@ -486,7 +494,7 @@
     .text-container h3 {
       font-size: 2.25rem;
     }
-    .text-container p {
+    .short-intro {
       font-size: 1.25rem;
     }
     .installWrapper {
@@ -500,7 +508,6 @@
     .installInner1 {
       order: 1;
       padding-right: 5vw;
-      text-align: center;
     }
     .installInner2 {
       order: 2;
@@ -538,6 +545,9 @@
     }
     .installWrapper {
       padding: 5vw 15vw 5vw 15vw;
+    }
+    .installInner1 {
+      text-align: left;
     }
   }
 </style>

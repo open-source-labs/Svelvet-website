@@ -6,6 +6,22 @@
 
 <div class="overflow-x-hidden">
   <h2 class="text-4xl font-semibold mb-8 w-screen">Installation</h2>
+  <div class="deprecated-box">
+    <div class="warning-icon">!</div>
+    <p>This portion of the documentation has been deprecated. Please refer to the latest version 
+      <a 
+      href="https://svelvet.mintlify.app/upgrading" 
+      class="text-rose-600 underline underline-offset-1"
+      target="_blank">
+      Documentation 
+      </a> 
+      for versions 7.0.0 and above. and the 
+      <a href="https://svelvet.mintlify.app/upgrading" 
+      class="text-rose-600 underline underline-offset-1"
+      target="_blank">
+      Upgrading </a> 
+      section for information on the major functional changes moving from version 6 to version 7 and later.</p>
+  </div>
   <p class="my-4 text-gray-600">
     Svelvet is available as an <a
       class="text-rose-600 underline underline-offset-1"
@@ -73,3 +89,20 @@
     edge (e.g. semi-circle or arrowhead).
   </p>
 </div>
+
+<style>
+  .deprecated-box {
+  background-color: #FFF9E5;
+  border: 2px solid #FFCD5C;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.warning-icon {
+  font-size: 24px;
+  color: #FFCD5C;
+  margin-right: 12px;
+}
+</style>
