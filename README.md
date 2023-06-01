@@ -25,10 +25,15 @@ Svelvet is a lightweight Svelte component library for building interactive node-
 ## 🚀 New Features 🚀
 
 - **Drawer Component:** A new drag-and-drop component that can take default Nodes, custom Nodes, Anchors and Edges as props and add them to the canvas via the UI.
+
+<p align="center">
+  <img src="./static/images/drawer.gif" alt="Drawer component example" width="400">
+<p>
+
 - **Knob Component:** A new input component to the data flow system that can be composed in custom nodes and customized by users.
 
 <p align="center">
-  <img src="./static/images/knob.gif" alt="Knob component example" width="500">
+  <img src="./static/images/knob.gif" alt="Knob component example" width="400">
 <p>
 
 <br>
@@ -36,7 +41,7 @@ Svelvet is a lightweight Svelte component library for building interactive node-
 - **Usecase Examples:** A brand new _Examples_ section to the documentation that features a usecase of Svelvet as a Database Visualization tool.<br>
 
 <p align="center">
-  <img src="./static/images/Database-Light.png" alt="database example" width="500">
+  <img src="./static/images/Database-Light.png" alt="database example" width="400">
 <p>
 <br>
 
@@ -44,7 +49,7 @@ Svelvet is a lightweight Svelte component library for building interactive node-
 
 ### Changelog
 
-- feat: added a new drag-and-drop Drawer component that can take custom Nodes, Anchors and Edges as props and add them to the canvas via the UI
+- feat: added a new drag-and-drop Drawer component that can create default and custom Nodes, Anchors and Edges as props and add them to the canvas via the UI
 - feat: added a new input component, Knob, to the collection of already existing data flow system components that can be composed in custom nodes and customized by users
 - docs: updated documentation to include an Example section that features a usecase of Svelvet as a Database Visualization tool
 - docs: updated the documentation page on the website to include newest version release
