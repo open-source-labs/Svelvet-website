@@ -19,6 +19,8 @@ Svelvet is a lightweight Svelte component library for building interactive node-
 </div>
 <br>
 
+![example](./static/images/svelvetExample.png)
+
 ## 🚀 New Features 🚀
 
 - **Drawer Component:** A new drag-and-drop component that can take default Nodes, custom Nodes, Anchors and Edges as props and add them to the canvas via the UI.
@@ -71,6 +73,7 @@ Some ideas inspired by v8.0.0 include:
 - Test suite: Vitest, Svelte Testing Library, Playwright
 - Vite
 - Mintlify
+- NPM
 - SvelteKit
 - Github Actions
 - HTML, CSS
