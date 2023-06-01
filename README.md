@@ -19,17 +19,23 @@ Svelvet is a lightweight Svelte component library for building interactive node-
 </div>
 <br>
 <p align="center">
-<img src="./static/images/Sandbox.png" width="700">
+<img src="./static/images/Sandbox.png" alt="sandbox" width="700">
 <p>
 
 ## 🚀 New Features 🚀
 
 - **Drawer Component:** A new drag-and-drop component that can take default Nodes, custom Nodes, Anchors and Edges as props and add them to the canvas via the UI.
 - **Knob Component:** A new input component to the data flow system that can be composed in custom nodes and customized by users.
+
+<p align="center">
+  <img src="./static/images/knob.gif" alt="Knob component example" width="500">
+<p>
+
+<br>
 - **Usecase Examples:** A brand new _Examples_ section to the documentation that features a usecase of Svelvet as a Database Visualization tool.<br>
 
 <p align="center">
-  <img src="./static/images/Database-Light.png" width="500">
+  <img src="./static/images/Database-Light.png" alt="database example" width="500">
 <p>
 <br>
 
