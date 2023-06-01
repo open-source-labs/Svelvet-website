@@ -36,7 +36,7 @@ Svelvet is a lightweight Svelte component library for building interactive node-
 - docs: updated documentation to include an Example section that features a usecase of Svelvet as a Database Visualization tool
 - docs: updated the documentation page on the website to include newest version release
 - test: added Unit and Component testing using Vitest and Svelte Testing Library
-- refactor: updated website styling: consolidated redundant CSS classes, fixed broken links and styling issues.
+- refactor: updated website styling: consolidated redundant CSS classes, fixed broken links and styling issues
 - chore: updated home page to include newest collaborators
 - chore: updated testing suite package versions
 
