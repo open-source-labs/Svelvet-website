@@ -2,7 +2,7 @@
 export const articles = [
   {
     version: 'Svelvet 8.0 🚀',
-    link: '', //TODO: update this!
+    link: '@rathnaganjigunta/introducing-svelvet-8-new-features-for-a-user-friendly-svelte-component-library-c9b966c5eb75',
   },
   {
     version: 'Svelvet 7.0',
