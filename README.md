@@ -19,7 +19,7 @@ Svelvet is a lightweight Svelte component library for building interactive node-
 </div>
 <br>
 <p align="center">
-<img src="./static/images/Sandbox.png" alt="sandbox" width="700">
+<img src="./static/images/sandbox.gif" alt="sandbox" width="700">
 <p>
 
 ## 🚀 New Features 🚀
