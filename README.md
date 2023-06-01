@@ -19,13 +19,14 @@ Svelvet is a lightweight Svelte component library for building interactive node-
 </div>
 <br>
 
-![example](./static/images/svelvetExample.png)
+![example](./static/images/sandbox.png)
 
 ## 🚀 New Features 🚀
 
 - **Drawer Component:** A new drag-and-drop component that can take default Nodes, custom Nodes, Anchors and Edges as props and add them to the canvas via the UI.
 - **Knob Component:** A new input component to the data flow system that can be composed in custom nodes and customized by users.
-- **Usecase Examples:** A brand new _Examples_ section to the documentation that features a usecase of Svelvet as a Database Visualization tool.
+- **Usecase Examples:** A brand new _Examples_ section to the documentation that features a usecase of Svelvet as a Database Visualization tool.<br>
+  <img src="./static/images/Database-Dark.png" width="600">
 
 <br>
 
@@ -68,15 +69,19 @@ Some ideas inspired by v8.0.0 include:
 
 ## Technologies
 
-- Svelte
-- Typescript, JSDoc
-- Test suite: Vitest, Svelte Testing Library, Playwright
-- Vite
-- Mintlify
-- NPM
-- SvelteKit
-- Github Actions
-- HTML, CSS
+![Svelte](https://img.shields.io/badge/svelte-%23E34F26.svg?style=for-the-badge&logo=svelte&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![JSDoc](https://img.shields.io/badge/JSDoc-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Vitest](https://img.shields.io/badge/vitest-%236da13f.svg?style=for-the-badge&logo=vitest&logoColor=white)
+![Svelte Testing Library](https://img.shields.io/badge/Testing_Library-%23E34F26.svg?style=for-the-badge&logo=testinglibrary&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-%2320232a.svg?style=for-the-badge&logo=Playwright&logoColor=%2345ba4b)
+![NPM](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
+![Mintlify](https://img.shields.io/badge/mintlify-%233C873A?style=for-the-badge&logo=Mintlify&logoColor=white)
+![SvelteKit](https://img.shields.io/badge/svelteKit-%23E34F26.svg?style=for-the-badge&logo=svelte&logoColor=white)
+![Vite](https://img.shields.io/badge/vite-%23454ce1.svg?style=for-the-badge&logo=vite&logoColor=white)
+![Github Action](https://img.shields.io/badge/Github_Action-%2320232a.svg?style=for-the-badge&logo=github&logoColor=%white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-007ACC.svg?style=for-the-badge&logo=css3&logoColor=white)
 
 <br>
 
