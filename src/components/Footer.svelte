@@ -35,14 +35,6 @@
         >MIT License</a
       >
     </div>
-    <div style="font-size: 0.75rem;">
-      Website designed by <a
-        href="https://wendyhuynhdesign.com/"
-        rel="noreferrer"
-        target="_blank"
-        style="color: #EC7489;">Wendy Huynh</a
-      >
-    </div>
   </div>
 </footer>
 
