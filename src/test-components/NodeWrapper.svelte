@@ -37,6 +37,7 @@
   .node {
     box-sizing: border-box;
     width: fit-content;
+    width: 220px;
     border-radius: 8px;
     height: fit-content;
     position: relative;
