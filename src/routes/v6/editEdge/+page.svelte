@@ -1,5 +1,5 @@
 <script>
-  import editEdgeDemo from '../../assets/features/feature_node_edge_edit.gif';
+  import editEdgeDemo from '../../../assets/features/feature_node_edge_edit.gif';
 </script>
 
 <h2 class="text-4xl font-semibold mb-12">Interactive Editable Nodes and Edges</h2>

@@ -1,5 +1,5 @@
 <script>
-  import customAnchor from '../../assets/features/feature_custom_anchors.gif';
+  import customAnchor from '../../../assets/features/feature_custom_anchors.gif';
 </script>
 
 <div>

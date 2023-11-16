@@ -1,6 +1,6 @@
 <script lang="ts">
   //import Svelvet from "svelvet";
-  import Logo from '../../assets/High Resolution Logo.png';
+  import Logo from '../../../assets/High Resolution Logo.png';
   const initialNodes = [
     {
       id: 1,
