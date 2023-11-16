@@ -13,7 +13,7 @@
   let y: number;
   $: currentDocVersion = $page.url.pathname.includes('v6')
     ? 'v6.0.0'
-    : 'v8.0.0';
+    : 'v9.0.0';
 
   export let mediumArticle;
 </script>
@@ -51,7 +51,7 @@
             <a
               href="https://svelvet.mintlify.app"
               id="docs"
-              class:selected={activeLink.includes('docs')}>v8</a
+              class:selected={activeLink.includes('docs')}>v9</a
             >
           </li>
           <li>
@@ -72,7 +72,7 @@
       rel="noreferrer">GitHub</a
     >
     <a
-      href="https://stackblitz.com/edit/svelvet-v7?file=src/routes/+page.svelte"
+      href="https://stackblitz.com/edit/svelvet-v9?file=src%2Froutes%2F%2Bpage.svelte"
       id="playground"
       class="hover:text-rose-500 {activeLink.includes('REPL')
         ? 'text-rose-500'
@@ -90,8 +90,7 @@
                 target="_blank"
                 rel="noreferrer"
                 class:selected={activeLink.includes('blog')}
-                href={`https://medium.com/${article.link}`}
-                >{article.version}</a
+                href={`https://medium.com/${article.link}`}>{article.version}</a
               >
             </li>
           {/each}

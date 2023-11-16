@@ -34,8 +34,40 @@ import ruxin from '../assets/profiles/Ruxin.png';
 import sam from '../assets/profiles/Sam.png';
 import wes from '../assets/profiles/Wes.png';
 import rathna from '../assets/profiles/Rathna.png';
+import henry from '../assets/profiles/henry.png';
+import jeremy from '../assets/profiles/jeremy.png';
+import john from '../assets/profiles/john.png';
+import spencer from '../assets/profiles/spencer.png';
 
 export const contributors = [
+  {
+    firstName: 'Henry',
+    lastName: 'Sweat',
+    linkedin: 'henry-sweat',
+    github: 'henry-sweat',
+    image: henry,
+  },
+  {
+    firstName: 'Jeremy',
+    lastName: 'David',
+    linkedin: 'jeremy-david-66jc',
+    github: 'Jdave1125',
+    image: jeremy,
+  },
+  {
+    firstName: 'John',
+    lastName: 'Costello',
+    linkedin: 'johnlcostello',
+    github: 'johnlcos',
+    image: john,
+  },
+  {
+    firstName: 'Spencer',
+    lastName: 'Huey',
+    linkedin: 'spencerhuey',
+    github: 'hueylew1s',
+    image: spencer,
+  },
   {
     firstName: 'Rathna',
     lastName: 'Chinthalapalli',

@@ -3,11 +3,11 @@
   import { slide } from 'svelte/transition';
 
   /* import store so that we can check if there's a user that is loggin in */
-  import { userInfoStore } from '../authStoreTs';
+  // import { userInfoStore } from '../authStoreTs';
   /* importing GitHub logo from assets */
   import github from '../assets/github-icon-white.svg';
 
-  let { user, user_avatar } = userInfoStore;
+  // let { user, user_avatar } = userInfoStore;
 
   let hidden = true;
 

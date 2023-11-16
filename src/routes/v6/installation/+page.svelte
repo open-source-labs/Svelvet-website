@@ -1,5 +1,5 @@
 <script>
-  import copyIcon from '../../assets/clipboard.svg';
+  import copyIcon from '../../../assets/clipboard.svg'
   const copyNPM = () => navigator.clipboard.writeText('npm install svelvet');
   const copyYarn = () => navigator.clipboard.writeText('yarn add svelvet');
 </script>
