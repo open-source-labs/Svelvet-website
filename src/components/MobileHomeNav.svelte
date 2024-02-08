@@ -52,7 +52,8 @@
   <div class="logoWrap">
     <img src={logo} alt="Logo" class="logo" />
     <a id="home" href="/" class="svelvet">svelvet</a>
-    <p class="version">v7.0.0</p>
+    <!-- For next version release, make sure to update the version number here -->
+    <p class="version">v10.0.2</p>
   </div>
   <button class="mobile-menu-button" on:click={toggleMenu}>
     <!-- hamburger menu -->
@@ -93,8 +94,8 @@
           on:click={toggleMenu}
           target="_blank"
           rel="noreferrer"
-          href="https://medium.com/@rathnaganjigunta/introducing-svelvet-8-new-features-for-a-user-friendly-svelte-component-library-c9b966c5eb75"
-          >Blog 8.0</a
+          href="https://medium.com/@julianb1212_35672/svelvet-10-0-new-features-for-accessibility-and-improved-performance-3caaab9e54e9"
+          >Latest Blog</a
         >
       </li>
     </ul>

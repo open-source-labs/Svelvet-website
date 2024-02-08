@@ -1,6 +1,10 @@
 //used in TopNav & Mobile DocsNav --> didn't implement in MobileHomeNav
 export const articles = [
   {
+    version: 'Svelvet 10.0 🛸',
+    link: '@julianb1212_35672/svelvet-10-0-new-features-for-accessibility-and-improved-performance-3caaab9e54e9',
+  },
+  {
     version: 'Svelvet 9.0 🚀',
     link: '@jlcos777/svelvet-9-0-4f03c6eeaa0c',
   },
