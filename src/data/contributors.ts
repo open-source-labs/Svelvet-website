@@ -38,10 +38,10 @@ import henry from '../assets/profiles/henry.png';
 import jeremy from '../assets/profiles/jeremy.png';
 import john from '../assets/profiles/john.png';
 import spencer from '../assets/profiles/spencer.png';
-import mayson from '../assets/profiles/mayson.png';
-import julian from '../assets/profiles/julian.png';
-import solomon from '../assets/profiles/solomon.png';
-import isaac from '../assets/profiles/isaac.png';
+import mayson from '../assets/profiles/Mayson.png';
+import julian from '../assets/profiles/Julian.png';
+import solomon from '../assets/profiles/Solomon.png';
+import isaac from '../assets/profiles/Isaac.png';
 
 export const contributors = [
   {
