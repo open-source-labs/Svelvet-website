@@ -19,7 +19,7 @@
     href="https://github.com/open-source-labs/Svelvet"
     target="_blank"
     rel="noreferrer"
-    class="btn-white btn">See Svelvet on GitHub</a
+    class="btn-white btn">Contribute</a
   >
 </article>
 

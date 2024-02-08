@@ -38,8 +38,41 @@ import henry from '../assets/profiles/henry.png';
 import jeremy from '../assets/profiles/jeremy.png';
 import john from '../assets/profiles/john.png';
 import spencer from '../assets/profiles/spencer.png';
+import mayson from '../assets/profiles/Mayson.png';
+import julian from '../assets/profiles/Julian.png';
+import solomon from '../assets/profiles/Solomon.png';
+import isaac from '../assets/profiles/Isaac.png';
 
 export const contributors = [
+  {
+    firstName: 'Isaac',
+    lastName: 'Bocage',
+    linkedin: 'isaac-bocage-15711715a',
+    github: 'isaacb0',
+    image: isaac,
+  },
+  {
+    firstName: 'Mayson',
+    lastName: 'Lee',
+    linkedin: 'maysonlee',
+    github: 'mayson124',
+    image: mayson,
+  },
+  {
+    firstName: 'Julian', 
+    lastName: 'Bos', 
+    linkedin: 'julian-bos-2ab287145', 
+    github: 'Julianb12',
+    image: julian,
+  },
+  {
+    firstName: "Solomon",
+    lastName: "Moon",
+    linkedin: "solomon-moon-aaab7818a",
+    github: "chobo91",
+    image: solomon,
+  },
+// --------------------------------- ADD YOUR INFO BELOW ---------------------------------
   {
     firstName: 'Henry',
     lastName: 'Sweat',

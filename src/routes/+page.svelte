@@ -2,7 +2,7 @@
   import ContributorsGrid from '../components/ContributorsGrid.svelte';
   import { contributors } from '../data/contributors';
 
-  import { Svelvet, Node, Group, ThemeToggle, Minimap } from 'svelvet';
+  import { Svelvet, Node, Group, ThemeToggle, Minimap, ContrastTheme } from 'svelvet';
   import type { Theme } from 'svelvet';
   import copyIcon from '../assets/clipboard.svg';
 
@@ -57,7 +57,7 @@
   <div class="topRight">
     <div class="diagram" bind:clientWidth={svelvetWidth}>
       {#if readyToMount}
-        <Svelvet
+        <Svelvet 
           edgeStyle="step"
           TD
           {theme}
@@ -82,7 +82,8 @@
           <Output />
           <span id="state" class="note"> Stateful Anchors</span>
           <span id="groups" class="note">Group Boxes</span>
-          <ThemeToggle main="light" alt="dark" slot="toggle" />
+          <ThemeToggle slot="toggle" />
+          <ContrastTheme slot="contrast" />
         </Svelvet>
       {/if}
     </div>

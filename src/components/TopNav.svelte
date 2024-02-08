@@ -11,9 +11,6 @@
 
   $: activeLink = `${$page.url.pathname}`;
   let y: number;
-  $: currentDocVersion = $page.url.pathname.includes('v6')
-    ? 'v6.0.0'
-    : 'v9.0.0';
 
   export let mediumArticle;
 </script>
@@ -37,34 +34,15 @@
       }}
       class="svelvet">svelvet</a
     >
-    <p class="version">{currentDocVersion}</p>
+    <!-- For next version release, make sure to update the version number here -->
+    <p class="version">v10.0.2</p>
   </div>
 
   <nav class="navBar">
     <a href="/" id="home" class:selected={activeLink === '/'}>Home</a>
 
-    <div class="dropdown">
-      <button class="dropbtn"> Docs </button>
-      <div class="dropdown-content docs">
-        <ul>
-          <li>
-            <a
-              href="https://svelvet.mintlify.app"
-              id="docs"
-              class:selected={activeLink.includes('docs')}>v9</a
-            >
-          </li>
-          <li>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              class:selected={activeLink.includes('blog')}
-              href={`/v6/installation`}>v6</a
-            >
-          </li>
-        </ul>
-      </div>
-    </div>
+    <a href="https://svelvet.mintlify.app" id="docs" class:selected={activeLink.includes('docs')}>Docs</a>
+
     <a
       href="https://github.com/open-source-labs/Svelvet"
       id="github"
