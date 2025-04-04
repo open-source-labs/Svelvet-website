@@ -28,7 +28,7 @@
   </div>
   <div class="footerBottom">
     <div style="font-size: 0.75rem;">
-      &copy; 2023 Svelvet | <a
+      &copy; 2025 Svelvet | <a
         target="_blank"
         rel="noreferrer"
         href="https://github.com/open-source-labs/Svelvet-website/blob/main/LICENSE"

@@ -53,7 +53,7 @@
     <img src={logo} alt="Logo" class="logo" />
     <a id="home" href="/" class="svelvet">svelvet</a>
     <!-- For next version release, make sure to update the version number here -->
-    <p class="version">v10.0.2</p>
+    <p class="version">v11.0.0</p>
   </div>
   <button class="mobile-menu-button" on:click={toggleMenu}>
     <!-- hamburger menu -->
