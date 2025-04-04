@@ -42,7 +42,7 @@ import mayson from '../assets/profiles/Mayson.png';
 import julian from '../assets/profiles/Julian.png';
 import solomon from '../assets/profiles/Solomon.png';
 import isaac from '../assets/profiles/Isaac.png';
-
+import tyler from '../assets/profiles/Tyler-Polite.jpeg';
 export const contributors = [
   {
     firstName: 'Isaac',
@@ -59,20 +59,20 @@ export const contributors = [
     image: mayson,
   },
   {
-    firstName: 'Julian', 
-    lastName: 'Bos', 
-    linkedin: 'julian-bos-2ab287145', 
+    firstName: 'Julian',
+    lastName: 'Bos',
+    linkedin: 'julian-bos-2ab287145',
     github: 'Julianb12',
     image: julian,
   },
   {
-    firstName: "Solomon",
-    lastName: "Moon",
-    linkedin: "solomon-moon-aaab7818a",
-    github: "chobo91",
+    firstName: 'Solomon',
+    lastName: 'Moon',
+    linkedin: 'solomon-moon-aaab7818a',
+    github: 'chobo91',
     image: solomon,
   },
-// --------------------------------- ADD YOUR INFO BELOW ---------------------------------
+  // --------------------------------- ADD YOUR INFO BELOW ---------------------------------
   {
     firstName: 'Henry',
     lastName: 'Sweat',
@@ -347,5 +347,12 @@ export const contributors = [
     linkedin: 'michael-chiang-84509025b',
     github: 'michael-chiang-dev5',
     image: michael,
+  },
+  {
+    firstName: 'Tyler',
+    lastName: 'Polite',
+    linkedin: 'tylerpolite',
+    github: 'Tpolite4',
+    image: tyler,
   },
 ];
